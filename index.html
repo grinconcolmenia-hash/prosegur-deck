@@ -941,6 +941,333 @@
   .org-a{justify-content:space-between; height:186px}
   .org-top{top:8px}
   .tcd-s span em{font-style:normal; flex:1; min-width:0}
+
+  /* ══ COMPONENTE 04 · PROSPECCION ══════════════════════ */
+  /* ══ COMPONENTE 04 ══════════════════════════════════════ */
+
+  /* -- S12 · Hoy vs el agente -- */
+  .pr-vs{display:grid; grid-template-columns:1fr 1.25fr; gap:30px; height:668px}
+  .pr-vh{background:#fdf3f2; border:1px solid #f3d4d4; border-radius:20px;
+    padding:48px 46px; display:flex; flex-direction:column}
+  .pr-vh .tg{font-size:12px; font-weight:700; letter-spacing:.17em; text-transform:uppercase;
+    color:#b4453f; margin-bottom:12px}
+  .pr-vh h3{font-family:var(--font-headline); font-size:76px; line-height:.98; margin:0 0 22px;
+    color:#d34b45}
+  .pr-vh p{margin:0 0 34px; font-size:21px; line-height:1.55; color:#7a6260}
+  .pr-hum{display:flex; gap:11px; margin-top:auto}
+  .pr-hum span{flex:1; display:flex; align-items:center; justify-content:center;
+    height:62px; border-radius:14px; background:#fff; border:1px solid #f0d8d6}
+  .pr-hum svg{width:26px; height:26px}
+  .pr-va{background:var(--gradient-dark-cover); border-radius:20px; padding:48px 46px;
+    color:#fff; box-shadow:0 10px 54px rgba(9,86,44,.32); display:flex; flex-direction:column}
+  .pr-va .tg{font-size:12px; font-weight:700; letter-spacing:.17em; text-transform:uppercase;
+    color:var(--color-neon-green); margin-bottom:12px}
+  .pr-va h3{font-family:var(--font-headline); font-size:76px; line-height:.98; margin:0 0 30px;
+    color:#fff}
+  .pr-does{display:flex; flex-direction:column; gap:14px; margin-top:auto}
+  .pr-do{display:flex; align-items:center; gap:20px; background:rgba(255,255,255,.07);
+    border:1px solid rgba(18,242,128,.30); border-radius:15px; padding:22px 26px}
+  .pr-do .nn{font-family:var(--font-headline); font-size:23px; color:var(--color-neon-green);
+    flex:0 0 auto; width:34px}
+  .pr-do b{font-size:22px; font-weight:600; color:#fff}
+
+  /* -- S13 · Los 3 caminos -- */
+  .pr-hoy{display:grid; grid-template-columns:repeat(3,1fr); gap:26px; height:648px}
+  .pr-h{border-radius:20px; overflow:hidden; border:1px solid var(--border-default);
+    background:#fff; box-shadow:0 4px 20px rgba(0,0,0,.05); display:flex; flex-direction:column}
+  .pr-hh{background:var(--color-near-black); padding:30px 34px; display:flex;
+    align-items:center; gap:15px}
+  .pr-hh svg{width:29px; height:29px; flex:0 0 auto}
+  .pr-hh b{font-family:var(--font-headline); font-size:27px; color:#fff; line-height:1.15}
+  .pr-hb{padding:38px 34px; flex:1; display:flex; flex-direction:column}
+  .pr-hb p{margin:0; font-size:19px; line-height:1.55; color:var(--fg-secondary)}
+  .pr-hx{margin-top:auto; padding-top:32px; display:flex; align-items:center; gap:18px}
+  .pr-hx .xx{width:56px; height:56px; border-radius:50%; background:#fdf3f2;
+    border:1.5px solid #f3d4d4; display:flex; align-items:center; justify-content:center;
+    font-size:24px; color:#d34b45; flex:0 0 auto}
+  .pr-hx .vv2{font-family:var(--font-headline); font-size:33px; color:#d34b45; line-height:1.05}
+  .pr-hx .vv2 small{display:block; font-family:var(--font-body); font-size:14.5px;
+    font-weight:400; color:var(--fg-secondary); margin-top:6px; line-height:1.4}
+
+  /* -- S14 · El flujo unificado -- */
+  .pr-flow{display:grid; grid-template-columns:1fr 46px 1.3fr 46px 1.18fr;
+    align-items:stretch; height:672px}
+  .pr-ar2{display:flex; align-items:center; justify-content:center; font-size:30px;
+    color:var(--color-neon-green); font-weight:700}
+  .pr-st{border-radius:18px; display:flex; flex-direction:column; min-height:0;
+    position:relative}
+  .pr-sk{display:flex; align-items:baseline; gap:11px; margin-bottom:16px}
+  .pr-sk .nu{font-family:var(--font-headline); font-size:15px; color:var(--color-neon-green);
+    background:var(--color-dark-green); border-radius:7px; padding:4px 10px; flex:0 0 auto}
+  .pr-sk .tw{font-family:var(--font-headline); font-size:25px; color:var(--fg-primary);
+    line-height:1.15}
+  .pr-st.dark{background:var(--gradient-dark-cover); color:#fff; padding:30px 30px;
+    box-shadow:0 8px 44px rgba(9,86,44,.30)}
+  .pr-st.dark .pr-sk .nu{background:rgba(18,242,128,.2)}
+  .pr-st.dark .pr-sk .tw{color:#fff}
+  .pr-st.plain{background:#f6f8f8; border:1.5px solid var(--border-default); padding:26px 26px}
+  .pr-st.out{background:#f7fdfa; border:1.5px solid #c8f0dc; padding:26px 26px}
+
+  .pr-svl{display:flex; flex-direction:column; gap:9px; margin-top:6px}
+  .pr-svl div{background:rgba(255,255,255,.07); border:1px solid rgba(18,242,128,.28);
+    border-radius:11px; padding:14px 16px}
+  .pr-svl b{display:block; font-size:16px; font-weight:600; color:#fff; line-height:1.25}
+  .pr-svl small{display:block; font-size:12.5px; color:rgba(255,255,255,.58); margin-top:3px}
+  .pr-stf{margin-top:auto; padding-top:18px; font-size:13.5px; line-height:1.45;
+    color:rgba(255,255,255,.6)}
+
+  /* LinkedIn front */
+  .pr-lupa{position:absolute; top:-20px; right:18px; width:74px; height:74px;
+    border-radius:50%; background:#fff; border:2.5px solid var(--color-neon-green);
+    display:flex; align-items:center; justify-content:center; z-index:5;
+    box-shadow:0 8px 28px rgba(18,242,128,.4)}
+  .pr-lupa svg{width:34px; height:34px}
+  .pr-li{background:#fff; border:1px solid #dbe4ea; border-radius:14px; overflow:hidden;
+    box-shadow:0 3px 16px rgba(0,0,0,.07); margin-bottom:12px}
+  .pr-lib{display:flex; align-items:center; gap:8px; padding:9px 16px; background:#f3f6f8;
+    border-bottom:1px solid #e4eaef}
+  .pr-lib svg{width:16px; height:16px}
+  .pr-lib span{font-size:10.5px; font-weight:700; letter-spacing:.1em; text-transform:uppercase;
+    color:#0a66c2}
+  .pr-lip{padding:14px 16px 0; display:flex; gap:11px; align-items:flex-start}
+  .pr-av{width:40px; height:40px; border-radius:50%; background:#e8f0f9;
+    border:1px solid #cfe3f7; display:flex; align-items:center; justify-content:center;
+    font-size:13px; font-weight:700; color:#0a66c2; flex:0 0 auto}
+  .pr-lip b{display:block; font-size:14.5px; font-weight:600; color:var(--fg-primary)}
+  .pr-lip small{display:block; font-size:11.5px; color:#8a938f; margin-top:1px}
+  .pr-lit{padding:11px 16px 0; font-size:14.5px; line-height:1.4; color:var(--fg-primary)}
+  .pr-lir{margin:12px 16px 0; padding:9px 0; border-top:1px solid #eef1f0;
+    border-bottom:1px solid #eef1f0; font-size:11.5px; color:#8a938f; display:flex; gap:14px}
+  .pr-lic{margin:11px 13px 13px; background:#effbf4; border:1.5px solid var(--color-neon-green);
+    border-radius:11px; padding:12px 14px; display:flex; gap:10px; align-items:flex-start}
+  .pr-lic .av3{width:28px; height:28px; border-radius:50%; background:#fff;
+    border:1px solid #c8f0dc; display:flex; align-items:center; justify-content:center;
+    font-size:10.5px; font-weight:700; color:var(--color-dark-green); flex:0 0 auto}
+  .pr-lic p{margin:0; font-size:14px; line-height:1.4; color:var(--fg-primary)}
+  .pr-lic .sg{display:block; margin-top:6px; font-size:10.5px; font-weight:700;
+    letter-spacing:.1em; text-transform:uppercase; color:var(--color-dark-green)}
+  /* Noticias · formato de medio real */
+  .pr-nws{display:flex; flex-direction:column; gap:10px; margin-top:auto}
+  .pr-nw2{background:#fff; border:1px solid var(--border-default); border-radius:12px;
+    overflow:hidden; box-shadow:0 3px 14px rgba(0,0,0,.05)}
+  .pr-nw2.hit{border-color:var(--color-neon-green)}
+  .pr-mast{display:flex; align-items:center; gap:9px; padding:7px 14px; background:#fafcfb;
+    border-bottom:1px solid #eef1f0}
+  .pr-mast .lg{font-family:var(--font-headline); font-size:14px; letter-spacing:.03em;
+    color:var(--fg-primary)}
+  .pr-mast .sec{font-size:10px; font-weight:700; letter-spacing:.1em; text-transform:uppercase;
+    color:#9aa5a0}
+  .pr-mast .dt{margin-left:auto; font-size:10.5px; color:#a9b2ae}
+  .pr-nwb{padding:10px 14px; display:flex; gap:11px; align-items:flex-start}
+  .pr-nwb .th{width:56px; height:52px; border-radius:8px; background:#eef1f0; flex:0 0 auto;
+    display:flex; align-items:center; justify-content:center}
+  .pr-nwb .th svg{width:23px; height:23px}
+  .pr-nwb .hh2{font-size:14.5px; font-weight:600; line-height:1.32; color:var(--fg-primary)}
+  .pr-nwb .by{display:block; font-size:11px; color:#a9b2ae; margin-top:5px}
+  .pr-nwf{padding:0 14px 10px}
+  .pr-nwf span{display:inline-flex; align-items:center; gap:7px; background:#effbf4;
+    border:1px solid #c8f0dc; border-radius:999px; padding:5px 12px; font-size:11px;
+    font-weight:700; color:var(--color-dark-green)}
+  .pr-nwf span i{width:6px; height:6px; border-radius:50%; background:var(--color-neon-green);
+    display:block}
+
+  /* Informe compacto */
+  .pr-mini{background:#fff; border:1px solid #c8f0dc; border-radius:13px; overflow:hidden;
+    box-shadow:0 4px 18px rgba(18,242,128,.14); margin-top:4px}
+  .pr-mh{background:var(--color-near-black); padding:10px 15px; display:flex;
+    align-items:center; gap:8px}
+  .pr-mh b{font-size:13px; color:#fff; font-weight:600}
+  .pr-mh span{margin-left:auto; font-size:9px; font-weight:700; letter-spacing:.1em;
+    text-transform:uppercase; color:var(--color-neon-green)}
+  .pr-mr2{padding:12px 15px; border-top:1px solid #eef1f0}
+  .pr-mr2:first-of-type{border-top:0}
+  .pr-mr2 .e2{font-size:14px; font-weight:600; color:var(--fg-primary); margin-bottom:2px}
+  .pr-mr2 .d2{font-size:12px; color:#8a938f; margin-bottom:7px}
+  .pr-mr2 .p2{font-size:14px; font-weight:600; color:var(--color-dark-green);
+    font-variant-numeric:tabular-nums; margin-bottom:8px}
+  .pr-mr2 .w2{font-size:12px; line-height:1.35; color:#6b7671; margin-bottom:9px}
+  .pr-fbk{display:flex; gap:5px}
+  .pr-fbk span{flex:1; text-align:center; border-radius:7px; padding:6px 3px; font-size:10.5px;
+    font-weight:700; border:1px solid var(--border-default); background:#fafcfb; color:#a9b2ae}
+  .pr-fbk span.yes{background:#effbf4; border-color:var(--color-neon-green);
+    color:var(--color-dark-green)}
+  .pr-stf2{margin-top:auto; padding-top:14px; font-size:13.5px; line-height:1.45;
+    color:var(--fg-secondary)}
+  .pr-stf2 b{color:var(--color-dark-green)}
+
+  /* -- S15 · Correos: flujograma -- */
+  .pr-step4{display:inline-flex; align-items:center; gap:12px; background:#effbf4;
+    border:1px solid #c8f0dc; border-radius:999px; padding:7px 18px 7px 8px;
+    font-size:13px; font-weight:700; letter-spacing:.03em; color:var(--color-dark-green);
+    margin:0 0 12px}
+  .pr-step4 .nu4{font-family:var(--font-headline); font-size:15px; color:var(--color-neon-green);
+    background:var(--color-dark-green); border-radius:999px; padding:4px 13px}
+  .pr-fg2{display:grid; grid-template-columns:250px 46px 1fr; align-items:stretch; height:300px}
+  .pr-who5{background:var(--gradient-dark-cover); border-radius:18px; padding:30px 26px;
+    color:#fff; box-shadow:0 8px 44px rgba(9,86,44,.30); display:flex; flex-direction:column;
+    align-items:center; justify-content:center; text-align:center}
+  .pr-who5 .av6{width:76px; height:76px; border-radius:50%; background:rgba(18,242,128,.16);
+    border:2px solid var(--color-neon-green); display:flex; align-items:center;
+    justify-content:center; margin-bottom:18px; box-shadow:0 0 40px rgba(18,242,128,.35)}
+  .pr-who5 .av6 svg{width:36px; height:36px}
+  .pr-who5 b{font-family:var(--font-headline); font-size:24px; line-height:1.15; display:block;
+    margin-bottom:8px}
+  .pr-who5 small{font-size:14px; color:rgba(255,255,255,.62); line-height:1.45}
+  .pr-who5 .bg2{margin-top:16px; background:rgba(18,242,128,.16);
+    border:1px solid rgba(18,242,128,.42); border-radius:10px; padding:9px 14px;
+    font-size:13px; font-weight:600}
+  .pr-arv{display:flex; align-items:center; justify-content:center; font-size:28px;
+    color:var(--color-neon-green); font-weight:700}
+  .pr-chain{display:grid; grid-template-columns:repeat(5,1fr); gap:0; align-items:stretch}
+  .pr-mn{background:#fff; border:1.5px solid var(--border-default); border-radius:15px;
+    padding:20px 18px; margin-right:26px; box-shadow:0 3px 16px rgba(0,0,0,.05);
+    display:flex; flex-direction:column; position:relative}
+  .pr-mn:last-child{margin-right:0}
+  .pr-mn.done{border-color:#c8f0dc; background:#f7fdfa}
+  .pr-mn .env2{width:38px; height:38px; border-radius:10px; background:#effbf4;
+    border:1px solid #c8f0dc; display:flex; align-items:center; justify-content:center;
+    margin-bottom:14px}
+  .pr-mn .env2 svg{width:19px; height:19px}
+  .pr-mn .dy{font-size:10.5px; font-weight:700; letter-spacing:.13em; text-transform:uppercase;
+    color:var(--color-dark-green); margin-bottom:6px}
+  .pr-mn h5{font-family:var(--font-headline); font-size:20px; margin:0 0 9px;
+    color:var(--fg-primary); line-height:1.15}
+  .pr-mn p{margin:0; font-size:13.5px; line-height:1.45; color:var(--fg-secondary)}
+  .pr-mn .arr2{position:absolute; right:-26px; top:50%; transform:translateY(-50%); width:26px;
+    text-align:center; font-size:19px; color:var(--color-neon-green); font-weight:700}
+  .pr-back{margin-top:18px; border:2px dashed var(--color-neon-green); background:#f4fef8;
+    border-radius:16px; padding:20px 30px; display:flex; align-items:center; gap:22px}
+  .pr-back .ic3{width:52px; height:52px; border-radius:50%; background:#fff;
+    border:1.5px solid var(--color-neon-green); display:flex; align-items:center;
+    justify-content:center; flex:0 0 auto}
+  .pr-back .ic3 svg{width:25px; height:25px}
+  .pr-back .kk6{font-family:var(--font-headline); font-size:22px; color:var(--color-dark-green);
+    white-space:nowrap}
+  .pr-back p{margin:0; font-size:16px; line-height:1.45; color:#2c3330}
+  .pr-math{margin-top:18px; display:grid;
+    grid-template-columns:1fr 44px 1fr 44px 1fr 52px 1.3fr; align-items:center; height:124px}
+  .pr-mb{background:#fff; border:1px solid var(--border-default); border-radius:15px;
+    padding:20px 22px; text-align:center; box-shadow:0 2px 12px rgba(0,0,0,.04)}
+  .pr-mb .nq{font-family:var(--font-headline); font-size:38px; color:var(--fg-primary);
+    line-height:1}
+  .pr-mb small{display:block; font-size:14px; color:var(--fg-secondary); margin-top:7px;
+    line-height:1.35}
+  .pr-op{display:flex; align-items:center; justify-content:center;
+    font-family:var(--font-headline); font-size:28px; color:#b6bfbb}
+  .pr-mb.res{background:var(--gradient-hero); border:none; color:#fff;
+    box-shadow:0 8px 40px rgba(18,242,128,.42)}
+  .pr-mb.res .nq{font-size:46px; color:#fff}
+  .pr-mb.res small{color:rgba(255,255,255,.9); font-size:15px}
+
+  /* -- (buzon, ya no se usa) -- */
+  .pr-mail{border-radius:20px; overflow:hidden; border:1px solid #d8ddda; background:#fff;
+    box-shadow:0 18px 60px rgba(0,0,0,.16); height:604px; display:flex; flex-direction:column}
+  .pr-mtop{height:48px; background:#eceeed; display:flex; align-items:center; padding:0 20px;
+    gap:9px; border-bottom:1px solid #dadedc; flex:0 0 auto}
+  .pr-mtop i{width:12px; height:12px; border-radius:50%; display:block}
+  .pr-mtop .u2{margin-left:16px; font-size:13.5px; color:#8c9490; background:#fff;
+    border-radius:8px; padding:6px 22px; border:1px solid #dfe4e2}
+  .pr-mtop .rt2{margin-left:auto; font-size:11.5px; font-weight:700; letter-spacing:.11em;
+    text-transform:uppercase; color:var(--color-dark-green); display:flex; align-items:center;
+    gap:8px}
+  .pr-mtop .rt2 b{width:8px; height:8px; border-radius:50%; background:var(--color-neon-green);
+    box-shadow:0 0 0 4px rgba(18,242,128,.25); display:block}
+  .pr-mbody{display:grid; grid-template-columns:290px 1fr; flex:1; min-height:0}
+  .pr-mside{background:var(--color-near-black); padding:22px 18px; overflow:hidden}
+  .pr-mside .kx{font-size:10px; font-weight:700; letter-spacing:.14em; text-transform:uppercase;
+    color:rgba(255,255,255,.4); margin:0 0 14px; padding:0 10px}
+  .pr-acc{display:flex; align-items:center; gap:11px; padding:10px 12px; border-radius:11px;
+    margin-bottom:4px}
+  .pr-acc.on{background:rgba(18,242,128,.15)}
+  .pr-acc .av5{width:34px; height:34px; border-radius:50%; background:rgba(255,255,255,.1);
+    display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:700;
+    color:rgba(255,255,255,.75); flex:0 0 auto}
+  .pr-acc.on .av5{background:var(--color-neon-green); color:var(--color-near-black)}
+  .pr-acc .tx{flex:1; min-width:0}
+  .pr-acc .tx b{display:block; font-size:14px; font-weight:600; color:rgba(255,255,255,.8);
+    line-height:1.2}
+  .pr-acc.on .tx b{color:#fff}
+  .pr-acc .tx small{font-size:11.5px; color:rgba(255,255,255,.42)}
+  .pr-acc .ct{font-size:12px; font-weight:700; color:var(--color-neon-green)}
+  .pr-msum{margin-top:14px; padding:14px 14px 0; border-top:1px solid rgba(255,255,255,.12)}
+  .pr-msum .nz{font-family:var(--font-headline); font-size:34px; color:var(--color-neon-green);
+    line-height:1}
+  .pr-msum small{display:block; font-size:12px; color:rgba(255,255,255,.5); margin-top:6px;
+    line-height:1.45}
+  .pr-mlist{padding:0; overflow:hidden; display:flex; flex-direction:column}
+  .pr-mrow{display:grid; grid-template-columns:250px 1fr 128px 152px; gap:18px;
+    align-items:center; padding:17px 26px; border-bottom:1px solid #eef1f0}
+  .pr-mrow.hd2{background:#fafcfb; padding:12px 26px; font-size:10px; font-weight:700;
+    letter-spacing:.11em; text-transform:uppercase; color:#9aa5a0}
+  .pr-mrow .emp{font-size:15.5px; font-weight:600; color:var(--fg-primary); line-height:1.25}
+  .pr-mrow .emp small{display:block; font-size:12.5px; font-weight:400; color:#9aa5a0;
+    margin-top:2px}
+  .pr-mrow .asu2{font-size:15px; color:#57605c; line-height:1.3}
+  .pr-step{display:flex; align-items:center; gap:4px}
+  .pr-step i{width:15px; height:5px; border-radius:3px; background:#e4e9e7; display:block}
+  .pr-step i.on{background:var(--color-neon-green)}
+  .pr-step b{margin-left:7px; font-size:12px; color:#8a938f; font-weight:600}
+  .pr-chip2{border-radius:999px; padding:7px 14px; font-size:12px; font-weight:700;
+    text-align:center; white-space:nowrap}
+  .pr-chip2.ok{background:#effbf4; border:1px solid #c8f0dc; color:var(--color-dark-green)}
+  .pr-chip2.pg{background:#fafcfb; border:1px dashed #c8d2ce; color:#9aa5a0}
+  .pr-chip2.rp{background:var(--color-near-black); color:var(--color-neon-green)}
+  .pr-mfoot{margin-top:22px; display:grid; grid-template-columns:repeat(3,1fr); gap:20px}
+  .pr-mc{background:#fafcfb; border:1px solid var(--border-default); border-radius:14px;
+    padding:20px 26px; display:flex; align-items:center; gap:17px}
+  .pr-mc .n2{font-family:var(--font-headline); font-size:34px; color:var(--color-dark-green);
+    line-height:1; flex:0 0 auto}
+  .pr-mc p{margin:0; font-size:15.5px; line-height:1.4; color:var(--fg-secondary)}
+
+  /* -- S16 · Estrategia -- */
+  .pr-gen{background:var(--gradient-dark-cover); border-radius:18px; padding:28px 38px;
+    box-shadow:0 8px 44px rgba(9,86,44,.30); display:grid;
+    grid-template-columns:300px 1fr; gap:34px; align-items:center; height:186px}
+  .pr-gen .lft .kk4{font-size:11px; font-weight:700; letter-spacing:.16em;
+    text-transform:uppercase; color:var(--color-neon-green); margin-bottom:8px}
+  .pr-gen .lft h3{font-family:var(--font-headline); font-size:29px; line-height:1.1;
+    margin:0 0 8px; color:#fff}
+  .pr-gen .lft small{font-size:14px; color:rgba(255,255,255,.6)}
+  .pr-g4{display:grid; grid-template-columns:repeat(4,1fr); gap:12px}
+  .pr-g4 span{background:rgba(255,255,255,.08); border:1px solid rgba(18,242,128,.32);
+    border-radius:12px; padding:15px 14px; font-size:15.5px; font-weight:600; color:#fff;
+    line-height:1.3}
+  .pr-arrows{display:grid; grid-template-columns:repeat(4,1fr); height:38px}
+  .pr-arrows i{font-style:normal; text-align:center; font-size:24px;
+    color:var(--color-neon-green); line-height:38px}
+  .pr-wk{display:grid; grid-template-columns:repeat(4,1fr); gap:18px; height:398px}
+  .pr-w{background:#fff; border:1px solid var(--border-default); border-radius:16px;
+    overflow:hidden; box-shadow:0 2px 12px rgba(0,0,0,.04); display:flex; flex-direction:column}
+  .pr-w.now{border-color:var(--color-neon-green); box-shadow:0 6px 28px rgba(18,242,128,.22)}
+  .pr-wh{padding:14px 20px; background:#fafcfb; border-bottom:1px solid var(--border-default);
+    display:flex; align-items:baseline; gap:9px}
+  .pr-w.now .pr-wh{background:#effbf4; border-color:#c8f0dc}
+  .pr-wh b{font-family:var(--font-headline); font-size:20px; color:var(--fg-primary)}
+  .pr-wh small{font-size:11px; font-weight:700; letter-spacing:.1em; text-transform:uppercase;
+    color:#9aa5a0; margin-left:auto}
+  .pr-w.now .pr-wh small{color:var(--color-dark-green)}
+  .pr-wb{padding:18px 18px 16px; display:flex; flex-direction:column; flex:1}
+  .pr-who4{background:var(--color-near-black); border-radius:11px; padding:13px 15px;
+    margin-bottom:13px}
+  .pr-who4 .kq{font-size:9.5px; font-weight:700; letter-spacing:.13em; text-transform:uppercase;
+    color:var(--color-neon-green); margin-bottom:5px}
+  .pr-who4 b{font-size:15.5px; font-weight:600; color:#fff; line-height:1.3}
+  .pr-sn{display:flex; flex-direction:column; gap:7px}
+  .pr-s{display:flex; align-items:center; gap:9px; border-radius:9px; padding:9px 12px;
+    font-size:13px; line-height:1.25}
+  .pr-s.on{background:#effbf4; border:1px solid #c8f0dc; color:var(--color-dark-green);
+    font-weight:600}
+  .pr-s.off{background:#fafcfb; border:1px solid var(--border-default); color:#b6bfbb}
+  .pr-s .sw{width:25px; height:14px; border-radius:999px; background:#dfe4e2;
+    position:relative; flex:0 0 auto}
+  .pr-s .sw::after{content:""; position:absolute; top:2.5px; left:2.5px; width:9px; height:9px;
+    border-radius:50%; background:#fff; box-shadow:0 1px 3px rgba(0,0,0,.2)}
+  .pr-s.on .sw{background:var(--color-neon-green)}
+  .pr-s.on .sw::after{left:13.5px}
+  .pr-wf{margin-top:auto; padding-top:12px; border-top:1px solid #eef1f0; font-size:12.5px;
+    color:#9aa5a0}
+  .pr-wf b{color:var(--color-dark-green)}
+
 </style>
 </head>
 <body>
@@ -1717,6 +2044,484 @@
 </section>
 
 
+<!-- ============ 12 · HOY vs EL AGENTE ============ -->
+<section data-label="Prospecci&oacute;n &middot; Qu&eacute; solucionamos">
+  <img class="stamp-logo" src="./_plantilla/assets/logo-horizontal.png" alt="">
+  <p class="eyebrow">Componente 04 <b>&middot;</b> Agente de Prospecci&oacute;n y Ventas</p>
+  <h1 class="title">Prospectar deja de ser a pulso</h1>
+  <p class="hint hint-sm">Hoy depende de a qui&eacute;n conoce cada comercial.
+     Con el agente, depende de lo que est&aacute; pasando en el mercado.</p>
+
+  <div class="pr-vs">
+    <div class="pr-vh">
+      <div class="tg">Hoy</div>
+      <h3>A pulso.</h3>
+      <p>Cada comercial busca por su cuenta a qui&eacute;n llamar. Se acuerda de
+         un conocido, marca al conmutador, o saca un listado viejo.</p>
+      <div class="pr-hum">
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="#c9635e" stroke-width="1.7"
+          stroke-linecap="round"><circle cx="12" cy="8" r="4"/>
+          <path d="M4 21v-2a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v2"/></svg></span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="#c9635e" stroke-width="1.7"
+          stroke-linecap="round"><circle cx="12" cy="8" r="4"/>
+          <path d="M4 21v-2a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v2"/></svg></span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="#c9635e" stroke-width="1.7"
+          stroke-linecap="round"><circle cx="12" cy="8" r="4"/>
+          <path d="M4 21v-2a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v2"/></svg></span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="#c9635e" stroke-width="1.7"
+          stroke-linecap="round"><circle cx="12" cy="8" r="4"/>
+          <path d="M4 21v-2a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v2"/></svg></span>
+      </div>
+    </div>
+
+    <div class="pr-va">
+      <div class="tg">Con el agente</div>
+      <h3>En autom&aacute;tico.</h3>
+      <div class="pr-does">
+        <div class="pr-do"><span class="nn">01</span><b>Entiende el negocio y los
+          servicios de Prosegur</b></div>
+        <div class="pr-do"><span class="nn">02</span><b>Rastrea noticias y
+          LinkedIn buscando qui&eacute;n necesita seguridad</b></div>
+        <div class="pr-do"><span class="nn">03</span><b>Entrega qui&eacute;n
+          decide, su tel&eacute;fono y por qu&eacute; llamarlo</b></div>
+        <div class="pr-do"><span class="nn">04</span><b>Manda los correos en
+          fr&iacute;o por cada comercial</b></div>
+        <div class="pr-do"><span class="nn">05</span><b>Aprende de c&oacute;mo le
+          fue al equipo</b></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="stamp-cap">Prosegur &middot; Propuesta COLMEN IA</div>
+  <div class="stamp-num">12</div>
+</section>
+
+
+<!-- ============ 13 · LOS TRES CAMINOS ============ -->
+<section data-label="Prospecci&oacute;n &middot; C&oacute;mo se prospecta hoy">
+  <img class="stamp-logo" src="./_plantilla/assets/logo-horizontal.png" alt="">
+  <p class="eyebrow">Componente 04 <b>&middot;</b> Agente de Prospecci&oacute;n y Ventas</p>
+  <h1 class="title">Los tres caminos de hoy</h1>
+  <p class="hint">Contados por los mismos comerciales. Los tres se quedan cortos.</p>
+
+  <div class="pr-hoy">
+    <div class="pr-h">
+      <div class="pr-hh">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#12f280" stroke-width="1.9"
+          stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+          <circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+          <path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        <b>El amigo del amigo</b>
+      </div>
+      <div class="pr-hb">
+        <p>El referido, el conocido, el que ya trabaj&oacute; con uno antes.</p>
+        <div class="pr-hx"><div class="xx">&#10005;</div>
+          <div class="vv2">No escala<small>Se agota con la agenda personal de cada quien</small></div></div>
+      </div>
+    </div>
+
+    <div class="pr-h">
+      <div class="pr-hh">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#12f280" stroke-width="1.9"
+          stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07
+          19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36
+          1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34
+          1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <b>La llamada directa</b>
+      </div>
+      <div class="pr-hb">
+        <p>Se marca al conmutador y se pide con alguien de seguridad.</p>
+        <div class="pr-hx"><div class="xx">&#10005;</div>
+          <div class="vv2">No llega<small>El filtro se come la llamada antes del que decide</small></div></div>
+      </div>
+    </div>
+
+    <div class="pr-h">
+      <div class="pr-hh">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#12f280" stroke-width="1.9"
+          stroke-linecap="round"><ellipse cx="12" cy="5" rx="9" ry="3"/>
+          <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+        <b>La base de datos</b>
+      </div>
+      <div class="pr-hb">
+        <p>Un listado que alguien les pasa para empezar a marcar.</p>
+        <div class="pr-hx"><div class="xx">&#10005;</div>
+          <div class="vv2">No sirve<small>Nace desactualizada y nadie la mantiene viva</small></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="stamp-cap">Prosegur &middot; Propuesta COLMEN IA</div>
+  <div class="stamp-num">13</div>
+</section>
+
+
+<!-- ============ 14 · EL FLUJO COMPLETO (unificado) ============ -->
+<section data-label="Prospecci&oacute;n &middot; C&oacute;mo funciona">
+  <img class="stamp-logo" src="./_plantilla/assets/logo-horizontal.png" alt="">
+  <p class="eyebrow">Componente 04 <b>&middot;</b> Agente de Prospecci&oacute;n y Ventas</p>
+  <h1 class="title">Entiende, rastrea y entrega</h1>
+  <p class="hint hint-sm">Todo el ciclo del agente, de las reglas del negocio al
+     tel&eacute;fono en la mano del comercial.</p>
+
+  <div class="pr-flow">
+
+    <!-- 01 · ENTIENDE -->
+    <div class="pr-st dark">
+      <div class="pr-sk"><span class="nu">01</span><span class="tw">Entiende a Prosegur</span></div>
+      <div class="pr-svl">
+        <div><b>Servicios fijos</b><small>Vigilancia recurrente por contrato</small></div>
+        <div><b>Adicionales normales</b><small>Refuerzos sobre el contrato</small></div>
+        <div><b>Adicionales especiales</b><small>Operativos fuera de lo est&aacute;ndar</small></div>
+        <div><b>Medio tecnol&oacute;gico</b><small>Menos puesto fijo, m&aacute;s cobertura</small></div>
+        <div><b>Seguridad electr&oacute;nica</b><small>CCTV, accesos y monitoreo</small></div>
+      </div>
+      <p class="pr-stf">Con el portafolio y la estructura del negocio cargados,
+        sabe reconocer una oportunidad cuando la ve.</p>
+    </div>
+
+    <div class="pr-ar2">&rarr;</div>
+
+    <!-- 02 · RASTREA -->
+    <div class="pr-st plain">
+      <div class="pr-lupa">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#09562c" stroke-width="2"
+          stroke-linecap="round"><circle cx="10.5" cy="10.5" r="7"/><path d="M21 21l-5.8-5.8"/></svg>
+      </div>
+      <div class="pr-sk"><span class="nu">02</span><span class="tw">Rastrea</span></div>
+
+      <div class="pr-li">
+        <div class="pr-lib">
+          <svg viewBox="0 0 24 24" fill="#0a66c2"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85
+            0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27
+            5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22
+            0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0
+            22.22 0z"/></svg>
+          <span>LinkedIn</span>
+        </div>
+        <div class="pr-lip">
+          <div class="pr-av">GS</div>
+          <div><b>Gerente de Seguridad y Riesgos</b>
+            <small>Grupo industrial &middot; hace 2 d&iacute;as</small></div>
+        </div>
+        <div class="pr-lit">&ldquo;Comparto que asumo un nuevo reto en el
+          grupo.&rdquo;</div>
+        <div class="pr-lic">
+          <div class="av3">AL</div>
+          <div><p>&ldquo;Gran reto con <b>la planta nueva que arranca en
+            octubre</b>.&rdquo;</p>
+            <span class="sg">&#9679; El comentario revela el momento</span></div>
+        </div>
+      </div>
+
+      <div class="pr-nws">
+
+        <div class="pr-nw2 hit">
+          <div class="pr-mast">
+            <span class="lg">FORBES</span><span class="sec">Colombia &middot; Negocios</span>
+            <span class="dt">Hoy, 7:12 a.m.</span>
+          </div>
+          <div class="pr-nwb">
+            <div class="th"><svg viewBox="0 0 24 24" fill="none" stroke="#09562c" stroke-width="1.7"
+              stroke-linecap="round"><path d="M3 21h18M5 21V9l7-5 7 5v12"/><path d="M10 21v-6h4v6"/></svg></div>
+            <div><div class="hh2">Operador log&iacute;stico invertir&aacute; en un
+              centro de distribuci&oacute;n de 40.000 m&sup2;</div>
+              <span class="by">Redacci&oacute;n Negocios</span></div>
+          </div>
+          <div class="pr-nwf"><span><i></i>Instalaci&oacute;n nueva</span></div>
+        </div>
+
+        <div class="pr-nw2 hit">
+          <div class="pr-mast">
+            <span class="lg">SEMANA</span><span class="sec">Naci&oacute;n</span>
+            <span class="dt">Ayer, 6:40 p.m.</span>
+          </div>
+          <div class="pr-nwb">
+            <div class="th"><svg viewBox="0 0 24 24" fill="none" stroke="#09562c" stroke-width="1.7"
+              stroke-linecap="round"><path d="M12 9v4M12 17h.01"/>
+              <path d="M10.3 3.9L1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg></div>
+            <div><div class="hh2">Alertan por el aumento del hurto a mercanc&iacute;a en el
+              corredor industrial</div>
+              <span class="by">Redacci&oacute;n Naci&oacute;n</span></div>
+          </div>
+          <div class="pr-nwf"><span><i></i>Dolor activo en la zona</span></div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="pr-ar2">&rarr;</div>
+
+    <!-- 03 · ENTREGA -->
+    <div class="pr-st out">
+      <div class="pr-sk"><span class="nu">03</span><span class="tw">Entrega el informe</span></div>
+
+      <div class="pr-mini">
+        <div class="pr-mh"><b>Informe de hoy</b><span>Security</span></div>
+        <div class="pr-mr2">
+          <div class="e2">Operador log&iacute;stico</div>
+          <div class="d2">Director de Operaciones</div>
+          <div class="p2">+57 31&bull; &bull;&bull;&bull; &bull;&bull;47</div>
+          <div class="w2">Centro de distribuci&oacute;n de 40.000 m&sup2;</div>
+          <div class="pr-fbk"><span class="yes">Interesa</span><span>Luego</span><span>No va</span></div>
+        </div>
+        <div class="pr-mr2">
+          <div class="e2">Grupo industrial</div>
+          <div class="d2">Gerente de Seguridad</div>
+          <div class="p2">+57 30&bull; &bull;&bull;&bull; &bull;&bull;15</div>
+          <div class="w2">Cargo nuevo &middot; planta arranca en octubre</div>
+          <div class="pr-fbk"><span class="yes">Interesa</span><span>Luego</span><span>No va</span></div>
+        </div>
+      </div>
+
+      <p class="pr-stf2">Y el comercial responde ah&iacute; mismo c&oacute;mo le
+        fue. <b>Ese bot&oacute;n es el que hace que el agente aprenda.</b></p>
+    </div>
+
+  </div>
+
+  <div class="stamp-cap">Prosegur &middot; Propuesta COLMEN IA</div>
+  <div class="stamp-num">14</div>
+</section>
+
+
+<!-- ============ 15 · CORREOS EN FRIO (flujograma) ============ -->
+<section data-label="Prospecci&oacute;n &middot; Correos en fr&iacute;o">
+  <img class="stamp-logo" src="./_plantilla/assets/logo-horizontal.png" alt="">
+  <p class="eyebrow">Componente 04 <b>&middot;</b> Agente de Prospecci&oacute;n y Ventas</p>
+  <div class="pr-step4"><span class="nu4">04</span>El cuarto paso del agente</div>
+  <h1 class="title">Correos en fr&iacute;o que se escriben solos</h1>
+  <p class="hint hint-sm">Personalizados con la se&ntilde;al de cada empresa.
+     Cada comercial toca diez puertas al d&iacute;a sin redactar una l&iacute;nea.</p>
+
+  <div class="pr-fg2">
+
+    <div class="pr-who5">
+      <div class="av6">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#12f280" stroke-width="1.7"
+          stroke-linecap="round"><circle cx="12" cy="8" r="4"/>
+          <path d="M4 21v-2a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v2"/></svg>
+      </div>
+      <b>Un comercial</b>
+      <small>10 correos al d&iacute;a saliendo en autom&aacute;tico</small>
+      <div class="bg2">No escribe ninguno</div>
+    </div>
+
+    <div class="pr-arv">&rarr;</div>
+
+    <div class="pr-chain">
+
+      <div class="pr-mn done">
+        <div class="env2"><svg viewBox="0 0 24 24" fill="none" stroke="#09562c" stroke-width="2"
+          stroke-linecap="round"><path d="M4 5h16v14H4z"/><path d="M4 8l8 5 8-5"/></svg></div>
+        <div class="dy">D&iacute;a 1</div>
+        <h5>El motivo</h5>
+        <p>Entra por la noticia que acaba de salir, no por el pitch.</p>
+        <div class="arr2">&rarr;</div>
+      </div>
+
+      <div class="pr-mn done">
+        <div class="env2"><svg viewBox="0 0 24 24" fill="none" stroke="#09562c" stroke-width="2"
+          stroke-linecap="round"><path d="M4 5h16v14H4z"/><path d="M4 8l8 5 8-5"/></svg></div>
+        <div class="dy">D&iacute;a 5</div>
+        <h5>La prueba</h5>
+        <p>Un caso del mismo sector y del mismo tama&ntilde;o.</p>
+        <div class="arr2">&rarr;</div>
+      </div>
+
+      <div class="pr-mn done">
+        <div class="env2"><svg viewBox="0 0 24 24" fill="none" stroke="#09562c" stroke-width="2"
+          stroke-linecap="round"><path d="M4 5h16v14H4z"/><path d="M4 8l8 5 8-5"/></svg></div>
+        <div class="dy">D&iacute;a 12</div>
+        <h5>El &aacute;ngulo</h5>
+        <p>El servicio que la estrategia de la semana quiere empujar.</p>
+        <div class="arr2">&rarr;</div>
+      </div>
+
+      <div class="pr-mn">
+        <div class="env2"><svg viewBox="0 0 24 24" fill="none" stroke="#09562c" stroke-width="2"
+          stroke-linecap="round"><path d="M4 5h16v14H4z"/><path d="M4 8l8 5 8-5"/></svg></div>
+        <div class="dy">D&iacute;a 20</div>
+        <h5>Lo &uacute;til</h5>
+        <p>Algo que le sirve aunque todav&iacute;a no compre.</p>
+        <div class="arr2">&rarr;</div>
+      </div>
+
+      <div class="pr-mn">
+        <div class="env2"><svg viewBox="0 0 24 24" fill="none" stroke="#09562c" stroke-width="2"
+          stroke-linecap="round"><path d="M4 5h16v14H4z"/><path d="M4 8l8 5 8-5"/></svg></div>
+        <div class="dy">D&iacute;a 28</div>
+        <h5>La pregunta</h5>
+        <p>S&iacute; o no, sin insistir. La respuesta tambi&eacute;n sirve.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="pr-back">
+    <div class="ic3">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#09562c" stroke-width="2"
+        stroke-linecap="round"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v6h-6"/></svg>
+    </div>
+    <div class="kk6">El que responde vuelve al informe</div>
+    <p>Deja de ser un contacto fr&iacute;o y pasa a la lista del comercial, con
+       su tel&eacute;fono y el motivo. <b>El c&iacute;rculo se cierra ah&iacute;.</b></p>
+  </div>
+
+  <div class="pr-math">
+    <div class="pr-mb"><div class="nq">13</div><small>Comerciales, cada uno con su
+      bandeja</small></div>
+    <div class="pr-op">&times;</div>
+    <div class="pr-mb"><div class="nq">10</div><small>Correos al d&iacute;a, en
+      autom&aacute;tico</small></div>
+    <div class="pr-op">=</div>
+    <div class="pr-mb"><div class="nq">130</div><small>Puertas tocadas cada
+      d&iacute;a</small></div>
+    <div class="pr-op">&rarr;</div>
+    <div class="pr-mb res"><div class="nq">2.600</div><small>Al mes &mdash; y cero
+      horas del equipo escribi&eacute;ndolos</small></div>
+  </div>
+
+  <p style="margin:16px 0 0;font-size:14.5px;line-height:1.5;color:var(--fg-secondary);
+    text-align:center">Diez por bandeja al d&iacute;a es un ritmo deliberado:
+    suficiente para tocar todo el mercado, y lo bastante bajo para que ning&uacute;n
+    dominio se queme.</p>
+
+  <div class="stamp-cap">Prosegur &middot; Propuesta COLMEN IA</div>
+  <div class="stamp-num">15</div>
+</section>
+
+
+<!-- ============ 16 · ESTRATEGIA ============ -->
+<section data-label="Prospecci&oacute;n &middot; La estrategia">
+  <img class="stamp-logo" src="./_plantilla/assets/logo-horizontal.png" alt="">
+  <p class="eyebrow">Componente 04 <b>&middot;</b> Agente de Prospecci&oacute;n y Ventas</p>
+  <h1 class="title">Una estrategia fija. Cuatro semanas distintas.</h1>
+  <p class="hint hint-sm">Los objetivos del a&ntilde;o no cambian. Lo que cambia
+     cada semana es a qui&eacute;n se le apunta.</p>
+
+  <div class="pr-gen">
+    <div class="lft">
+      <div class="kk4">La estrategia general</div>
+      <h3>Los objetivos del a&ntilde;o</h3>
+      <small>Los define la direcci&oacute;n comercial</small>
+    </div>
+    <div class="pr-g4">
+      <span>Crecer en medio tecnol&oacute;gico</span>
+      <span>M&aacute;s adicionales especiales</span>
+      <span>Abrir el sector log&iacute;stico</span>
+      <span>Empujar Prosegur Tecnolog&iacute;a</span>
+    </div>
+  </div>
+
+  <div class="pr-arrows"><i>&darr;</i><i>&darr;</i><i>&darr;</i><i>&darr;</i></div>
+
+  <div class="pr-wk">
+    <div class="pr-w now">
+      <div class="pr-wh"><b>Semana 1</b><small>Activa</small></div>
+      <div class="pr-wb">
+        <div class="pr-who4"><div class="kq">Vamos por</div>
+          <b>Directores de seguridad de operadores log&iacute;sticos</b></div>
+        <div class="pr-sn">
+          <div class="pr-s on"><span class="sw"></span>Apertura de bodega o CEDI</div>
+          <div class="pr-s on"><span class="sw"></span>Hurto a mercanc&iacute;a</div>
+          <div class="pr-s off"><span class="sw"></span>Evento masivo</div>
+        </div>
+        <div class="pr-wf">Servicio: <b>Medio tecnol&oacute;gico</b></div>
+      </div>
+    </div>
+
+    <div class="pr-w">
+      <div class="pr-wh"><b>Semana 2</b></div>
+      <div class="pr-wb">
+        <div class="pr-who4"><div class="kq">Vamos por</div>
+          <b>Gerentes de riesgo de cadenas hoteleras</b></div>
+        <div class="pr-sn">
+          <div class="pr-s on"><span class="sw"></span>Apertura de sede</div>
+          <div class="pr-s off"><span class="sw"></span>Hurto a mercanc&iacute;a</div>
+          <div class="pr-s on"><span class="sw"></span>Evento masivo</div>
+        </div>
+        <div class="pr-wf">Servicio: <b>Adicionales especiales</b></div>
+      </div>
+    </div>
+
+    <div class="pr-w">
+      <div class="pr-wh"><b>Semana 3</b></div>
+      <div class="pr-wb">
+        <div class="pr-who4"><div class="kq">Vamos por</div>
+          <b>Jefes de seguridad f&iacute;sica de terminales y puertos</b></div>
+        <div class="pr-sn">
+          <div class="pr-s off"><span class="sw"></span>Apertura de sede</div>
+          <div class="pr-s on"><span class="sw"></span>Inseguridad en la zona</div>
+          <div class="pr-s on"><span class="sw"></span>Cambio de proveedor</div>
+        </div>
+        <div class="pr-wf">Servicio: <b>Seguridad electr&oacute;nica</b></div>
+      </div>
+    </div>
+
+    <div class="pr-w">
+      <div class="pr-wh"><b>Semana 4</b></div>
+      <div class="pr-wb">
+        <div class="pr-who4"><div class="kq">Vamos por</div>
+          <b>Gerentes de planta del sector manufactura</b></div>
+        <div class="pr-sn">
+          <div class="pr-s on"><span class="sw"></span>Cargo de seguridad nuevo</div>
+          <div class="pr-s on"><span class="sw"></span>Planta o l&iacute;nea nueva</div>
+          <div class="pr-s off"><span class="sw"></span>Evento masivo</div>
+        </div>
+        <div class="pr-wf">Servicio: <b>Servicios fijos</b></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="stamp-cap">Prosegur &middot; Propuesta COLMEN IA</div>
+  <div class="stamp-num">16</div>
+</section>
+
+
+<!-- ============ 17 · ALCANCE ============ -->
+<section data-label="Prospecci&oacute;n &middot; Alcance y l&iacute;mites">
+  <img class="stamp-logo" src="./_plantilla/assets/logo-horizontal.png" alt="">
+  <p class="eyebrow">Componente 04 <b>&middot;</b> Agente de Prospecci&oacute;n y Ventas</p>
+  <h1 class="title">Alcance y l&iacute;mites</h1>
+  <p class="hint">Lo que entra en este componente, y lo que queda fuera.</p>
+
+  <div class="two">
+    <div class="col col-yes">
+      <h3>Lo que hace</h3>
+      <ul>
+        <li><i>&#10003;</i>Aprende la estructura de negocio y el portafolio de Prosegur</li>
+        <li><i>&#10003;</i>Rastrea LinkedIn &mdash; publicaciones, cargos y comentarios &mdash; y noticias</li>
+        <li><i>&#10003;</i>Entrega empresa, tomador de decisi&oacute;n y tel&eacute;fono directo</li>
+        <li><i>&#10003;</i>Informe con el porqu&eacute; de cada llamada y bot&oacute;n de feedback</li>
+        <li><i>&#10003;</i>Manda 5 correos al mes por empresa, desde la bandeja de cada comercial</li>
+        <li><i>&#10003;</i>Sirve a <b>Security y a Tecnolog&iacute;a</b>, cada una con su base</li>
+      </ul>
+    </div>
+    <div class="col col-no">
+      <h3>Lo que no hace</h3>
+      <ul>
+        <li><i>&#10005;</i>No llama: la llamada sigue siendo del comercial</li>
+        <li><i>&#10005;</i>No cierra ni negocia</li>
+        <li><i>&#10005;</i>No decide la estrategia: la fija la direcci&oacute;n comercial</li>
+        <li><i>&#10005;</i>No aprende solo: sin feedback del equipo, se queda quieto</li>
+        <li><i>&#10005;</i>No incluye el licenciamiento de Apollo y Lusha</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="dash">
+    <div class="k">Dos condiciones</div>
+    <p><b>Apollo y Lusha son licencias recurrentes</b> y se presupuestan aparte.
+       Y los correos salen desde un <b>dominio propio del proyecto</b>, nunca
+       desde el corporativo de Prosegur.</p>
+  </div>
+
+  <div class="stamp-cap">Prosegur &middot; Propuesta COLMEN IA</div>
+  <div class="stamp-num">17</div>
+</section>
+
+
 <!-- ============ 08 · SECOP · QUE SOLUCIONAMOS ============ -->
 <section data-label="SECOP &middot; Qu&eacute; solucionamos">
   <img class="stamp-logo" src="./_plantilla/assets/logo-horizontal.png" alt="">
@@ -1753,7 +2558,7 @@
   </div>
 
   <div class="stamp-cap">Prosegur &middot; Propuesta COLMEN IA</div>
-  <div class="stamp-num">12</div>
+  <div class="stamp-num">18</div>
 </section>
 
 
@@ -1801,7 +2606,7 @@
   </div>
 
   <div class="stamp-cap">Prosegur &middot; Propuesta COLMEN IA</div>
-  <div class="stamp-num">13</div>
+  <div class="stamp-num">19</div>
 </section>
 
 
@@ -1881,7 +2686,7 @@
   </div>
 
   <div class="stamp-cap">Prosegur &middot; Propuesta COLMEN IA &middot; Interfaz de referencia</div>
-  <div class="stamp-num">14</div>
+  <div class="stamp-num">20</div>
 </section>
 
 
@@ -1925,7 +2730,7 @@
   </div>
 
   <div class="stamp-cap">Prosegur &middot; Propuesta COLMEN IA</div>
-  <div class="stamp-num">15</div>
+  <div class="stamp-num">21</div>
 </section>
 
 
