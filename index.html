@@ -1307,6 +1307,8 @@
 
   .pc-tags{display:flex; flex-wrap:wrap; gap:11px}
   .pc-wrap.r .pc-tags{justify-content:flex-end}
+  .pc-tags span.both{border-color:rgba(18,242,128,.55); background:rgba(18,242,128,.13);
+    color:var(--color-neon-green)}
   .pc-tags span{border:1px solid rgba(255,255,255,.24); background:rgba(255,255,255,.07);
     border-radius:999px; padding:11px 21px; font-size:16px; font-weight:600;
     color:rgba(255,255,255,.88)}
@@ -1377,6 +1379,58 @@
   .pe-s.hi .vv9{color:var(--color-neon-green); font-size:50px}
   .pe-s .xx9{font-size:13.5px; color:rgba(255,255,255,.55); margin-top:8px; line-height:1.4}
 
+
+  /* ══ PROPUESTA ECONOMICA CONSOLIDADA ══════════════════════ */
+  .pq{border:1.5px solid var(--border-default); border-radius:18px; overflow:hidden;
+    background:#fff; box-shadow:0 4px 22px rgba(0,0,0,.05)}
+  .pq-h{display:grid; grid-template-columns:1fr 250px 250px; gap:22px; padding:15px 32px;
+    background:var(--color-near-black); font-size:10.5px; font-weight:700;
+    letter-spacing:.13em; text-transform:uppercase; color:rgba(255,255,255,.5)}
+  .pq-h .c2{text-align:center}
+  .pq-h .c3{text-align:right}
+  .pq-r{display:grid; grid-template-columns:1fr 250px 250px; gap:22px; padding:21px 32px;
+    align-items:center; border-top:1px solid #eef1f0}
+  .pq-r:first-of-type{border-top:0}
+  .pq-r.opt{background:#f7fdfa; border-top:1px dashed #c8f0dc}
+  .pq-nm{display:flex; align-items:center; gap:16px}
+  .pq-nm .nu2{font-family:var(--font-headline); font-size:14px; color:var(--color-neon-green);
+    background:var(--color-dark-green); border-radius:8px; padding:6px 12px; flex:0 0 auto}
+  .pq-nm .nu2.gh{background:#eef1f0; color:#b6bfbb}
+  .pq-nm b{display:block; font-family:var(--font-headline); font-size:22px;
+    color:var(--fg-primary); line-height:1.2}
+  .pq-nm small{display:block; font-size:14px; color:var(--fg-secondary); margin-top:4px}
+  .pq-ap{text-align:center}
+  .pq-ap span{display:inline-flex; align-items:center; gap:8px; background:#effbf4;
+    border:1px solid #c8f0dc; border-radius:999px; padding:8px 15px; font-size:13px;
+    font-weight:700; color:var(--color-dark-green); line-height:1.2}
+  .pq-ap span i{width:7px; height:7px; border-radius:50%; background:var(--color-neon-green);
+    display:block; flex:0 0 auto}
+  .pq-ap em{font-style:normal; font-size:13.5px; color:#b6bfbb}
+  .pq-v{text-align:right; font-family:var(--font-headline); font-size:28px;
+    color:var(--fg-primary); font-variant-numeric:tabular-nums}
+  .pq-r.opt .pq-v{color:var(--color-dark-green)}
+
+  .pq-sum{margin-top:24px; display:grid; grid-template-columns:1.15fr 1fr 1fr; gap:22px;
+    height:176px}
+  .pq-note{background:#fafcfb; border:1px solid var(--border-default); border-radius:16px;
+    padding:26px 30px; display:flex; flex-direction:column; justify-content:center}
+  .pq-note b{font-family:var(--font-headline); font-size:21px; color:var(--color-dark-green);
+    line-height:1.2; margin-bottom:10px}
+  .pq-note p{margin:0; font-size:15px; line-height:1.5; color:var(--fg-secondary)}
+  .pq-t{border-radius:16px; padding:26px 30px; display:flex; flex-direction:column;
+    justify-content:center; text-align:center}
+  .pq-t.base{background:#fff; border:1.5px solid var(--border-default);
+    box-shadow:0 2px 12px rgba(0,0,0,.04)}
+  .pq-t.full{background:var(--gradient-hero); box-shadow:0 8px 40px rgba(18,242,128,.42)}
+  .pq-t .kx2{font-size:11px; font-weight:700; letter-spacing:.14em; text-transform:uppercase;
+    color:#9aa5a0; margin-bottom:12px}
+  .pq-t.full .kx2{color:rgba(255,255,255,.9)}
+  .pq-t .vx2{font-family:var(--font-headline); font-size:40px; color:var(--fg-primary);
+    line-height:1}
+  .pq-t.full .vx2{color:#fff}
+  .pq-t .sx2{font-size:13.5px; color:var(--fg-secondary); margin-top:10px; line-height:1.4}
+  .pq-t.full .sx2{color:rgba(255,255,255,.88)}
+
 </style>
 </head>
 <body>
@@ -1386,7 +1440,7 @@
 
 <!-- ════════ PORTADA · COMPONENTE 01 · CAPACITACION ════════ -->
 <section data-label="Portada &middot; Capacitaci&oacute;n" class="pc">
-  <div class="pc-bg" style="background-image:url('./_plantilla/assets/portadas/capacitacion.jpg')"></div>
+  <div class="pc-bg" style="background-image:url('./_plantilla/assets/portadas/capacitacion.jpg?v=3')"></div>
   <div class="pc-scrim l"></div>
   <div class="pc-vig"></div>
   <div class="pc-wrap l">
@@ -1561,7 +1615,7 @@
 
 <!-- ════════ PORTADA · COMPONENTE 02 · TARIFADOR ════════ -->
 <section data-label="Portada &middot; Tarifador" class="pc">
-  <div class="pc-bg" style="background-image:url('./_plantilla/assets/portadas/tarifador.jpg')"></div>
+  <div class="pc-bg" style="background-image:url('./_plantilla/assets/portadas/tarifador.jpg?v=3')"></div>
   <div class="pc-scrim r"></div>
   <div class="pc-vig"></div>
   <div class="pc-wrap r">
@@ -2197,7 +2251,7 @@
 
 <!-- ════════ PORTADA · COMPONENTE 03 · PROSPECCION ════════ -->
 <section data-label="Portada &middot; Prospecci&oacute;n" class="pc">
-  <div class="pc-bg" style="background-image:url('./_plantilla/assets/portadas/prospeccion.jpg')"></div>
+  <div class="pc-bg" style="background-image:url('./_plantilla/assets/portadas/prospeccion.jpg?v=3')"></div>
   <div class="pc-scrim l"></div>
   <div class="pc-vig"></div>
   <div class="pc-wrap l">
@@ -2208,6 +2262,7 @@
     <div class="pc-tags">
       <span>Los tres caminos</span><span>Entiende y rastrea</span>
       <span>Correos en fr&iacute;o</span><span>La estrategia</span>
+      <span class="both">Security + Tecnolog&iacute;a</span>
     </div>
   </div>
   <span class="pc-corner tl"></span><span class="pc-corner bl"></span>
@@ -2695,7 +2750,7 @@
 
 <!-- ════════ PORTADA · COMPONENTE 04 · SECOP ════════ -->
 <section data-label="Portada &middot; SECOP" class="pc">
-  <div class="pc-bg" style="background-image:url('./_plantilla/assets/portadas/secop.jpg')"></div>
+  <div class="pc-bg" style="background-image:url('./_plantilla/assets/portadas/secop.jpg?v=3')"></div>
   <div class="pc-scrim r"></div>
   <div class="pc-vig"></div>
   <div class="pc-wrap r">
@@ -2706,6 +2761,7 @@
     <div class="pc-tags">
       <span>Qu&eacute; solucionamos</span><span>C&oacute;mo funciona</span>
       <span>El informe</span><span>An&aacute;lisis de pliegos</span>
+      <span class="both">Security + Tecnolog&iacute;a</span>
     </div>
   </div>
   <span class="pc-corner tr"></span><span class="pc-corner br"></span>
@@ -3006,6 +3062,87 @@
 
   <div class="stamp-cap">Prosegur &middot; Propuesta COLMEN IA</div>
   <div class="stamp-num">26</div>
+</section>
+
+
+<!-- ════════════ PROPUESTA ECONOMICA · CONSOLIDADO ════════════ -->
+<section data-label="Propuesta econ&oacute;mica &middot; Consolidado">
+  <img class="stamp-logo" src="./_plantilla/assets/logo-horizontal.png" alt="">
+  <p class="eyebrow">Propuesta consolidada</p>
+  <h1 class="title">Los cuatro componentes</h1>
+  <p class="hint hint-sm">Dos de ellos &mdash; el gestor de SECOP y el agente de
+     prospecci&oacute;n &mdash; sirven a las dos compa&ntilde;&iacute;as con la misma
+     implementaci&oacute;n.</p>
+
+  <div class="pq">
+    <div class="pq-h">
+      <div>Componente</div><div class="c2">Aplica a</div><div class="c3">Valor</div>
+    </div>
+
+    <div class="pq-r">
+      <div class="pq-nm"><span class="nu2">01</span>
+        <span><b>Plan de transformaci&oacute;n en IA</b>
+          <small>28 horas &middot; tronco com&uacute;n y zoom por &aacute;rea</small></span></div>
+      <div class="pq-ap"><em>Todo el equipo</em></div>
+      <div class="pq-v">$19.800.000</div>
+    </div>
+
+    <div class="pq-r">
+      <div class="pq-nm"><span class="nu2">02</span>
+        <span><b>Tarifador Inteligente</b>
+          <small>Servicios fijos y adicionales, con portal de cliente</small></span></div>
+      <div class="pq-ap"><em>Operaci&oacute;n de seguridad</em></div>
+      <div class="pq-v">$60.000.000</div>
+    </div>
+
+    <div class="pq-r">
+      <div class="pq-nm"><span class="nu2">03</span>
+        <span><b>Agente de Prospecci&oacute;n y Ventas</b>
+          <small>Radar, informe con tel&eacute;fonos y correos en fr&iacute;o</small></span></div>
+      <div class="pq-ap"><span><i></i>Security + Tecnolog&iacute;a</span></div>
+      <div class="pq-v">$22.000.000</div>
+    </div>
+
+    <div class="pq-r">
+      <div class="pq-nm"><span class="nu2">04</span>
+        <span><b>Gestor de SECOP</b>
+          <small>Conexi&oacute;n directa a SECOP, informe priorizado y an&aacute;lisis
+            de pliegos</small></span></div>
+      <div class="pq-ap"><span><i></i>Security + Tecnolog&iacute;a</span></div>
+      <div class="pq-v">$15.000.000</div>
+    </div>
+
+    <div class="pq-r opt">
+      <div class="pq-nm"><span class="nu2 gh">+</span>
+        <span><b>&hellip; y las plataformas privadas</b>
+          <small>Ariba y las dem&aacute;s, cuando quede validado el alcance de cada
+            integraci&oacute;n</small></span></div>
+      <div class="pq-ap"><em>Opcional</em></div>
+      <div class="pq-v">$23.000.000</div>
+    </div>
+  </div>
+
+  <div class="pq-sum">
+    <div class="pq-note">
+      <b>Una implementaci&oacute;n, dos compa&ntilde;&iacute;as</b>
+      <p>El gestor de SECOP y el agente de prospecci&oacute;n se montan una sola vez
+         y sirven tanto a <b>Prosegur Security</b> como a <b>Prosegur
+         Tecnolog&iacute;a</b>, cada una con su foco y su informe.</p>
+    </div>
+    <div class="pq-t base">
+      <div class="kx2">Los cuatro componentes</div>
+      <div class="vx2">$116.800.000</div>
+      <div class="sx2">Con el gestor conectado solo a SECOP</div>
+    </div>
+    <div class="pq-t full">
+      <div class="kx2">Con plataformas privadas</div>
+      <div class="vx2">$124.800.000</div>
+      <div class="sx2">Sumando Ariba y las dem&aacute;s plataformas</div>
+    </div>
+  </div>
+
+  <div class="stamp-cap">Prosegur &middot; Propuesta COLMEN IA</div>
+  <div class="stamp-num">27</div>
 </section>
 
 
