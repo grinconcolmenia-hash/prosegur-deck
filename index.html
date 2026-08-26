@@ -639,6 +639,62 @@
   .plg-s .vv em{font-style:normal; color:var(--color-dark-green)}
   .plg-a{display:flex; align-items:center; justify-content:center; font-size:26px;
     color:var(--color-neon-green)}
+
+  /* == FLUJO SECOP ======================================== */
+  .gf{display:grid; grid-template-columns:repeat(6, 1fr); gap:0; height:504px;
+    align-items:stretch; position:relative}
+  .gfn{position:relative; border-radius:14px; padding:22px 20px 24px; margin-right:34px;
+    display:flex; flex-direction:column; background:#fff;
+    border:1.5px solid var(--border-default); box-shadow:0 2px 12px rgba(0,0,0,.05)}
+  .gfn:last-child{margin-right:0}
+  .gfn.hi{background:var(--gradient-dark-cover); border-color:transparent;
+    box-shadow:0 8px 40px rgba(9,86,44,.30)}
+  .gfn.hum{background:#f7fdfa; border-color:#c8f0dc}
+  .gfnum{width:32px; height:32px; border-radius:50%; background:var(--color-dark-green);
+    color:#fff; display:flex; align-items:center; justify-content:center;
+    font-family:var(--font-headline); font-size:15px; margin-bottom:14px}
+  .gfn.hi .gfnum{background:var(--color-neon-green); color:var(--color-near-black)}
+  .gfn h4{font-family:var(--font-headline); font-size:19px; line-height:1.2; margin:0 0 9px;
+    color:var(--fg-primary)}
+  .gfn.hi h4{color:#fff}
+  .gfn p{margin:0; font-size:13.5px; line-height:1.45; color:var(--fg-secondary)}
+  .gfn.hi p{color:rgba(255,255,255,.72)}
+  .gfar{position:absolute; right:-34px; top:50%; transform:translateY(-50%);
+    width:34px; text-align:center; font-size:22px; color:var(--color-neon-green);
+    font-weight:700; z-index:3}
+  .gfsrc{margin-top:auto; display:flex; flex-direction:column; gap:8px}
+  .gfsrc span{background:rgba(18,242,128,.16); border:1px solid rgba(18,242,128,.42);
+    border-radius:9px; padding:10px 11px; font-size:13px; font-weight:600; color:#fff;
+    line-height:1.3}
+  .gfsrc span small{display:block; font-weight:400; font-size:11px;
+    color:rgba(255,255,255,.62); margin-top:2px}
+  .gf2x{margin-top:10px; text-align:center; font-size:11.5px; font-weight:700;
+    letter-spacing:.1em; text-transform:uppercase; color:var(--color-neon-green)}
+  .gfchip{margin-top:auto; display:flex; flex-direction:column; gap:6px}
+  .gfchip span{background:#effbf4; border:1px solid #c8f0dc; border-radius:8px;
+    padding:8px 10px; font-size:12.5px; font-weight:600; color:var(--color-dark-green);
+    line-height:1.25}
+  .gfpc{margin-top:10px; background:var(--gradient-hero); border-radius:9px; padding:10px;
+    text-align:center; color:#fff; font-family:var(--font-headline); font-size:16px}
+  .gfmail{margin-top:auto; display:flex; flex-direction:column; gap:6px}
+  .gfmail span{display:flex; gap:8px; align-items:flex-start; font-size:12.5px;
+    line-height:1.3; color:var(--fg-secondary)}
+  .gfmail span i{font-style:normal; color:var(--color-dark-green); font-weight:700}
+
+  .gfdup{margin-top:24px; border:2px dashed var(--color-neon-green); background:#f4fef8;
+    border-radius:16px; padding:24px 34px; display:grid;
+    grid-template-columns:370px 1fr 1fr; gap:28px; align-items:center}
+  .gfdup .kk{font-family:var(--font-headline); font-size:22px;
+    color:var(--color-dark-green); line-height:1.2; max-width:340px}
+  .gfdup .kk small{display:block; font-family:var(--font-body); font-size:14px;
+    font-weight:400; color:var(--fg-secondary); margin-top:7px; line-height:1.4}
+  .gfco{background:#fff; border:1px solid #c8f0dc; border-radius:12px; padding:18px 22px;
+    display:flex; align-items:center; gap:14px}
+  .gfco .dot2{width:11px; height:11px; border-radius:50%; background:var(--color-neon-green);
+    flex:0 0 auto}
+  .gfco b{font-family:var(--font-headline); font-size:19px; color:var(--fg-primary);
+    display:block}
+  .gfco small{font-size:13px; color:var(--fg-secondary)}
 </style>
 </head>
 <body>
@@ -1301,89 +1357,101 @@
 </section>
 
 
-<!-- ============ 09 · SECOP · COMO FUNCIONA ============ -->
-<section data-label="SECOP &middot; C&oacute;mo funciona">
+<!-- ============ 09 · SECOP · EL FLUJO ============ -->
+<section data-label="SECOP &middot; El flujo">
   <img class="stamp-logo" src="./_plantilla/assets/logo-horizontal.png" alt="">
   <p class="eyebrow">Componente 03 <b>&middot;</b> Gestor de SECOP</p>
-  <h1 class="title">De d&oacute;nde salen y c&oacute;mo se filtran</h1>
-  <p class="hint hint-sm">Conexi&oacute;n directa a la fuente, memoria de lo que Prosegur ya
-     ha hecho, y un informe por compa&ntilde;&iacute;a.</p>
+  <h1 class="title">C&oacute;mo funciona, paso a paso</h1>
+  <p class="hint hint-sm">De entender el negocio a avisarle al &aacute;rea que hay un
+     documento por subsanar.</p>
 
-  <div class="sc-pipe" style="height:600px">
+  <div class="gf">
 
-    <div class="sc-col sc-src">
-      <p class="sc-k">Paso 01</p>
-      <p class="sc-t">Las fuentes</p>
-      <div class="sc-it">
-        <svg viewBox="0 0 24 24" fill="none" stroke="#09562c" stroke-width="2" stroke-linecap="round">
-          <rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18"/><path d="M8 4v16"/></svg>
-        <div><b>SECOP</b><span>Conexi&oacute;n directa por API a la fuente oficial. Sin
-          intermediarios</span></div>
+    <div class="gfn">
+      <div class="gfnum">1</div>
+      <h4>Entiende el negocio</h4>
+      <p>Se levanta con el hist&oacute;rico de licitaciones de Prosegur de los &uacute;ltimos
+         a&ntilde;os: qu&eacute; se present&oacute;, con qu&eacute; alcance, c&oacute;mo
+         fue.</p>
+      <div class="gfchip" style="margin-top:auto">
+        <span>Ese hist&oacute;rico es lo que le da criterio para filtrar</span>
       </div>
-      <div class="sc-it">
-        <svg viewBox="0 0 24 24" fill="none" stroke="#09562c" stroke-width="2" stroke-linecap="round">
-          <path d="M12 2 2 7l10 5 10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-        <div><b>Ariba y otras privadas</b><span>Las licitaciones que no pasan por SECOP,
-          en el mismo tablero</span></div>
+      <div class="gfar">&rarr;</div>
+    </div>
+
+    <div class="gfn hi">
+      <div class="gfnum">2</div>
+      <h4>Busca en las fuentes</h4>
+      <p>Barre las convocatorias nuevas y descarta lo que no encaja con lo que Prosegur
+         sabe hacer.</p>
+      <div class="gfsrc">
+        <span>SECOP<small>API directa, sin intermediarios</small></span>
+        <span>Ariba y otras privadas<small>Licitaciones que no pasan por SECOP</small></span>
       </div>
-      <div class="sc-it">
-        <svg viewBox="0 0 24 24" fill="none" stroke="#09562c" stroke-width="2" stroke-linecap="round">
-          <path d="M4 4h6l2 3h8v13H4z"/><path d="M8 13h8"/></svg>
-        <div><b>El hist&oacute;rico de Prosegur</b><span>Las licitaciones de todos estos
-          a&ntilde;os, hoy repartidas en carpetas del equipo</span></div>
+      <div class="gf2x">Dos veces al d&iacute;a</div>
+      <div class="gfar">&rarr;</div>
+    </div>
+
+    <div class="gfn">
+      <div class="gfnum">3</div>
+      <h4>Arma el informe en la nube</h4>
+      <p>Un informe vivo, que se actualiza en cada barrido. Ordena las convocatorias por
+         <b>rango de cumplimiento</b>: qu&eacute; tanto de lo que piden puede prestar
+         Prosegur.</p>
+      <div class="gfchip">
+        <span>Alta &middot; Media &middot; Baja &middot; Descartada</span>
+      </div>
+      <div class="gfar">&rarr;</div>
+    </div>
+
+    <div class="gfn hum">
+      <div class="gfnum">4</div>
+      <h4>El humano decide</h4>
+      <p>El &aacute;rea de licitaciones marca cu&aacute;les quiere llevar a lectura de
+         pliegos. Este paso <b>no lo toma el sistema</b>.</p>
+      <div class="gfchip">
+        <span>Segundo filtro, disparado por una persona</span>
+      </div>
+      <div class="gfar">&rarr;</div>
+    </div>
+
+    <div class="gfn">
+      <div class="gfnum">5</div>
+      <h4>Lee los pliegos</h4>
+      <p>Sobre las marcadas, entra al detalle y vuelve a clasificar qu&eacute; tanto encaja
+         la licitaci&oacute;n.</p>
+      <div class="gfchip">
+        <span>Condiciones del proceso</span>
+        <span>Alcance territorial</span>
+        <span>Indicadores financieros</span>
+        <span>Requerimiento de personal</span>
+      </div>
+      <div class="gfpc">% de cumplimiento</div>
+      <div class="gfar">&rarr;</div>
+    </div>
+
+    <div class="gfn">
+      <div class="gfnum">6</div>
+      <h4>Notifica lo que pasa</h4>
+      <p>Sobre los procesos que el &aacute;rea decidi&oacute; seguir, avisa por correo.
+         Nadie tiene que estar revisando.</p>
+      <div class="gfmail">
+        <span><i>&rarr;</i>Cambios en el proceso</span>
+        <span><i>&rarr;</i>Documentos por subsanar</span>
+        <span><i>&rarr;</i>Fechas de entrega y sus cambios</span>
       </div>
     </div>
 
-    <div class="sc-ar">&rarr;</div>
+  </div>
 
-    <div class="sc-col sc-eng">
-      <p class="sc-k">Paso 02</p>
-      <p class="sc-t">El filtro</p>
-      <div class="sc-it">
-        <svg viewBox="0 0 24 24" fill="none" stroke="#12f280" stroke-width="2" stroke-linecap="round">
-          <path d="M22 3H2l8 9.5V19l4 2v-8.5z"/></svg>
-        <div><b>Descarta lo que no aplica</b><span>Contrasta cada convocatoria contra lo
-          que Prosegur sabe hacer</span></div>
-      </div>
-      <div class="sc-it">
-        <svg viewBox="0 0 24 24" fill="none" stroke="#12f280" stroke-width="2" stroke-linecap="round">
-          <path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg>
-        <div><b>Mide el grado de oportunidad</b><span>Qu&eacute; porcentaje de los servicios
-          pedidos puede prestar la compa&ntilde;&iacute;a</span></div>
-      </div>
-      <div class="sc-it">
-        <svg viewBox="0 0 24 24" fill="none" stroke="#12f280" stroke-width="2" stroke-linecap="round">
-          <path d="M3 6h18"/><path d="M7 12h10"/><path d="M11 18h2"/></svg>
-        <div><b>Prioriza</b><span>Ordena de m&aacute;s a menos afinidad con la trayectoria
-          real de Prosegur</span></div>
-      </div>
-      <div class="sc-2x">Dos barridos al d&iacute;a</div>
-    </div>
-
-    <div class="sc-ar">&rarr;</div>
-
-    <div class="sc-col sc-out">
-      <p class="sc-k">Paso 03</p>
-      <p class="sc-t">El informe</p>
-      <div class="sc-it">
-        <svg viewBox="0 0 24 24" fill="none" stroke="#09562c" stroke-width="2" stroke-linecap="round">
-          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-          <path d="M14 2v6h6"/><path d="M9 15l2 2 4-4"/></svg>
-        <div><b>Lista priorizada</b><span>Con el grado de oportunidad de cada convocatoria,
-          al &aacute;rea de licitaciones</span></div>
-      </div>
-      <div class="sc-it">
-        <svg viewBox="0 0 24 24" fill="none" stroke="#09562c" stroke-width="2" stroke-linecap="round">
-          <circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
-        <div><b>Seguimiento</b><span>Estado de cada proceso, fechas de entrega y
-          <b>cambios de fecha</b></span></div>
-      </div>
-      <div class="sc-two">
-        <span>Prosegur Security<small>su propio foco</small></span>
-        <span>Prosegur Tecnolog&iacute;a<small>su propio foco</small></span>
-      </div>
-    </div>
-
+  <div class="gfdup">
+    <div class="kk">Y todo esto corre dos veces
+      <small>Mismo sistema, distinto foco de b&uacute;squeda. Cada compa&ntilde;&iacute;a
+        recibe su propio informe.</small></div>
+    <div class="gfco"><span class="dot2"></span>
+      <div><b>Prosegur Security</b><small>Su informe, con su foco</small></div></div>
+    <div class="gfco"><span class="dot2"></span>
+      <div><b>Prosegur Tecnolog&iacute;a</b><small>Su informe, con su foco</small></div></div>
   </div>
 
   <div class="stamp-cap">Prosegur &middot; Propuesta COLMEN IA</div>
@@ -1471,72 +1539,7 @@
 </section>
 
 
-<!-- ============ 11 · SECOP · EL AGENTE DE PLIEGOS ============ -->
-<section data-label="SECOP &middot; An&aacute;lisis de pliegos">
-  <img class="stamp-logo" src="./_plantilla/assets/logo-horizontal.png" alt="">
-  <p class="eyebrow">Componente 03 <b>&middot;</b> Gestor de SECOP</p>
-  <h1 class="title">El agente que lee los pliegos</h1>
-  <p class="hint hint-sm">Segundo filtro. Lo dispara una persona sobre las convocatorias que
-     marc&oacute; &mdash; y el agente entra al detalle.</p>
-
-  <div class="plg-flow" style="margin-bottom:28px">
-    <div class="plg-s"><div class="kk">Lo decide un humano</div>
-      <div class="vv">El &aacute;rea marca <em>cu&aacute;les</em> analizar</div></div>
-    <div class="plg-a">&rarr;</div>
-    <div class="plg-s"><div class="kk">Lo hace el agente</div>
-      <div class="vv">Entra a los pliegos y los <em>eval&uacute;a punto por punto</em></div></div>
-    <div class="plg-a">&rarr;</div>
-    <div class="plg-s"><div class="kk">Lo recibe el &aacute;rea</div>
-      <div class="vv">Qu&eacute; tan cerca est&aacute;<br><em>Prosegur de cumplir</em></div></div>
-  </div>
-
-  <div class="plg">
-    <div class="plg-c">
-      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#09562c" stroke-width="2"
-        stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-        <path d="M14 2v6h6"/><path d="M9 13h6"/><path d="M9 17h4"/></svg></div>
-      <h4>Condiciones del proceso</h4>
-      <p>Qu&eacute; exige la contrataci&oacute;n: modalidad, requisitos habilitantes,
-         plazos y forma de presentaci&oacute;n.</p>
-    </div>
-    <div class="plg-c">
-      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#09562c" stroke-width="2"
-        stroke-linecap="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/>
-        <circle cx="12" cy="10" r="3"/></svg></div>
-      <h4>Capacidad territorial</h4>
-      <p>D&oacute;nde hay que prestar el servicio y si Prosegur tiene presencia y
-         operaci&oacute;n en esas delegaciones.</p>
-    </div>
-    <div class="plg-c">
-      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#09562c" stroke-width="2"
-        stroke-linecap="round"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg></div>
-      <h4>Indicadores financieros</h4>
-      <p>Los &iacute;ndices que pide el pliego contra los que la compa&ntilde;&iacute;a
-         puede acreditar.</p>
-    </div>
-    <div class="plg-c">
-      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#09562c" stroke-width="2"
-        stroke-linecap="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
-        <circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg></div>
-      <h4>Requerimiento de personal</h4>
-      <p>Cu&aacute;nta gente pide la convocatoria, con qu&eacute; perfil, y qu&eacute;
-         tan alcanzable es cubrirlo.</p>
-    </div>
-  </div>
-
-  <div class="note">
-    <div class="k">Por qu&eacute; importa</div>
-    <p>Leer un pliego a fondo es donde se van las horas. Que el agente lo haga primero no
-       reemplaza el criterio del &aacute;rea: le llega el an&aacute;lisis hecho y decide
-       sobre eso.</p>
-  </div>
-
-  <div class="stamp-cap">Prosegur &middot; Propuesta COLMEN IA</div>
-  <div class="stamp-num">11</div>
-</section>
-
-
-<!-- ============ 12 · SECOP · ALCANCE ============ -->
+<!-- ============ 11 · SECOP · ALCANCE ============ -->
 <section data-label="SECOP &middot; Alcance y l&iacute;mites">
   <img class="stamp-logo" src="./_plantilla/assets/logo-horizontal.png" alt="">
   <p class="eyebrow">Componente 03 <b>&middot;</b> Gestor de SECOP</p>
@@ -1576,7 +1579,7 @@
   </div>
 
   <div class="stamp-cap">Prosegur &middot; Propuesta COLMEN IA</div>
-  <div class="stamp-num">12</div>
+  <div class="stamp-num">11</div>
 </section>
 
 
