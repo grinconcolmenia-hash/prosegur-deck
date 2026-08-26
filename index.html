@@ -885,11 +885,96 @@
     color:var(--fg-secondary); display:flex; gap:8px}
   .tcd-s span i{font-style:normal; color:var(--color-neon-green);
     -webkit-text-stroke:.5px var(--color-dark-green); font-weight:700; flex:0 0 auto}
+
+  /* == ORGANIGRAMA DE LA CAPACITACION ===================== */
+  .org{position:relative; width:1700px; height:634px}
+  .org > svg{position:absolute; inset:0; width:1700px; height:634px}
+  .org-top{position:absolute; left:250px; top:0; width:1200px; background:#0b1410;
+    border-radius:16px; overflow:hidden; padding:30px 40px 32px; z-index:2;
+    box-shadow:0 12px 44px rgba(9,86,44,.34)}
+  .org-top::before{content:""; position:absolute; left:0; top:0; width:100%; height:5px;
+    background:var(--color-neon-green)}
+  .org-top .ok{font-family:var(--font-body); font-weight:600; font-size:12px;
+    letter-spacing:.28em; text-transform:uppercase; color:var(--color-neon-green);
+    margin:0 0 9px}
+  .org-top .ot{font-family:var(--font-headline); font-size:36px; line-height:1.1;
+    color:#fff; margin:0 0 10px}
+  .org-top .ox{font-family:var(--font-body); font-size:16px; line-height:1.5;
+    color:rgba(255,255,255,.72); margin:0 0 18px; max-width:900px}
+  .org-mods{display:flex; flex-wrap:wrap; gap:8px}
+  .org-mods span{background:rgba(18,242,128,.14); border:1px solid rgba(18,242,128,.4);
+    border-radius:8px; padding:8px 13px; font-size:13px; font-weight:600; color:#fff}
+  .org-mods span b{color:var(--color-neon-green); font-weight:700; margin-right:6px}
+  .org-lab{position:absolute; left:50%; transform:translateX(-50%); top:322px; z-index:4;
+    background:#fff; border:1px solid var(--border-default); border-radius:999px;
+    padding:9px 24px; font-family:var(--font-body); font-weight:700; font-size:12px;
+    letter-spacing:.2em; text-transform:uppercase; color:var(--color-dark-green)}
+  .org-a{position:absolute; top:404px; width:398px; height:230px; background:#fff;
+    border:1px solid var(--border-default); border-radius:16px; overflow:hidden;
+    padding:24px 26px 16px; z-index:2; display:flex; flex-direction:column;
+    justify-content:space-between; box-shadow:0 4px 20px rgba(9,86,44,.07)}
+  .org-a::before{content:""; position:absolute; left:0; top:0; width:100%; height:5px;
+    background:var(--gradient-green-blue)}
+  .org-a .an{font-family:var(--font-headline); font-size:23px; line-height:1.15;
+    color:var(--fg-primary); margin:0 0 6px}
+  .org-a .aw{font-family:var(--font-body); font-size:13.5px; color:var(--fg-secondary);
+    margin:0 0 12px}
+  .org-a .al{display:flex; flex-direction:column; gap:7px}
+  .org-a .al span{font-size:13.5px; line-height:1.35; color:var(--fg-secondary);
+    display:flex; gap:8px}
+  .org-a .al span i{font-style:normal; color:var(--color-neon-green);
+    -webkit-text-stroke:.5px var(--color-dark-green); font-weight:700; flex:0 0 auto}
+  .org-a .af2{border-top:1px solid var(--border-default); padding-top:11px;
+    font-family:var(--font-body); font-weight:600; font-size:11px; letter-spacing:.2em;
+    text-transform:uppercase; color:var(--fg-muted)}
 </style>
 </head>
 <body>
 
 <deck-stage width="1920" height="1080">
+
+
+<!-- ============ C00 · ORGANIGRAMA ============ -->
+<section data-label="Capacitaci&oacute;n &middot; C&oacute;mo se desarrolla">
+  <img class="stamp-logo" src="./_plantilla/assets/logo-horizontal.png" alt="">
+  <div class="ghead">
+    <div class="gl">
+      <p class="geye">Adopci&oacute;n de inteligencia artificial</p>
+      <h2 class="gt">Un solo programa para que la IA entre
+        <span class="hl2">a toda la operaci&oacute;n.</span></h2>
+    </div>
+    <p class="gh">Una base com&uacute;n para todo el equipo, y de ah&iacute; una rama por
+      &aacute;rea sobre su trabajo real.</p>
+  </div>
+
+  <div class="org">
+    <svg viewBox="0 0 1700 634">
+      <g stroke="#12f280" stroke-width="2.5" fill="none" stroke-linecap="round">
+        <path d="M850 296 L850 356"/>
+        <path d="M199 356 L1501 356"/>
+        <path d="M199 356 L199 404"/><path d="M633 356 L633 404"/><path d="M1067 356 L1067 404"/><path d="M1501 356 L1501 404"/>
+      </g>
+    </svg>
+
+    <div class="org-top">
+      <p class="ok">M&oacute;dulo troncal &middot; lo ve todo el equipo</p>
+      <p class="ot">Fundamentos y primer agente</p>
+      <p class="ox">Directivos, comerciales, SECOP y reporter&iacute;a arrancan con la
+        misma base: la herramienta instalada, el criterio para usarla y un agente propio
+        funcionando. Seis m&oacute;dulos, doce horas.</p>
+      <div class="org-mods"><span><b>01</b>Introducci&oacute;n a sistemas de IA</span><span><b>02</b>Pensamiento sistem&aacute;tico y prompting</span><span><b>03</b>Productividad empresarial</span><span><b>04</b>Rutinas, skills y Excel en la nube</span><span><b>05 &middot; 06</b>Introducci&oacute;n al primer agente &middot; 2 sesiones</span></div>
+    </div>
+
+    <div class="org-lab">Y de ah&iacute;, una rama por &aacute;rea</div>
+    <div class="org-a" style="left:0px"><div><p class="an">Comercial</p><p class="aw">3 personas</p><div class="al"><span><i>&rarr;</i>Presentaciones estandarizadas</span><span><i>&rarr;</i>Agente de gesti&oacute;n sobre el CRM</span></div></div><div class="af2">2 sesiones &middot; 4 horas</div></div>
+    <div class="org-a" style="left:434px"><div><p class="an">SECOP</p><p class="aw">Equipo de licitaciones</p><div class="al"><span><i>&rarr;</i>Agente diligenciador de formatos</span><span><i>&rarr;</i>Redacci&oacute;n asistida</span></div></div><div class="af2">2 sesiones &middot; 4 horas</div></div>
+    <div class="org-a" style="left:868px"><div><p class="an">CRM y reporter&iacute;a</p><p class="aw">Equipo de informes</p><div class="al"><span><i>&rarr;</i>Informes mejor presentados</span><span><i>&rarr;</i>An&aacute;lisis, no solo armado</span></div></div><div class="af2">2 sesiones &middot; 4 horas</div></div>
+    <div class="org-a" style="left:1302px"><div><p class="an">Equipo directivo</p><p class="aw">Comit&eacute;</p><div class="al"><span><i>&rarr;</i>Simular el impacto de un cambio de reglas</span><span><i>&rarr;</i>El informe del comit&eacute;, armado solo</span></div></div><div class="af2">2 sesiones &middot; 4 horas</div></div>
+  </div>
+
+  <div class="stamp-cap">Prosegur &middot; Propuesta COLMEN IA</div>
+  <div class="stamp-num">01</div>
+</section>
 
 
 <!-- ============ C01 · EL PROGRAMA ============ -->
@@ -905,12 +990,12 @@
   </div>
 
   <div class="tocg">
-      <div class="tcd"><div class="tcd-b"><p class="tcd-n">01</p><p class="tcd-t">Fundamentos del sistema de IA</p><p class="tcd-x">Instalaci&oacute;n de la plataforma y c&oacute;mo funciona por dentro.</p></div><div class="tcd-f"><span class="tcd-g">Fundamentos</span><span class="tcd-a">&rarr;</span></div></div>
-      <div class="tcd"><div class="tcd-b"><p class="tcd-n">02</p><p class="tcd-t">Pensamiento sistem&aacute;tico</p><p class="tcd-x">C&oacute;mo hablarle a la IA para que devuelva lo que se necesita.</p></div><div class="tcd-f"><span class="tcd-g">Criterio</span><span class="tcd-a">&rarr;</span></div></div>
-      <div class="tcd"><div class="tcd-b"><p class="tcd-n">03</p><p class="tcd-t">Productividad empresarial I</p><p class="tcd-x">Crear rutinas y skills sobre lo que cada quien repite todos los d&iacute;as.</p></div><div class="tcd-f"><span class="tcd-g">Productividad</span><span class="tcd-a">&rarr;</span></div></div>
-      <div class="tcd"><div class="tcd-b"><p class="tcd-n">04</p><p class="tcd-t">Productividad empresarial II</p><p class="tcd-x">Excel en la nube y ejecuci&oacute;n autom&aacute;tica de los archivos de siempre.</p></div><div class="tcd-f"><span class="tcd-g">Automatizaci&oacute;n</span><span class="tcd-a">&rarr;</span></div></div>
-      <div class="tcd"><div class="tcd-b"><p class="tcd-n">05</p><p class="tcd-t">Tu primer agente I</p><p class="tcd-x">Qu&eacute; es un agente y c&oacute;mo se estructura, de la idea a la primera versi&oacute;n.</p></div><div class="tcd-f"><span class="tcd-g">Agentes</span><span class="tcd-a">&rarr;</span></div></div>
-      <div class="tcd"><div class="tcd-b"><p class="tcd-n">06</p><p class="tcd-t">Tu primer agente II</p><p class="tcd-x">Taller: cada quien construye el suyo, enfocado en su &aacute;rea.</p></div><div class="tcd-f"><span class="tcd-g">Taller</span><span class="tcd-a">&rarr;</span></div></div>
+      <div class="tcd"><div class="tcd-b"><p class="tcd-n">01</p><p class="tcd-t">Introducci&oacute;n a sistemas de IA</p><p class="tcd-x">Instalaci&oacute;n de la plataforma y c&oacute;mo funciona por dentro.</p></div><div class="tcd-f"><span class="tcd-g">Fundamentos</span><span class="tcd-a">&rarr;</span></div></div>
+      <div class="tcd"><div class="tcd-b"><p class="tcd-n">02</p><p class="tcd-t">Pensamiento sistem&aacute;tico y esquema de prompting</p><p class="tcd-x">C&oacute;mo hablarle a la IA para que devuelva lo que se necesita.</p></div><div class="tcd-f"><span class="tcd-g">Prompting</span><span class="tcd-a">&rarr;</span></div></div>
+      <div class="tcd"><div class="tcd-b"><p class="tcd-n">03</p><p class="tcd-t">Productividad empresarial</p><p class="tcd-x">Correo, calendario y las plataformas del d&iacute;a a d&iacute;a, conectadas.</p></div><div class="tcd-f"><span class="tcd-g">Productividad</span><span class="tcd-a">&rarr;</span></div></div>
+      <div class="tcd"><div class="tcd-b"><p class="tcd-n">04</p><p class="tcd-t">Rutinas, skills y Excel en la nube</p><p class="tcd-x">Sistemas que se rellenan y se ejecutan solos, sobre los archivos de siempre.</p></div><div class="tcd-f"><span class="tcd-g">Rutinas y skills</span><span class="tcd-a">&rarr;</span></div></div>
+      <div class="tcd"><div class="tcd-b"><p class="tcd-n">05</p><p class="tcd-t">Introducci&oacute;n al primer agente</p><p class="tcd-x">Qu&eacute; es un agente y c&oacute;mo se estructura, de la idea a la primera versi&oacute;n.</p></div><div class="tcd-f"><span class="tcd-g">Agentes</span><span class="tcd-a">&rarr;</span></div></div>
+      <div class="tcd"><div class="tcd-b"><p class="tcd-n">06</p><p class="tcd-t">Tu primer agente &middot; taller</p><p class="tcd-x">Cada quien construye el suyo, enfocado en el &aacute;rea donde trabaja.</p></div><div class="tcd-f"><span class="tcd-g">Taller</span><span class="tcd-a">&rarr;</span></div></div>
       <div class="tcd acc">
         <p class="ak">El tronco com&uacute;n</p>
         <p class="af"><span class="hl2">6 m&oacute;dulos</span> &middot; 12 horas</p>
@@ -919,7 +1004,7 @@
   </div>
 
   <div class="stamp-cap">Prosegur &middot; Propuesta COLMEN IA</div>
-  <div class="stamp-num">01</div>
+  <div class="stamp-num">02</div>
 </section>
 
 
@@ -939,7 +1024,7 @@
       <div class="tcd"><div class="tcd-b"><p class="tcd-n">01</p><p class="tcd-t">Comercial</p><p class="tcd-x">3 personas</p><div class="tcd-s"><span><i>&rarr;</i>Presentaciones estandarizadas, sacadas r&aacute;pido</span><span><i>&rarr;</i>Agente de gesti&oacute;n comercial sobre el CRM</span></div></div><div class="tcd-f"><span class="tcd-g">Comercial</span><span class="tcd-a">&rarr;</span></div></div>
       <div class="tcd"><div class="tcd-b"><p class="tcd-n">02</p><p class="tcd-t">SECOP</p><p class="tcd-x">Equipo de licitaciones</p><div class="tcd-s"><span><i>&rarr;</i>Agente diligenciador de formatos de SECOP</span><span><i>&rarr;</i>Redacci&oacute;n asistida de los formatos del proceso</span></div></div><div class="tcd-f"><span class="tcd-g">Licitaciones</span><span class="tcd-a">&rarr;</span></div></div>
       <div class="tcd"><div class="tcd-b"><p class="tcd-n">03</p><p class="tcd-t">CRM y reporter&iacute;a</p><p class="tcd-x">Equipo de informes</p><div class="tcd-s"><span><i>&rarr;</i>Agente que presenta y analiza los informes</span><span><i>&rarr;</i>Reducir el tiempo de producci&oacute;n de cada reporte</span></div></div><div class="tcd-f"><span class="tcd-g">Reporter&iacute;a</span><span class="tcd-a">&rarr;</span></div></div>
-      <div class="tcd"><div class="tcd-b"><p class="tcd-n">04</p><p class="tcd-t">Equipo directivo</p><p class="tcd-x">Comit&eacute;</p><div class="tcd-s"><span><i>&rarr;</i>Decidir con datos propios: pedir el an&aacute;lisis y leerlo</span><span><i>&rarr;</i>Base consultable, para que el conocimiento no se vaya</span></div></div><div class="tcd-f"><span class="tcd-g">Direcci&oacute;n</span><span class="tcd-a">&rarr;</span></div></div>
+      <div class="tcd"><div class="tcd-b"><p class="tcd-n">04</p><p class="tcd-t">Equipo directivo</p><p class="tcd-x">Comit&eacute;</p><div class="tcd-s"><span><i>&rarr;</i>Simular qu&eacute; le hace a la rentabilidad un cambio de reglas: reducci&oacute;n de jornada, salario m&iacute;nimo, recargos &mdash; por cliente y por delegaci&oacute;n</span><span><i>&rarr;</i>El informe del comit&eacute; armado solo: lo que producen las &aacute;reas en un tablero, y poder preguntarle a los datos sin esperar a que alguien lo arme</span></div></div><div class="tcd-f"><span class="tcd-g">Direcci&oacute;n</span><span class="tcd-a">&rarr;</span></div></div>
       <div class="tcd acc" style="grid-column:span 2">
         <p class="ak">El zoom por &aacute;rea</p>
         <p class="af"><span class="hl2">4 &aacute;reas</span> &middot; 2 sesiones cada una</p>
@@ -948,7 +1033,7 @@
   </div>
 
   <div class="stamp-cap">Prosegur &middot; Propuesta COLMEN IA</div>
-  <div class="stamp-num">02</div>
+  <div class="stamp-num">03</div>
 </section>
 
 
@@ -997,7 +1082,7 @@
   </div>
 
   <div class="stamp-cap">Prosegur &middot; Propuesta COLMEN IA</div>
-  <div class="stamp-num">03</div>
+  <div class="stamp-num">04</div>
 </section>
 
 
@@ -1074,7 +1159,7 @@
   </div>
 
   <div class="stamp-cap">Prosegur &middot; Propuesta COLMEN IA</div>
-  <div class="stamp-num">04</div>
+  <div class="stamp-num">05</div>
 </section>
 
 
@@ -1199,7 +1284,7 @@
   </div>
 
   <div class="stamp-cap">Prosegur &middot; Propuesta COLMEN IA &middot; Interfaz de referencia</div>
-  <div class="stamp-num">05</div>
+  <div class="stamp-num">06</div>
 </section>
 
 
@@ -1282,7 +1367,7 @@
   </div>
 
   <div class="stamp-cap">Prosegur &middot; Propuesta COLMEN IA</div>
-  <div class="stamp-num">06</div>
+  <div class="stamp-num">07</div>
 </section>
 
 
@@ -1343,7 +1428,7 @@
   </div>
 
   <div class="stamp-cap">Prosegur &middot; Propuesta COLMEN IA &middot; Cifras de ejemplo</div>
-  <div class="stamp-num">07</div>
+  <div class="stamp-num">08</div>
 </section>
 
 
@@ -1458,7 +1543,7 @@
   </div>
 
   <div class="stamp-cap">Prosegur &middot; Propuesta COLMEN IA &middot; Interfaz de referencia</div>
-  <div class="stamp-num">08</div>
+  <div class="stamp-num">09</div>
 </section>
 
 
@@ -1569,7 +1654,7 @@
   </div>
 
   <div class="stamp-cap">Prosegur &middot; Propuesta COLMEN IA</div>
-  <div class="stamp-num">09</div>
+  <div class="stamp-num">10</div>
 </section>
 
 
@@ -1613,7 +1698,7 @@
   </div>
 
   <div class="stamp-cap">Prosegur &middot; Propuesta COLMEN IA</div>
-  <div class="stamp-num">10</div>
+  <div class="stamp-num">11</div>
 </section>
 
 
@@ -1653,7 +1738,7 @@
   </div>
 
   <div class="stamp-cap">Prosegur &middot; Propuesta COLMEN IA</div>
-  <div class="stamp-num">11</div>
+  <div class="stamp-num">12</div>
 </section>
 
 
@@ -1701,7 +1786,7 @@
   </div>
 
   <div class="stamp-cap">Prosegur &middot; Propuesta COLMEN IA</div>
-  <div class="stamp-num">12</div>
+  <div class="stamp-num">13</div>
 </section>
 
 
@@ -1781,7 +1866,7 @@
   </div>
 
   <div class="stamp-cap">Prosegur &middot; Propuesta COLMEN IA &middot; Interfaz de referencia</div>
-  <div class="stamp-num">13</div>
+  <div class="stamp-num">14</div>
 </section>
 
 
@@ -1825,7 +1910,7 @@
   </div>
 
   <div class="stamp-cap">Prosegur &middot; Propuesta COLMEN IA</div>
-  <div class="stamp-num">14</div>
+  <div class="stamp-num">15</div>
 </section>
 
 
