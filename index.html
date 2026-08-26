@@ -1326,110 +1326,97 @@
   .pc-mark.r{right:110px}
 
 
+  
   /* ══ PROPUESTA ECONOMICA ══════════════════════════════════ */
-  .pe{display:grid; grid-template-columns:1fr 1fr; gap:28px; height:516px}
-  .pe-c{border-radius:20px; overflow:hidden; display:flex; flex-direction:column;
-    box-shadow:0 4px 22px rgba(0,0,0,.06)}
-  .pe-c.a{background:#fff; border:1.5px solid var(--border-default)}
-  .pe-c.b{background:#f7fdfa; border:1.5px solid #c8f0dc}
-  .pe-h{padding:22px 32px; display:flex; align-items:center; gap:16px;
-    background:var(--color-near-black)}
-  .pe-h .no{font-family:var(--font-headline); font-size:16px; color:var(--color-neon-green);
-    background:rgba(18,242,128,.16); border:1px solid rgba(18,242,128,.4);
-    border-radius:9px; padding:6px 13px; flex:0 0 auto}
-  .pe-h .tt{font-family:var(--font-headline); font-size:27px; color:#fff; line-height:1.15}
-  .pe-h .tt small{display:block; font-family:var(--font-body); font-size:14px;
-    font-weight:400; color:rgba(255,255,255,.55); margin-top:4px}
-  .pe-b{padding:24px 32px 26px; flex:1; display:flex; flex-direction:column}
 
-  .pe-meta{display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:#e6eae8;
-    border:1px solid #e6eae8; border-radius:13px; overflow:hidden; margin-bottom:22px}
-  .pe-meta div{background:#fff; padding:14px 12px; text-align:center}
-  .pe-c.b .pe-meta div{background:#fff}
-  .pe-meta .n3{font-family:var(--font-headline); font-size:26px; color:var(--fg-primary);
-    line-height:1}
-  .pe-meta .l3{font-size:12.5px; color:var(--fg-secondary); margin-top:6px; line-height:1.3}
-
-  .pe-hero{margin-bottom:auto}
-  .pe-hero .k7{font-size:11px; font-weight:700; letter-spacing:.15em; text-transform:uppercase;
-    color:var(--color-dark-green); margin-bottom:8px}
-  .pe-hero .v7{font-family:var(--font-headline); font-size:52px; line-height:1;
-    color:var(--fg-primary)}
-  .pe-hero .v7 em{font-style:normal; font-size:26px; color:var(--fg-secondary)}
-  .pe-hero .x7{font-size:14.5px; line-height:1.45; color:var(--fg-secondary); margin-top:10px}
-
-  .pe-tot{margin-top:20px; padding-top:18px; border-top:1px solid var(--border-default);
-    display:flex; align-items:baseline; gap:12px}
-  .pe-tot .k8{font-size:12px; font-weight:700; letter-spacing:.13em; text-transform:uppercase;
-    color:#9aa5a0}
-  .pe-tot .v8{font-family:var(--font-headline); font-size:34px; color:var(--fg-primary);
-    margin-left:auto}
-  .pe-c.b .pe-tot .v8{color:var(--color-dark-green)}
-
-  .pe-sum{margin-top:22px; background:var(--gradient-dark-cover); border-radius:20px;
-    padding:32px 44px; box-shadow:0 10px 48px rgba(9,86,44,.3); display:grid;
-    grid-template-columns:1fr 1fr 1.15fr; gap:38px; align-items:center; height:172px}
-  .pe-s{text-align:center}
-  .pe-s .kk9{font-size:11px; font-weight:700; letter-spacing:.15em; text-transform:uppercase;
-    color:rgba(255,255,255,.5); margin-bottom:10px}
-  .pe-s .vv9{font-family:var(--font-headline); font-size:44px; color:#fff; line-height:1}
-  .pe-s.hi{background:rgba(18,242,128,.13); border:1px solid rgba(18,242,128,.42);
-    border-radius:15px; padding:20px 24px}
-  .pe-s.hi .kk9{color:var(--color-neon-green)}
-  .pe-s.hi .vv9{color:var(--color-neon-green); font-size:50px}
-  .pe-s .xx9{font-size:13.5px; color:rgba(255,255,255,.55); margin-top:8px; line-height:1.4}
-
-
-  /* ══ PROPUESTA ECONOMICA CONSOLIDADA ══════════════════════ */
-  .pq{border:1.5px solid var(--border-default); border-radius:18px; overflow:hidden;
+  /* -- Tabla de lineas (capacitacion) -- */
+  .ec-t{border:1.5px solid var(--border-default); border-radius:18px; overflow:hidden;
     background:#fff; box-shadow:0 4px 22px rgba(0,0,0,.05)}
-  .pq-h{display:grid; grid-template-columns:1fr 250px 250px; gap:22px; padding:15px 32px;
-    background:var(--color-near-black); font-size:10.5px; font-weight:700;
-    letter-spacing:.13em; text-transform:uppercase; color:rgba(255,255,255,.5)}
-  .pq-h .c2{text-align:center}
-  .pq-h .c3{text-align:right}
-  .pq-r{display:grid; grid-template-columns:1fr 250px 250px; gap:22px; padding:21px 32px;
-    align-items:center; border-top:1px solid #eef1f0}
-  .pq-r:first-of-type{border-top:0}
-  .pq-r.opt{background:#f7fdfa; border-top:1px dashed #c8f0dc}
-  .pq-nm{display:flex; align-items:center; gap:16px}
-  .pq-nm .nu2{font-family:var(--font-headline); font-size:14px; color:var(--color-neon-green);
-    background:var(--color-dark-green); border-radius:8px; padding:6px 12px; flex:0 0 auto}
-  .pq-nm .nu2.gh{background:#eef1f0; color:#b6bfbb}
-  .pq-nm b{display:block; font-family:var(--font-headline); font-size:22px;
+  .ec-th{display:grid; grid-template-columns:1fr 300px 250px 260px; gap:20px;
+    padding:16px 34px; background:var(--color-near-black); font-size:10.5px;
+    font-weight:700; letter-spacing:.13em; text-transform:uppercase;
+    color:rgba(255,255,255,.5)}
+  .ec-th .ra{text-align:right}
+  .ec-tr{display:grid; grid-template-columns:1fr 300px 250px 260px; gap:20px;
+    padding:28px 34px; align-items:center; border-top:1px solid #eef1f0}
+  .ec-tr:first-of-type{border-top:0}
+  .ec-nm{display:flex; align-items:center; gap:18px}
+  .ec-nm .nu3{font-family:var(--font-headline); font-size:14px; color:var(--color-neon-green);
+    background:var(--color-dark-green); border-radius:8px; padding:7px 13px; flex:0 0 auto}
+  .ec-nm b{display:block; font-family:var(--font-headline); font-size:25px;
     color:var(--fg-primary); line-height:1.2}
-  .pq-nm small{display:block; font-size:14px; color:var(--fg-secondary); margin-top:4px}
-  .pq-ap{text-align:center}
-  .pq-ap span{display:inline-flex; align-items:center; gap:8px; background:#effbf4;
-    border:1px solid #c8f0dc; border-radius:999px; padding:8px 15px; font-size:13px;
-    font-weight:700; color:var(--color-dark-green); line-height:1.2}
-  .pq-ap span i{width:7px; height:7px; border-radius:50%; background:var(--color-neon-green);
-    display:block; flex:0 0 auto}
-  .pq-ap em{font-style:normal; font-size:13.5px; color:#b6bfbb}
-  .pq-v{text-align:right; font-family:var(--font-headline); font-size:28px;
+  .ec-nm small{display:block; font-size:14.5px; color:var(--fg-secondary); margin-top:5px}
+  .ec-det{display:flex; flex-wrap:wrap; gap:8px}
+  .ec-det span{background:#fafcfb; border:1px solid var(--border-default);
+    border-radius:999px; padding:7px 14px; font-size:13px; font-weight:600;
+    color:var(--fg-secondary)}
+  .ec-hr{text-align:right}
+  .ec-hr b{font-family:var(--font-headline); font-size:30px; color:var(--color-dark-green);
+    display:block; line-height:1}
+  .ec-hr small{font-size:12.5px; color:#9aa5a0; display:block; margin-top:5px}
+  .ec-sub{text-align:right; font-family:var(--font-headline); font-size:32px;
     color:var(--fg-primary); font-variant-numeric:tabular-nums}
-  .pq-r.opt .pq-v{color:var(--color-dark-green)}
 
-  .pq-sum{margin-top:24px; display:grid; grid-template-columns:1.15fr 1fr 1fr; gap:22px;
-    height:176px}
-  .pq-note{background:#fafcfb; border:1px solid var(--border-default); border-radius:16px;
-    padding:26px 30px; display:flex; flex-direction:column; justify-content:center}
-  .pq-note b{font-family:var(--font-headline); font-size:21px; color:var(--color-dark-green);
-    line-height:1.2; margin-bottom:10px}
-  .pq-note p{margin:0; font-size:15px; line-height:1.5; color:var(--fg-secondary)}
-  .pq-t{border-radius:16px; padding:26px 30px; display:flex; flex-direction:column;
-    justify-content:center; text-align:center}
-  .pq-t.base{background:#fff; border:1.5px solid var(--border-default);
-    box-shadow:0 2px 12px rgba(0,0,0,.04)}
-  .pq-t.full{background:var(--gradient-hero); box-shadow:0 8px 40px rgba(18,242,128,.42)}
-  .pq-t .kx2{font-size:11px; font-weight:700; letter-spacing:.14em; text-transform:uppercase;
-    color:#9aa5a0; margin-bottom:12px}
-  .pq-t.full .kx2{color:rgba(255,255,255,.9)}
-  .pq-t .vx2{font-family:var(--font-headline); font-size:40px; color:var(--fg-primary);
-    line-height:1}
-  .pq-t.full .vx2{color:#fff}
-  .pq-t .sx2{font-size:13.5px; color:var(--fg-secondary); margin-top:10px; line-height:1.4}
-  .pq-t.full .sx2{color:rgba(255,255,255,.88)}
+  .ec-tot{display:grid; grid-template-columns:1fr 300px 250px 260px; gap:20px;
+    padding:26px 34px; align-items:center; background:var(--gradient-dark-cover)}
+  .ec-tot .lb2{font-family:var(--font-headline); font-size:25px; color:#fff}
+  .ec-tot .lb2 small{display:block; font-family:var(--font-body); font-size:14px;
+    font-weight:400; color:rgba(255,255,255,.55); margin-top:5px}
+  .ec-tot .hrs{display:flex; flex-wrap:wrap; gap:8px}
+  .ec-tot .hrs span{background:rgba(255,255,255,.09); border:1px solid rgba(255,255,255,.2);
+    border-radius:999px; padding:7px 14px; font-size:13px; font-weight:600;
+    color:rgba(255,255,255,.85)}
+  .ec-tot .ph2{text-align:right}
+  .ec-tot .ph2 b{font-family:var(--font-headline); font-size:30px;
+    color:var(--color-neon-green); display:block; line-height:1}
+  .ec-tot .ph2 small{font-size:12.5px; color:rgba(255,255,255,.5); display:block;
+    margin-top:5px}
+  .ec-tot .gr{text-align:right; font-family:var(--font-headline); font-size:38px;
+    color:#fff; font-variant-numeric:tabular-nums}
+
+  .ec-foot{margin-top:24px; display:flex; align-items:center; gap:20px;
+    background:#f4fef8; border:1px solid #c8f0dc; border-radius:14px; padding:20px 30px}
+  .ec-foot .kf{font-family:var(--font-headline); font-size:19px;
+    color:var(--color-dark-green); white-space:nowrap}
+  .ec-foot p{margin:0; font-size:15.5px; line-height:1.45; color:#2c3330}
+
+  /* -- Slide de un componente -- */
+  .ec-one{display:grid; grid-template-columns:1.2fr 1fr; gap:32px; height:660px}
+  .ec-res{background:#fff; border:1.5px solid var(--border-default); border-radius:20px;
+    padding:40px 44px; box-shadow:0 4px 22px rgba(0,0,0,.05); display:flex;
+    flex-direction:column}
+  .ec-res .kr{font-size:11px; font-weight:700; letter-spacing:.15em; text-transform:uppercase;
+    color:var(--color-dark-green); margin-bottom:20px}
+  .ec-li{display:flex; gap:16px; align-items:flex-start; padding:17px 0;
+    border-top:1px solid #eef1f0}
+  .ec-li:first-of-type{border-top:0}
+  .ec-li svg{width:22px; height:22px; flex:0 0 auto; margin-top:2px}
+  .ec-li b{display:block; font-size:18.5px; font-weight:600; color:var(--fg-primary);
+    line-height:1.3; margin-bottom:4px}
+  .ec-li span{font-size:15px; line-height:1.45; color:var(--fg-secondary)}
+  .ec-both{margin-top:auto; padding-top:22px; display:flex; align-items:center; gap:14px;
+    border-top:1px solid var(--border-default)}
+  .ec-both i{width:9px; height:9px; border-radius:50%; background:var(--color-neon-green);
+    box-shadow:0 0 10px rgba(18,242,128,.8); display:block; flex:0 0 auto}
+  .ec-both p{margin:0; font-size:15.5px; line-height:1.45; color:#2c3330}
+  .ec-both b{color:var(--color-dark-green)}
+
+  .ec-price{background:var(--gradient-dark-cover); border-radius:20px; padding:42px 40px;
+    color:#fff; box-shadow:0 10px 50px rgba(9,86,44,.32); display:flex;
+    flex-direction:column; justify-content:center}
+  .ec-price .kp{font-size:11px; font-weight:700; letter-spacing:.16em; text-transform:uppercase;
+    color:var(--color-neon-green); margin-bottom:16px}
+  .ec-price .vp{font-family:var(--font-headline); font-size:64px; line-height:1;
+    margin-bottom:16px}
+  .ec-price .xp{font-size:16px; line-height:1.5; color:rgba(255,255,255,.68)}
+  .ec-opt{background:rgba(255,255,255,.07); border:1px solid rgba(18,242,128,.32);
+    border-radius:15px; padding:24px 26px; margin-bottom:14px}
+  .ec-opt:last-of-type{margin-bottom:0}
+  .ec-opt.hi{background:rgba(18,242,128,.13); border-color:rgba(18,242,128,.55)}
+  .ec-opt .ko{font-size:10.5px; font-weight:700; letter-spacing:.14em; text-transform:uppercase;
+    color:var(--color-neon-green); margin-bottom:9px}
+  .ec-opt .vo{font-family:var(--font-headline); font-size:44px; line-height:1; color:#fff}
+  .ec-opt .xo{font-size:14px; line-height:1.45; color:rgba(255,255,255,.62); margin-top:9px}
 
 </style>
 </head>
@@ -2981,168 +2968,256 @@
 </section>
 
 
-<!-- ════════════ PROPUESTA ECONOMICA · CAPACITACION ════════════ -->
-<section data-label="Propuesta econ&oacute;mica &middot; Capacitaci&oacute;n">
+
+
+
+
+
+
+<!-- ════════════ ECO 01 · PLAN DE CAPACITACION ════════════ -->
+<section data-label="Propuesta econ&oacute;mica &middot; Plan de capacitaci&oacute;n">
   <img class="stamp-logo" src="./_plantilla/assets/logo-horizontal.png" alt="">
-  <p class="eyebrow">Componente 01 <b>&middot;</b> Plan de transformaci&oacute;n en IA</p>
-  <h1 class="title">Propuesta econ&oacute;mica</h1>
+  <p class="eyebrow">Propuesta econ&oacute;mica <b>&middot;</b> Componente 01</p>
+  <h1 class="title">Plan de transformaci&oacute;n en IA</h1>
   <p class="hint hint-sm">El tronco lo dictan dos capacitadores para todo el
-     equipo. El zoom baja a un capacitador por &aacute;rea, y con eso baja la hora.</p>
+     equipo. El zoom baja a uno por &aacute;rea, y con eso baja la hora.</p>
 
-  <div class="pe">
-
-    <div class="pe-c a">
-      <div class="pe-h">
-        <span class="no">01</span>
-        <span class="tt">Fundamentos y primer agente<small>El tronco &middot; lo ve todo el equipo</small></span>
-      </div>
-      <div class="pe-b">
-        <div class="pe-meta">
-          <div><div class="n3">6</div><div class="l3">M&oacute;dulos</div></div>
-          <div><div class="n3">12</div><div class="l3">Horas</div></div>
-          <div><div class="n3">2</div><div class="l3">Capacitadores en sala</div></div>
-        </div>
-        <div class="pe-hero">
-          <div class="k7">Valor hora</div>
-          <div class="v7">$850.000 <em>/ hora</em></div>
-          <div class="x7">Dos capacitadores acompa&ntilde;ando al equipo completo
-            &mdash; directivos, comerciales, SECOP y reporter&iacute;a en el mismo
-            sal&oacute;n.</div>
-        </div>
-        <div class="pe-tot">
-          <span class="k8">Subtotal</span>
-          <span class="v8">$10.200.000</span>
-        </div>
-      </div>
+  <div class="ec-t">
+    <div class="ec-th">
+      <div>M&oacute;dulo</div><div>Alcance</div>
+      <div class="ra">Valor hora</div><div class="ra">Subtotal</div>
     </div>
 
-    <div class="pe-c b">
-      <div class="pe-h">
-        <span class="no">02</span>
-        <span class="tt">Zoom por &aacute;rea<small>Una rama para cada equipo</small></span>
-      </div>
-      <div class="pe-b">
-        <div class="pe-meta">
-          <div><div class="n3">4</div><div class="l3">&Aacute;reas</div></div>
-          <div><div class="n3">16</div><div class="l3">Horas</div></div>
-          <div><div class="n3">1</div><div class="l3">Capacitador por &aacute;rea</div></div>
-        </div>
-        <div class="pe-hero">
-          <div class="k7">Valor hora</div>
-          <div class="v7">$600.000 <em>/ hora</em></div>
-          <div class="x7">Grupos m&aacute;s peque&ntilde;os y un solo capacitador por
-            rama: la hora baja <b>29%</b> frente al tronco.</div>
-        </div>
-        <div class="pe-tot">
-          <span class="k8">Subtotal</span>
-          <span class="v8">$9.600.000</span>
-        </div>
-      </div>
+    <div class="ec-tr">
+      <div class="ec-nm"><span class="nu3">01</span>
+        <span><b>Fundamentos y primer agente</b>
+          <small>El tronco &mdash; lo ve todo el equipo</small></span></div>
+      <div class="ec-det"><span>6 m&oacute;dulos</span><span>12 horas</span>
+        <span>2 capacitadores</span></div>
+      <div class="ec-hr"><b>$850.000</b><small>por hora</small></div>
+      <div class="ec-sub">$10.200.000</div>
     </div>
 
+    <div class="ec-tr">
+      <div class="ec-nm"><span class="nu3">02</span>
+        <span><b>Zoom por &aacute;rea</b>
+          <small>Una rama para cada equipo</small></span></div>
+      <div class="ec-det"><span>4 &aacute;reas</span><span>16 horas</span>
+        <span>1 capacitador</span></div>
+      <div class="ec-hr"><b>$600.000</b><small>por hora</small></div>
+      <div class="ec-sub">$9.600.000</div>
+    </div>
+
+    <div class="ec-tot">
+      <div class="lb2">Total del plan<small>Tronco com&uacute;n m&aacute;s zoom por
+        &aacute;rea</small></div>
+      <div class="hrs"><span>28 horas</span><span>Todas las &aacute;reas</span></div>
+      <div class="ph2"><b>$707.143</b><small>hora promedio</small></div>
+      <div class="gr">$19.800.000</div>
+    </div>
   </div>
 
-  <div class="pe-sum">
-    <div class="pe-s">
-      <div class="kk9">Horas totales</div>
-      <div class="vv9">28</div>
-      <div class="xx9">12 del tronco + 16 del zoom</div>
-    </div>
-    <div class="pe-s">
-      <div class="kk9">Valor hora promedio</div>
-      <div class="vv9">$707.143</div>
-      <div class="xx9">Mezcla de las dos tarifas</div>
-    </div>
-    <div class="pe-s hi">
-      <div class="kk9">Inversi&oacute;n total</div>
-      <div class="vv9">$19.800.000</div>
-      <div class="xx9">Plan de transformaci&oacute;n completo, todas las &aacute;reas</div>
-    </div>
+  <div class="ec-foot">
+    <span class="kf">Por qu&eacute; baja la hora</span>
+    <p>En el tronco hay <b>dos capacitadores</b> acompa&ntilde;ando al equipo completo
+       en el mismo sal&oacute;n. En el zoom cada &aacute;rea trabaja con
+       <b>un solo capacitador</b>, en grupo peque&ntilde;o.</p>
   </div>
 
   <div class="stamp-cap">Prosegur &middot; Propuesta COLMEN IA</div>
-  <div class="stamp-num">26</div>
+  <div class="stamp-num">22</div>
 </section>
 
 
-<!-- ════════════ PROPUESTA ECONOMICA · CONSOLIDADO ════════════ -->
-<section data-label="Propuesta econ&oacute;mica &middot; Consolidado">
+<!-- ════════════ ECO 02 · TARIFADOR ════════════ -->
+<section data-label="Propuesta econ&oacute;mica &middot; Tarifador">
   <img class="stamp-logo" src="./_plantilla/assets/logo-horizontal.png" alt="">
-  <p class="eyebrow">Propuesta consolidada</p>
-  <h1 class="title">Los cuatro componentes</h1>
-  <p class="hint hint-sm">Dos de ellos &mdash; el gestor de SECOP y el agente de
-     prospecci&oacute;n &mdash; sirven a las dos compa&ntilde;&iacute;as con la misma
-     implementaci&oacute;n.</p>
+  <p class="eyebrow">Propuesta econ&oacute;mica <b>&middot;</b> Componente 02</p>
+  <h1 class="title">Tarifador Inteligente</h1>
+  <p class="hint hint-sm">Lo que entra en la implementaci&oacute;n y su valor.</p>
 
-  <div class="pq">
-    <div class="pq-h">
-      <div>Componente</div><div class="c2">Aplica a</div><div class="c3">Valor</div>
+  <div class="ec-one">
+    <div class="ec-res">
+      <p class="kr">Resumen ejecutivo</p>
+
+      <div class="ec-li">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#09562c" stroke-width="1.9" stroke-linecap="round">
+          <path d="M20 7h-9M14 17H5"/><circle cx="17" cy="17" r="3"/><circle cx="7" cy="7" r="3"/></svg>
+        <div><b>Tarifa de servicios fijos y adicionales</b>
+          <span>Adicionales normales y especiales, con la l&oacute;gica de cada uno.</span></div>
+      </div>
+      <div class="ec-li">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#09562c" stroke-width="1.9" stroke-linecap="round">
+          <ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/>
+          <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+        <div><b>Conectado a las cinco fuentes</b>
+          <span>MARTE, Meta 4, la nube de compras, las reglas de negocio y la
+            adquisici&oacute;n del dato.</span></div>
+      </div>
+      <div class="ec-li">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#09562c" stroke-width="1.9" stroke-linecap="round">
+          <path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        <div><b>Sugiere la tarifa y la sustenta</b>
+          <span>Contra el hist&oacute;rico, y reporta lo que no puede resolver en vez de
+            rellenarlo.</span></div>
+      </div>
+      <div class="ec-li">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#09562c" stroke-width="1.9" stroke-linecap="round">
+          <rect x="2" y="4" width="20" height="14" rx="2"/><path d="M8 22h8M12 18v4"/></svg>
+        <div><b>Portal privado de cliente</b>
+          <span>Para servicios adicionales, con las cuatro &aacute;reas notificadas al
+            tiempo.</span></div>
+      </div>
+
+      <div class="ec-both">
+        <i></i>
+        <p>El m&eacute;todo de conexi&oacute;n a cada sistema se define con
+          <b>TI de Prosegur</b> al inicio; ese valor se presenta como estimado.</p>
+      </div>
     </div>
 
-    <div class="pq-r">
-      <div class="pq-nm"><span class="nu2">01</span>
-        <span><b>Plan de transformaci&oacute;n en IA</b>
-          <small>28 horas &middot; tronco com&uacute;n y zoom por &aacute;rea</small></span></div>
-      <div class="pq-ap"><em>Todo el equipo</em></div>
-      <div class="pq-v">$19.800.000</div>
-    </div>
-
-    <div class="pq-r">
-      <div class="pq-nm"><span class="nu2">02</span>
-        <span><b>Tarifador Inteligente</b>
-          <small>Servicios fijos y adicionales, con portal de cliente</small></span></div>
-      <div class="pq-ap"><em>Operaci&oacute;n de seguridad</em></div>
-      <div class="pq-v">$60.000.000</div>
-    </div>
-
-    <div class="pq-r">
-      <div class="pq-nm"><span class="nu2">03</span>
-        <span><b>Agente de Prospecci&oacute;n y Ventas</b>
-          <small>Radar, informe con tel&eacute;fonos y correos en fr&iacute;o</small></span></div>
-      <div class="pq-ap"><span><i></i>Security + Tecnolog&iacute;a</span></div>
-      <div class="pq-v">$22.000.000</div>
-    </div>
-
-    <div class="pq-r">
-      <div class="pq-nm"><span class="nu2">04</span>
-        <span><b>Gestor de SECOP</b>
-          <small>Conexi&oacute;n directa a SECOP, informe priorizado y an&aacute;lisis
-            de pliegos</small></span></div>
-      <div class="pq-ap"><span><i></i>Security + Tecnolog&iacute;a</span></div>
-      <div class="pq-v">$15.000.000</div>
-    </div>
-
-    <div class="pq-r opt">
-      <div class="pq-nm"><span class="nu2 gh">+</span>
-        <span><b>&hellip; y las plataformas privadas</b>
-          <small>Ariba y las dem&aacute;s, cuando quede validado el alcance de cada
-            integraci&oacute;n</small></span></div>
-      <div class="pq-ap"><em>Opcional</em></div>
-      <div class="pq-v">$23.000.000</div>
-    </div>
-  </div>
-
-  <div class="pq-sum">
-    <div class="pq-note">
-      <b>Una implementaci&oacute;n, dos compa&ntilde;&iacute;as</b>
-      <p>El gestor de SECOP y el agente de prospecci&oacute;n se montan una sola vez
-         y sirven tanto a <b>Prosegur Security</b> como a <b>Prosegur
-         Tecnolog&iacute;a</b>, cada una con su foco y su informe.</p>
-    </div>
-    <div class="pq-t base">
-      <div class="kx2">Los cuatro componentes</div>
-      <div class="vx2">$116.800.000</div>
-      <div class="sx2">Con el gestor conectado solo a SECOP</div>
-    </div>
-    <div class="pq-t full">
-      <div class="kx2">Con plataformas privadas</div>
-      <div class="vx2">$124.800.000</div>
-      <div class="sx2">Sumando Ariba y las dem&aacute;s plataformas</div>
+    <div class="ec-price">
+      <div class="kp">Inversi&oacute;n</div>
+      <div class="vp">$60.000.000</div>
+      <div class="xp">Implementaci&oacute;n completa del tarifador, con el portal de
+        cliente y la conexi&oacute;n a las fuentes.</div>
     </div>
   </div>
 
   <div class="stamp-cap">Prosegur &middot; Propuesta COLMEN IA</div>
-  <div class="stamp-num">27</div>
+  <div class="stamp-num">23</div>
+</section>
+
+
+<!-- ════════════ ECO 03 · PROSPECCION ════════════ -->
+<section data-label="Propuesta econ&oacute;mica &middot; Prospecci&oacute;n">
+  <img class="stamp-logo" src="./_plantilla/assets/logo-horizontal.png" alt="">
+  <p class="eyebrow">Propuesta econ&oacute;mica <b>&middot;</b> Componente 03</p>
+  <h1 class="title">Agente de Prospecci&oacute;n y Ventas</h1>
+  <p class="hint hint-sm">Lo que entra en la implementaci&oacute;n y su valor.</p>
+
+  <div class="ec-one">
+    <div class="ec-res">
+      <p class="kr">Resumen ejecutivo</p>
+
+      <div class="ec-li">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#09562c" stroke-width="1.9" stroke-linecap="round">
+          <circle cx="10.5" cy="10.5" r="7"/><path d="M21 21l-5.8-5.8"/></svg>
+        <div><b>Rastreo de noticias y LinkedIn</b>
+          <span>Publicaciones, cambios de cargo y tambi&eacute;n los comentarios, que
+            suelen decir m&aacute;s que el post.</span></div>
+      </div>
+      <div class="ec-li">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#09562c" stroke-width="1.9" stroke-linecap="round">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6
+          19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0
+          0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2
+          2 0 0 1 22 16.92z"/></svg>
+        <div><b>Informe con qui&eacute;n decide y su tel&eacute;fono</b>
+          <span>Tres contactos por empresa y el motivo concreto para llamar, con enlace
+            a la fuente.</span></div>
+      </div>
+      <div class="ec-li">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#09562c" stroke-width="1.9" stroke-linecap="round">
+          <path d="M4 5h16v14H4z"/><path d="M4 8l8 5 8-5"/></svg>
+        <div><b>Correos en fr&iacute;o por cada comercial</b>
+          <span>Cinco por empresa al mes, desde la bandeja de cada uno, sin que nadie
+            redacte.</span></div>
+      </div>
+      <div class="ec-li">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#09562c" stroke-width="1.9" stroke-linecap="round">
+          <path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v6h-6"/></svg>
+        <div><b>Panel semanal y aprendizaje</b>
+          <span>La direcci&oacute;n comercial prende las se&ntilde;ales de la semana y el
+            feedback del equipo afina el radar.</span></div>
+      </div>
+
+      <div class="ec-both">
+        <i></i>
+        <p>Una sola implementaci&oacute;n sirve a <b>Prosegur Security</b> y a
+          <b>Prosegur Tecnolog&iacute;a</b>, cada una con su foco y su base.</p>
+      </div>
+    </div>
+
+    <div class="ec-price">
+      <div class="kp">Inversi&oacute;n</div>
+      <div class="vp">$22.000.000</div>
+      <div class="xp">Agente completo para las dos compa&ntilde;&iacute;as. Las licencias
+        de Apollo y Lusha se presupuestan aparte.</div>
+    </div>
+  </div>
+
+  <div class="stamp-cap">Prosegur &middot; Propuesta COLMEN IA</div>
+  <div class="stamp-num">24</div>
+</section>
+
+
+<!-- ════════════ ECO 04 · SECOP ════════════ -->
+<section data-label="Propuesta econ&oacute;mica &middot; SECOP">
+  <img class="stamp-logo" src="./_plantilla/assets/logo-horizontal.png" alt="">
+  <p class="eyebrow">Propuesta econ&oacute;mica <b>&middot;</b> Componente 04</p>
+  <h1 class="title">Gestor de SECOP y licitaciones</h1>
+  <p class="hint hint-sm">Dos alcances posibles: solo SECOP, o sumando las
+     plataformas privadas.</p>
+
+  <div class="ec-one">
+    <div class="ec-res">
+      <p class="kr">Resumen ejecutivo</p>
+
+      <div class="ec-li">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#09562c" stroke-width="1.9" stroke-linecap="round">
+          <path d="M23 4v6h-6"/><path d="M20.5 15a9 9 0 1 1-2.1-9.4L23 10"/></svg>
+        <div><b>Conexi&oacute;n directa a SECOP</b>
+          <span>Barrido dos veces al d&iacute;a, sin pagar intermediario.</span></div>
+      </div>
+      <div class="ec-li">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#09562c" stroke-width="1.9" stroke-linecap="round">
+          <path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/></svg>
+        <div><b>El hist&oacute;rico como criterio</b>
+          <span>Se levanta y estructura lo que Prosegur ya present&oacute;; eso es lo que
+            le da criterio al filtro.</span></div>
+      </div>
+      <div class="ec-li">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#09562c" stroke-width="1.9" stroke-linecap="round">
+          <path d="M3 21h18M7 21V11M12 21V6M17 21v-7"/></svg>
+        <div><b>Informe priorizado</b>
+          <span>Qu&eacute; porcentaje de cada convocatoria puede prestar Prosegur, y con eso
+            el orden para competir.</span></div>
+      </div>
+      <div class="ec-li">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#09562c" stroke-width="1.9" stroke-linecap="round">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+          <path d="M14 2v6h6M9 15l2 2 4-4"/></svg>
+        <div><b>An&aacute;lisis de pliegos bajo demanda</b>
+          <span>Condiciones, capacidad territorial, indicadores y personal, sobre las que
+            un humano marque.</span></div>
+      </div>
+
+      <div class="ec-both">
+        <i></i>
+        <p>Una sola implementaci&oacute;n sirve a <b>Prosegur Security</b> y a
+          <b>Prosegur Tecnolog&iacute;a</b>, cada una con su informe.</p>
+      </div>
+    </div>
+
+    <div class="ec-price">
+      <div class="ec-opt hi">
+        <div class="ko">Alcance base</div>
+        <div class="vo">$15.000.000</div>
+        <div class="xo">Conectado a SECOP, con el hist&oacute;rico levantado, el informe
+          priorizado y el an&aacute;lisis de pliegos.</div>
+      </div>
+      <div class="ec-opt">
+        <div class="ko">Con plataformas privadas</div>
+        <div class="vo">$23.000.000</div>
+        <div class="xo">Sumando Ariba y las dem&aacute;s, una vez validado el alcance de
+          cada integraci&oacute;n.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="stamp-cap">Prosegur &middot; Propuesta COLMEN IA</div>
+  <div class="stamp-num">25</div>
 </section>
 
 
