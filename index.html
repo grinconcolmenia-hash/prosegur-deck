@@ -1268,11 +1268,85 @@
     color:#9aa5a0}
   .pr-wf b{color:var(--color-dark-green)}
 
+
+  /* ══ PORTADAS DE COMPONENTE ═══════════════════════════════ */
+  .pc{padding:0}
+  .pc-bg{position:absolute; inset:0; background-size:cover; background-position:center;
+    z-index:0}
+  .pc-scrim{position:absolute; inset:0; z-index:1}
+  .pc-scrim.l{background:linear-gradient(90deg,
+    rgba(4,10,7,.97) 0%, rgba(4,10,7,.93) 30%, rgba(4,10,7,.62) 55%, rgba(4,10,7,.12) 78%,
+    rgba(4,10,7,0) 100%)}
+  .pc-scrim.r{background:linear-gradient(270deg,
+    rgba(4,10,7,.97) 0%, rgba(4,10,7,.93) 30%, rgba(4,10,7,.62) 55%, rgba(4,10,7,.12) 78%,
+    rgba(4,10,7,0) 100%)}
+  .pc-vig{position:absolute; inset:0; z-index:1;
+    background:linear-gradient(180deg, rgba(4,10,7,.55) 0%, rgba(4,10,7,0) 26%,
+      rgba(4,10,7,0) 74%, rgba(4,10,7,.6) 100%)}
+
+  .pc-wrap{position:absolute; top:50%; transform:translateY(-50%); z-index:3; width:760px}
+  .pc-wrap.l{left:110px}
+  .pc-wrap.r{right:110px; text-align:right}
+
+  .pc-chip{display:inline-flex; align-items:center; gap:11px; border:1px solid rgba(18,242,128,.45);
+    background:rgba(18,242,128,.10); border-radius:999px; padding:9px 20px;
+    font-size:13px; font-weight:700; letter-spacing:.15em; text-transform:uppercase;
+    color:var(--color-neon-green); margin-bottom:26px}
+  .pc-chip i{width:8px; height:8px; border-radius:50%; background:var(--color-neon-green);
+    box-shadow:0 0 12px rgba(18,242,128,.9); display:block}
+
+  .pc-title{font-family:var(--font-headline); font-size:84px; line-height:1.03;
+    letter-spacing:.005em; margin:0 0 24px; color:#fff}
+  .pc-title span{color:var(--color-neon-green)}
+
+  .pc-sub{font-family:var(--font-subtitle); font-size:25px; line-height:1.5;
+    color:rgba(255,255,255,.76); margin:0 0 34px}
+  .pc-wrap.l .pc-sub{max-width:660px}
+  .pc-wrap.r .pc-sub{max-width:660px; margin-left:auto}
+
+  .pc-tags{display:flex; flex-wrap:wrap; gap:11px}
+  .pc-wrap.r .pc-tags{justify-content:flex-end}
+  .pc-tags span{border:1px solid rgba(255,255,255,.24); background:rgba(255,255,255,.07);
+    border-radius:999px; padding:11px 21px; font-size:16px; font-weight:600;
+    color:rgba(255,255,255,.88)}
+
+  .pc-corner{position:absolute; width:74px; height:74px; z-index:4;
+    border-color:rgba(18,242,128,.62); border-style:solid; border-width:0}
+  .pc-corner.tl{top:56px; left:56px; border-top-width:2px; border-left-width:2px}
+  .pc-corner.bl{bottom:56px; left:56px; border-bottom-width:2px; border-left-width:2px}
+  .pc-corner.tr{top:56px; right:56px; border-top-width:2px; border-right-width:2px}
+  .pc-corner.br{bottom:56px; right:56px; border-bottom-width:2px; border-right-width:2px}
+
+  .pc-mark{position:absolute; bottom:44px; z-index:4; font-family:var(--font-headline);
+    font-size:15px; letter-spacing:.16em; color:rgba(255,255,255,.38)}
+  .pc-mark.l{left:110px}
+  .pc-mark.r{right:110px}
+
 </style>
 </head>
 <body>
 
 <deck-stage width="1920" height="1080">
+
+
+<!-- ════════ PORTADA · COMPONENTE 01 · CAPACITACION ════════ -->
+<section data-label="Portada &middot; Capacitaci&oacute;n" class="pc">
+  <div class="pc-bg" style="background-image:url('./_plantilla/assets/portadas/capacitacion.jpg')"></div>
+  <div class="pc-scrim l"></div>
+  <div class="pc-vig"></div>
+  <div class="pc-wrap l">
+    <div class="pc-chip"><i></i>Componente 01</div>
+    <h2 class="pc-title">Capacitaci&oacute;n<br><span>a la medida de Prosegur</span></h2>
+    <p class="pc-sub">Formaci&oacute;n pr&aacute;ctica por &aacute;rea, sobre los
+      procesos que el equipo ya tiene entre manos.</p>
+    <div class="pc-tags">
+      <span>C&oacute;mo se desarrolla</span><span>El programa</span>
+      <span>Zoom por &aacute;rea</span><span>C&oacute;mo se dicta</span>
+    </div>
+  </div>
+  <span class="pc-corner tl"></span><span class="pc-corner bl"></span>
+  <div class="pc-mark r">COLMEN IA</div>
+</section>
 
 
 <!-- ============ C00 · ORGANIGRAMA ============ -->
@@ -1425,6 +1499,26 @@
 
   <div class="stamp-cap">Prosegur &middot; Propuesta COLMEN IA</div>
   <div class="stamp-num">04</div>
+</section>
+
+
+<!-- ════════ PORTADA · COMPONENTE 02 · TARIFADOR ════════ -->
+<section data-label="Portada &middot; Tarifador" class="pc">
+  <div class="pc-bg" style="background-image:url('./_plantilla/assets/portadas/tarifador.jpg')"></div>
+  <div class="pc-scrim r"></div>
+  <div class="pc-vig"></div>
+  <div class="pc-wrap r">
+    <div class="pc-chip"><i></i>Componente 02</div>
+    <h2 class="pc-title">Tarifador<br><span>Inteligente</span></h2>
+    <p class="pc-sub">De perseguir el dato por correo a tener la tarifa
+      sustentada, en minutos.</p>
+    <div class="pc-tags">
+      <span>Qu&eacute; solucionamos</span><span>El motor</span>
+      <span>La cotizaci&oacute;n</span><span>Portal de cliente</span>
+    </div>
+  </div>
+  <span class="pc-corner tr"></span><span class="pc-corner br"></span>
+  <div class="pc-mark l">COLMEN IA</div>
 </section>
 
 
@@ -2044,10 +2138,30 @@
 </section>
 
 
+<!-- ════════ PORTADA · COMPONENTE 03 · PROSPECCION ════════ -->
+<section data-label="Portada &middot; Prospecci&oacute;n" class="pc">
+  <div class="pc-bg" style="background-image:url('./_plantilla/assets/portadas/prospeccion.jpg')"></div>
+  <div class="pc-scrim l"></div>
+  <div class="pc-vig"></div>
+  <div class="pc-wrap l">
+    <div class="pc-chip"><i></i>Componente 03</div>
+    <h2 class="pc-title">Agente de<br><span>Prospecci&oacute;n y Ventas</span></h2>
+    <p class="pc-sub">Del titular en la prensa al tel&eacute;fono de quien
+      decide, sin que nadie lo busque.</p>
+    <div class="pc-tags">
+      <span>Los tres caminos</span><span>Entiende y rastrea</span>
+      <span>Correos en fr&iacute;o</span><span>La estrategia</span>
+    </div>
+  </div>
+  <span class="pc-corner tl"></span><span class="pc-corner bl"></span>
+  <div class="pc-mark r">COLMEN IA</div>
+</section>
+
+
 <!-- ============ 12 · HOY vs EL AGENTE ============ -->
 <section data-label="Prospecci&oacute;n &middot; Qu&eacute; solucionamos">
   <img class="stamp-logo" src="./_plantilla/assets/logo-horizontal.png" alt="">
-  <p class="eyebrow">Componente 04 <b>&middot;</b> Agente de Prospecci&oacute;n y Ventas</p>
+  <p class="eyebrow">Componente 03 <b>&middot;</b> Agente de Prospecci&oacute;n y Ventas</p>
   <h1 class="title">Prospectar deja de ser a pulso</h1>
   <p class="hint hint-sm">Hoy depende de a qui&eacute;n conoce cada comercial.
      Con el agente, depende de lo que est&aacute; pasando en el mercado.</p>
@@ -2100,7 +2214,7 @@
 <!-- ============ 13 · LOS TRES CAMINOS ============ -->
 <section data-label="Prospecci&oacute;n &middot; C&oacute;mo se prospecta hoy">
   <img class="stamp-logo" src="./_plantilla/assets/logo-horizontal.png" alt="">
-  <p class="eyebrow">Componente 04 <b>&middot;</b> Agente de Prospecci&oacute;n y Ventas</p>
+  <p class="eyebrow">Componente 03 <b>&middot;</b> Agente de Prospecci&oacute;n y Ventas</p>
   <h1 class="title">Los tres caminos de hoy</h1>
   <p class="hint">Contados por los mismos comerciales. Los tres se quedan cortos.</p>
 
@@ -2159,7 +2273,7 @@
 <!-- ============ 14 · EL FLUJO COMPLETO (unificado) ============ -->
 <section data-label="Prospecci&oacute;n &middot; C&oacute;mo funciona">
   <img class="stamp-logo" src="./_plantilla/assets/logo-horizontal.png" alt="">
-  <p class="eyebrow">Componente 04 <b>&middot;</b> Agente de Prospecci&oacute;n y Ventas</p>
+  <p class="eyebrow">Componente 03 <b>&middot;</b> Agente de Prospecci&oacute;n y Ventas</p>
   <h1 class="title">Entiende, rastrea y entrega</h1>
   <p class="hint hint-sm">Todo el ciclo del agente, de las reglas del negocio al
      tel&eacute;fono en la mano del comercial.</p>
@@ -2288,7 +2402,7 @@
 <!-- ============ 15 · CORREOS EN FRIO (flujograma) ============ -->
 <section data-label="Prospecci&oacute;n &middot; Correos en fr&iacute;o">
   <img class="stamp-logo" src="./_plantilla/assets/logo-horizontal.png" alt="">
-  <p class="eyebrow">Componente 04 <b>&middot;</b> Agente de Prospecci&oacute;n y Ventas</p>
+  <p class="eyebrow">Componente 03 <b>&middot;</b> Agente de Prospecci&oacute;n y Ventas</p>
   <div class="pr-step4"><span class="nu4">04</span>El cuarto paso del agente</div>
   <h1 class="title">Correos en fr&iacute;o que se escriben solos</h1>
   <p class="hint hint-sm">Personalizados con la se&ntilde;al de cada empresa.
@@ -2395,7 +2509,7 @@
 <!-- ============ 16 · ESTRATEGIA ============ -->
 <section data-label="Prospecci&oacute;n &middot; La estrategia">
   <img class="stamp-logo" src="./_plantilla/assets/logo-horizontal.png" alt="">
-  <p class="eyebrow">Componente 04 <b>&middot;</b> Agente de Prospecci&oacute;n y Ventas</p>
+  <p class="eyebrow">Componente 03 <b>&middot;</b> Agente de Prospecci&oacute;n y Ventas</p>
   <h1 class="title">Una estrategia fija. Cuatro semanas distintas.</h1>
   <p class="hint hint-sm">Los objetivos del a&ntilde;o no cambian. Lo que cambia
      cada semana es a qui&eacute;n se le apunta.</p>
@@ -2482,7 +2596,7 @@
 <!-- ============ 17 · ALCANCE ============ -->
 <section data-label="Prospecci&oacute;n &middot; Alcance y l&iacute;mites">
   <img class="stamp-logo" src="./_plantilla/assets/logo-horizontal.png" alt="">
-  <p class="eyebrow">Componente 04 <b>&middot;</b> Agente de Prospecci&oacute;n y Ventas</p>
+  <p class="eyebrow">Componente 03 <b>&middot;</b> Agente de Prospecci&oacute;n y Ventas</p>
   <h1 class="title">Alcance y l&iacute;mites</h1>
   <p class="hint">Lo que entra en este componente, y lo que queda fuera.</p>
 
@@ -2522,10 +2636,30 @@
 </section>
 
 
+<!-- ════════ PORTADA · COMPONENTE 04 · SECOP ════════ -->
+<section data-label="Portada &middot; SECOP" class="pc">
+  <div class="pc-bg" style="background-image:url('./_plantilla/assets/portadas/secop.jpg')"></div>
+  <div class="pc-scrim r"></div>
+  <div class="pc-vig"></div>
+  <div class="pc-wrap r">
+    <div class="pc-chip"><i></i>Componente 04</div>
+    <h2 class="pc-title">Gestor de<br><span>SECOP y licitaciones</span></h2>
+    <p class="pc-sub">Dejar de revisar convocatorias a mano y empezar a escoger
+      d&oacute;nde competir.</p>
+    <div class="pc-tags">
+      <span>Qu&eacute; solucionamos</span><span>C&oacute;mo funciona</span>
+      <span>El informe</span><span>An&aacute;lisis de pliegos</span>
+    </div>
+  </div>
+  <span class="pc-corner tr"></span><span class="pc-corner br"></span>
+  <div class="pc-mark l">COLMEN IA</div>
+</section>
+
+
 <!-- ============ 08 · SECOP · QUE SOLUCIONAMOS ============ -->
 <section data-label="SECOP &middot; Qu&eacute; solucionamos">
   <img class="stamp-logo" src="./_plantilla/assets/logo-horizontal.png" alt="">
-  <p class="eyebrow">Componente 03 <b>&middot;</b> Gestor de SECOP</p>
+  <p class="eyebrow">Componente 04 <b>&middot;</b> Gestor de SECOP</p>
   <h1 class="title">Qu&eacute; solucionamos</h1>
   <p class="hint hint-sm">El equipo de licitaciones no est&aacute; lento. Est&aacute; en su
      techo de capacidad.</p>
@@ -2565,7 +2699,7 @@
 <!-- ============ 09 · SECOP · EL FLUJO ============ -->
 <section data-label="SECOP &middot; El flujo">
   <img class="stamp-logo" src="./_plantilla/assets/logo-horizontal.png" alt="">
-  <p class="eyebrow">Componente 03 <b>&middot;</b> Gestor de SECOP</p>
+  <p class="eyebrow">Componente 04 <b>&middot;</b> Gestor de SECOP</p>
   <h1 class="title">C&oacute;mo funciona, paso a paso</h1>
   <p class="hint hint-sm">De entender el negocio a avisarle al &aacute;rea que hay un
      documento por subsanar.</p>
@@ -2613,7 +2747,7 @@
 <!-- ============ 10 · SECOP · EL INFORME ============ -->
 <section data-label="SECOP &middot; El informe">
   <img class="stamp-logo" src="./_plantilla/assets/logo-horizontal.png" alt="">
-  <p class="eyebrow">Componente 03 <b>&middot;</b> Gestor de SECOP</p>
+  <p class="eyebrow">Componente 04 <b>&middot;</b> Gestor de SECOP</p>
   <h1 class="title">El informe que recibe el &aacute;rea</h1>
   <p class="hint hint-sm">No una lista de convocatorias: una lista ordenada por qu&eacute;
      tanto encaja cada una con lo que Prosegur sabe hacer.</p>
@@ -2693,7 +2827,7 @@
 <!-- ============ 11 · SECOP · ALCANCE ============ -->
 <section data-label="SECOP &middot; Alcance y l&iacute;mites">
   <img class="stamp-logo" src="./_plantilla/assets/logo-horizontal.png" alt="">
-  <p class="eyebrow">Componente 03 <b>&middot;</b> Gestor de SECOP</p>
+  <p class="eyebrow">Componente 04 <b>&middot;</b> Gestor de SECOP</p>
   <h1 class="title">Alcance y l&iacute;mites</h1>
   <p class="hint">Lo que entra en este componente, y lo que deliberadamente queda fuera.</p>
 
