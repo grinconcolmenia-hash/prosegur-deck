@@ -1,0 +1,1587 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>Propuesta COLMEN IA &middot; Prosegur</title>
+<link rel="stylesheet" href="./_plantilla/colors_and_type.css">
+<style>
+  deck-stage:not(:defined){visibility:hidden}
+
+  section{
+    position:relative; width:1920px; height:1080px; overflow:hidden;
+    background:var(--bg-base); font-family:var(--font-body);
+    color:var(--fg-primary); box-sizing:border-box;
+    padding:86px 110px 92px;
+  }
+  section *{box-sizing:border-box}
+
+  .stamp-logo{position:absolute; top:6px; right:52px; height:110px; opacity:.92}
+  .stamp-cap{position:absolute; left:110px; bottom:40px;
+    font-size:13px; letter-spacing:.09em; text-transform:uppercase;
+    color:var(--fg-muted); font-weight:600}
+  .stamp-num{position:absolute; right:110px; bottom:38px;
+    font-family:var(--font-headline); font-size:19px; color:var(--fg-muted)}
+
+  .eyebrow{font-size:14px; font-weight:700; letter-spacing:.16em;
+    text-transform:uppercase; color:var(--color-dark-green); margin:0 0 14px}
+  .eyebrow b{color:var(--color-neon-green); -webkit-text-stroke:.4px var(--color-dark-green)}
+  h1.title{font-family:var(--font-headline); font-size:62px; line-height:1.04;
+    letter-spacing:.01em; margin:0 0 10px; color:var(--fg-primary)}
+  .hint{font-family:var(--font-subtitle); font-size:23px; color:var(--fg-secondary);
+    margin:0 0 30px; max-width:1560px}
+  .hint-sm{margin-bottom:20px; font-size:21px}
+
+  /* ══ SLIDE 1 ════════════════════════════════════════════ */
+  .who{display:grid; grid-template-columns:repeat(3,1fr); gap:26px; height:716px}
+  .wc{border:1px solid var(--border-default); border-radius:18px; overflow:hidden;
+    background:#fff; box-shadow:0 2px 12px rgba(0,0,0,0.04); display:flex;
+    flex-direction:column}
+  .wc-head{background:var(--color-near-black); color:#fff; padding:28px 32px;
+    display:flex; align-items:center; gap:13px}
+  .wc-head svg{width:28px; height:28px; flex:0 0 auto}
+  .wc-head .r{font-family:var(--font-headline); font-size:27px; line-height:1.15}
+  .wc-body{padding:36px 32px 0; flex:1; display:flex; flex-direction:column;
+    justify-content:center; gap:34px}
+  .wc-lab{font-size:11.5px; font-weight:700; letter-spacing:.15em;
+    text-transform:uppercase; margin:0 0 10px}
+  .wc-hoy .wc-lab{color:#c0453f}
+  .wc-post .wc-lab{color:var(--color-dark-green)}
+  .wc-blk p{margin:0; font-size:19px; line-height:1.55; color:#2c3330}
+  .wc-hoy p{color:#7a6260}
+  .wc-rule{height:1px; background:var(--border-default); margin:0 32px}
+  .wc-stat{padding:32px 32px 34px; background:#f7fdfa}
+  .wc-stat .n{font-family:var(--font-headline); font-size:46px; line-height:1;
+    color:var(--color-dark-green); margin-bottom:8px}
+  .wc-stat .n em{font-style:normal; color:var(--color-neon-green);
+    -webkit-text-stroke:1px var(--color-dark-green)}
+  .wc-stat .l{font-size:14.5px; color:var(--fg-secondary); line-height:1.4}
+
+  /* ══ APP MOCKUP (slides 2 y 5) ══════════════════════════ */
+  .app{border-radius:18px; overflow:hidden; border:1px solid #d8ddda;
+    box-shadow:0 18px 60px rgba(0,0,0,0.16); background:#fff; height:668px;
+    display:flex; flex-direction:column}
+  .app-bar{height:44px; background:#eceeed; display:flex; align-items:center;
+    padding:0 18px; gap:8px; border-bottom:1px solid #dadedc; flex:0 0 auto}
+  .app-bar .d{width:12px; height:12px; border-radius:50%}
+  .app-bar .u{margin-left:18px; font-size:13.5px; color:#8c9490; background:#fff;
+    border-radius:8px; padding:6px 20px; border:1px solid #dfe4e2}
+  .app-body{display:grid; grid-template-columns:248px 1fr; flex:1; min-height:0}
+
+  .app-side{background:var(--color-near-black); padding:18px 14px; overflow:hidden}
+  .side-k{font-size:10px; font-weight:700; letter-spacing:.15em; text-transform:uppercase;
+    color:rgba(255,255,255,.42); margin:0 0 10px; padding:0 10px}
+  .side-i{display:flex; align-items:center; gap:10px; padding:8px 11px;
+    border-radius:8px; font-size:13.5px; color:rgba(255,255,255,.72); margin-bottom:2px}
+  .side-i .bd{width:6px; height:6px; border-radius:50%; background:rgba(18,242,128,.5);
+    flex:0 0 auto}
+  .side-i.on{background:rgba(18,242,128,.16); color:#fff; font-weight:600}
+  .side-i.on .bd{background:var(--color-neon-green)}
+  .side-foot{margin-top:14px; padding:12px 11px; border-top:1px solid rgba(255,255,255,.12);
+    font-size:11.5px; line-height:1.45; color:rgba(255,255,255,.5)}
+
+  .app-main{padding:18px 22px; display:flex; flex-direction:column; min-height:0;
+    background:#fbfcfc}
+
+  .selrow{display:flex; align-items:center; gap:10px; margin-bottom:14px; flex-wrap:wrap}
+  .selrow .lb{font-size:10.5px; font-weight:700; letter-spacing:.12em;
+    text-transform:uppercase; color:#9aa5a0; margin-right:4px}
+  .sel{border:1.5px solid #dde3e0; background:#fff; border-radius:999px;
+    padding:8px 20px; font-size:14px; font-weight:600; color:#7b8480}
+  .sel.on{background:var(--color-dark-green); border-color:var(--color-dark-green); color:#fff}
+  .sel.sub{padding:6px 15px; font-size:12.5px; border-radius:8px}
+  .sel.sub.on{background:var(--color-neon-green); border-color:var(--color-neon-green);
+    color:var(--color-near-black)}
+  .selrow .sep{color:#c6cecb; font-size:15px}
+
+  .io{display:grid; grid-template-columns:1fr 1fr; gap:16px; flex:1; min-height:0}
+  .iocol{background:#fff; border:1px solid #e3e8e6; border-radius:13px;
+    padding:15px 17px; display:flex; flex-direction:column; min-height:0}
+  .iocol.out{background:#f7fdfa; border-color:#c8f0dc}
+  .ioh{display:flex; align-items:center; gap:9px; margin-bottom:12px}
+  .ionum{width:24px; height:24px; border-radius:50%; background:var(--color-dark-green);
+    color:#fff; display:flex; align-items:center; justify-content:center;
+    font-size:13px; font-weight:700; flex:0 0 auto}
+  .iocol.out .ionum{background:var(--color-neon-green); color:var(--color-near-black)}
+  .ioh .t{font-family:var(--font-headline); font-size:18px; color:var(--fg-primary)}
+  .ioh .who2{margin-left:auto; font-size:11px; font-weight:700; letter-spacing:.08em;
+    text-transform:uppercase; color:#9aa5a0}
+
+  .frow{display:grid; grid-template-columns:1fr 1fr; gap:9px; margin-bottom:9px}
+  .fi{border:1px solid #e0e6e3; border-radius:8px; padding:7px 11px; background:#fff}
+  .fi.edit{border-color:var(--color-neon-green); box-shadow:0 0 0 3px rgba(18,242,128,.14)}
+  .fi .k{font-size:9.5px; font-weight:700; letter-spacing:.1em; text-transform:uppercase;
+    color:#9aa5a0; margin-bottom:2px}
+  .fi .v{font-size:14px; font-weight:600; color:var(--fg-primary)}
+  .caret{display:inline-block; width:1.5px; height:14px; background:var(--color-dark-green);
+    vertical-align:-2px; margin-left:1px}
+
+  .lrow{display:grid; grid-template-columns:1fr 58px 84px; gap:8px; align-items:center;
+    padding:8px 0; border-top:1px solid #eef1f0; font-size:13.5px}
+  .lrow .nm{font-weight:600; color:var(--fg-primary); line-height:1.3}
+  .lrow .c{text-align:center; color:var(--fg-secondary)}
+  .lrow .r{text-align:right; color:var(--fg-secondary)}
+  .addln{margin-top:9px; border:1.5px dashed #c8d2ce; border-radius:8px; padding:8px;
+    text-align:center; font-size:13px; font-weight:600; color:#9aa5a0}
+  .obs{margin-top:auto; border:1px solid var(--color-neon-green); border-radius:9px;
+    padding:9px 12px; background:#f7fdfa}
+  .obs .k{font-size:9.5px; font-weight:700; letter-spacing:.1em; text-transform:uppercase;
+    color:var(--color-dark-green); margin-bottom:3px}
+  .obs .v{font-size:13px; line-height:1.4; color:#57605c}
+
+  .orow{display:grid; grid-template-columns:1fr 92px 118px; gap:8px; align-items:center;
+    padding:8px 0; border-top:1px solid #dcefe5; font-size:13.5px}
+  .orow:first-of-type{border-top:0}
+  .orow .src{font-size:11px; color:#8fa39a; text-align:center}
+  .orow .r{text-align:right; font-variant-numeric:tabular-nums; font-weight:600;
+    color:var(--fg-primary)}
+  .orow.sum{border-top:1.5px solid #b7e6ce; font-weight:600}
+  .why2{margin-top:9px; background:#fff; border:1px solid #dcefe5; border-left:3px solid
+    var(--color-neon-green); border-radius:9px; padding:9px 12px}
+  .why2 .k{font-size:9.5px; font-weight:700; letter-spacing:.1em; text-transform:uppercase;
+    color:var(--color-dark-green); margin-bottom:3px}
+  .why2 p{margin:0; font-size:12.5px; line-height:1.45; color:#57605c}
+  .totbar{margin-top:auto; background:var(--gradient-hero); border-radius:11px;
+    padding:13px 18px; display:flex; align-items:center; color:#fff}
+  .totbar .k{font-size:10.5px; font-weight:700; letter-spacing:.11em; text-transform:uppercase;
+    color:rgba(255,255,255,.85)}
+  .totbar .v{font-family:var(--font-headline); font-size:27px}
+  .totbar .rt{margin-left:auto; text-align:right}
+  .acts{display:flex; gap:9px; margin-top:10px}
+  .act{flex:1; border-radius:9px; padding:10px; text-align:center; font-size:13.5px;
+    font-weight:600}
+  .act-o{background:#fff; border:1.5px solid var(--color-dark-green); color:var(--color-dark-green)}
+  .act-n{background:var(--color-near-black); color:#fff}
+
+  .note{margin-top:14px; display:flex; gap:14px; align-items:center;
+    background:#f4fef8; border:1px solid #c8f0dc; border-radius:13px; padding:13px 26px}
+  .note .k{font-family:var(--font-headline); font-size:19px; color:var(--color-dark-green);
+    white-space:nowrap}
+  .note p{margin:0; font-size:15.5px; line-height:1.4; color:#2c3330}
+  .note .ej{margin-left:auto; font-size:11.5px; font-weight:700; letter-spacing:.08em;
+    text-transform:uppercase; color:#9aa5a0; white-space:nowrap}
+
+  /* ══ MINI TARIFADOR ═════════════════════════════════════ */
+  .mini{border-radius:11px; overflow:hidden; border:1px solid #d8ddda;
+    box-shadow:0 6px 24px rgba(0,0,0,0.13); background:#fff}
+  .mini-bar{height:26px; background:#eceeed; display:flex; align-items:center;
+    padding:0 10px; gap:5px; border-bottom:1px solid #dadedc}
+  .mini-bar i{width:7px; height:7px; border-radius:50%; display:block}
+  .mini-bar span{margin-left:8px; font-size:9.5px; color:#8c9490}
+  .mini-body{display:grid; grid-template-columns:78px 1fr}
+  .mini-side{background:var(--color-near-black); padding:9px 7px}
+  .mini-side u{display:block; height:6px; border-radius:3px;
+    background:rgba(255,255,255,.16); margin-bottom:6px; text-decoration:none}
+  .mini-side u.on{background:var(--color-neon-green); width:80%}
+  .mini-main{padding:9px 10px}
+  .mini-main .mr{height:7px; border-radius:3px; background:#e8edeb; margin-bottom:6px}
+  .mini-main .mr.w1{width:88%} .mini-main .mr.w2{width:66%} .mini-main .mr.w3{width:76%}
+  .mini-tot{margin-top:8px; background:var(--gradient-hero); border-radius:6px;
+    padding:6px 9px; color:#fff; font-size:10.5px; font-weight:700;
+    display:flex; justify-content:space-between}
+
+  /* ══ SLIDE 3 ════════════════════════════════════════════ */
+  .s3top{display:grid; grid-template-columns:400px 1fr; gap:34px; align-items:center;
+    background:var(--gradient-dark-cover); border-radius:20px; padding:24px 32px;
+    box-shadow:0 8px 48px rgba(9,86,44,.28); color:#fff}
+  .s3k{font-size:11.5px; font-weight:700; letter-spacing:.19em; text-transform:uppercase;
+    color:var(--color-neon-green); margin-bottom:6px}
+  .s3n{font-family:var(--font-headline); font-size:34px; line-height:1.05; margin-bottom:16px}
+  .tarif-out{display:grid; grid-template-columns:1fr 1.35fr; gap:16px; align-items:start}
+  .obox{background:rgba(255,255,255,.09); border:1px solid rgba(18,242,128,.34);
+    border-radius:13px; padding:15px 19px}
+  .obox .ot{font-family:var(--font-headline); font-size:21px; margin-bottom:4px;
+    color:var(--color-neon-green)}
+  .obox .od{font-size:13.5px; line-height:1.4; color:rgba(255,255,255,.72)}
+  .osub{display:flex; gap:11px; margin-top:11px}
+  .osub span{flex:1; background:rgba(18,242,128,.15);
+    border:1px solid rgba(18,242,128,.45); border-radius:9px; padding:9px 14px;
+    font-size:14.5px; font-weight:600; color:#fff; text-align:center}
+  .osub span small{display:block; font-weight:400; font-size:11.5px;
+    color:rgba(255,255,255,.62); margin-top:2px}
+
+  .wires{display:block; width:1700px; height:64px}
+  .backlab{font-size:12px; font-weight:700; letter-spacing:.17em;
+    text-transform:uppercase; color:var(--fg-muted); margin:8px 0 14px; text-align:center}
+  .circles{display:grid; grid-template-columns:repeat(5,1fr); gap:0}
+  .cnode{text-align:center; padding:0 13px}
+  .cdot{width:58px; height:58px; border-radius:50%; margin:0 auto 10px;
+    background:#fff; border:2px solid var(--color-dark-green);
+    display:flex; align-items:center; justify-content:center;
+    box-shadow:0 4px 24px rgba(18,242,128,.22)}
+  .cdot svg{width:26px; height:26px}
+  .cnode .cn{font-family:var(--font-headline); font-size:18.5px; margin-bottom:5px;
+    color:var(--fg-primary)}
+  .cnode .cd{font-size:13px; line-height:1.4; color:var(--fg-secondary)}
+  .csub{display:flex; flex-direction:column; gap:6px; margin-top:8px}
+  .csub span{background:#f4fef8; border:1px solid #c8f0dc; border-radius:8px;
+    padding:7px 9px; font-size:12px; font-weight:600; color:var(--color-dark-green);
+    line-height:1.3}
+  .cex{margin-top:8px; background:#fafafa; border:1px solid #eaeaea;
+    border-radius:8px; padding:8px 10px; font-size:11.5px; line-height:1.4;
+    color:#6f6f6f; text-align:left}
+  .cex b{display:block; font-size:10px; letter-spacing:.12em; text-transform:uppercase;
+    color:#a0a0a0; margin-bottom:3px}
+
+  /* ══ SLIDE 4 ════════════════════════════════════════════ */
+  .mock{border-radius:16px; overflow:hidden; border:1px solid var(--border-default);
+    box-shadow:0 8px 32px rgba(0,0,0,0.10); background:#fff}
+  .chrome{height:42px; background:#f1f3f2; display:flex; align-items:center;
+    padding:0 16px; gap:8px; border-bottom:1px solid var(--border-default)}
+  .dot{width:12px; height:12px; border-radius:50%}
+  .chrome .u{margin-left:16px; font-size:13px; color:var(--fg-muted);
+    background:#fff; border-radius:8px; padding:5px 16px; border:1px solid #e3e7e5}
+  .mgrid{display:grid; grid-template-columns:1fr 470px}
+  .mleft{padding:34px 40px; border-right:1px solid var(--border-default)}
+  .mright{padding:34px 36px; background:#fafcfb}
+  .mrow{display:grid; grid-template-columns:1fr 150px 176px;
+    padding:19px 4px; border-bottom:1px solid #eef1f0; font-size:17px}
+  .mrow.h{font-size:12.5px; letter-spacing:.11em; text-transform:uppercase;
+    color:var(--fg-muted); font-weight:700; border-bottom:2px solid #e6eae8}
+  .mrow b{font-weight:600}
+  .mrow .r{text-align:right; font-variant-numeric:tabular-nums}
+  .mrow.tot{background:var(--gradient-hero); color:#fff; border:0; border-radius:12px;
+    margin-top:18px; padding:22px 16px; font-size:20px; font-weight:600}
+  .dl{margin-top:14px; display:flex; align-items:center; gap:12px;
+    border:1.5px solid var(--color-dark-green); border-radius:11px; padding:13px 20px;
+    font-size:15.5px; font-weight:600; color:var(--color-dark-green)}
+  .why{font-size:12px; font-weight:700; letter-spacing:.14em; text-transform:uppercase;
+    color:var(--color-dark-green); margin:0 0 16px}
+  .wcard{background:#fff; border:1px solid #d9efe3; border-left:4px solid var(--color-neon-green);
+    border-radius:12px; padding:18px 20px; margin-bottom:14px}
+  .wcard p{margin:0; font-size:15px; line-height:1.5; color:#2c3330}
+  .wcard .src-l{display:block; margin-top:7px; font-size:11.5px; font-weight:700;
+    letter-spacing:.09em; text-transform:uppercase; color:var(--color-dark-green)}
+  .warn{background:#fffaf0; border:1px solid #f5dfb0; border-left:4px solid #e8a33d;
+    border-radius:12px; padding:18px 20px}
+  .warn p{margin:0; font-size:15px; line-height:1.5; color:#6b4d1c}
+  .warn .src-l{display:block; margin-top:7px; font-size:11.5px; font-weight:700;
+    letter-spacing:.09em; text-transform:uppercase; color:#b57722}
+
+  /* ══ SLIDE 6 ════════════════════════════════════════════ */
+  .flow{display:grid; grid-template-columns:1fr 46px 1fr 46px 1fr 46px 1fr;
+    align-items:stretch; margin-bottom:26px; height:498px}
+  .fcard{background:#fff; border:1px solid var(--border-default); border-radius:16px;
+    padding:24px 26px 26px; box-shadow:0 2px 12px rgba(0,0,0,0.04);
+    display:flex; flex-direction:column}
+  .fnum{width:42px; height:42px; border-radius:50%; background:var(--color-dark-green);
+    color:#fff; display:flex; align-items:center; justify-content:center;
+    font-family:var(--font-headline); font-size:20px; margin-bottom:16px}
+  .fcard h4{font-family:var(--font-headline); font-size:22px; line-height:1.2;
+    margin:0 0 10px; color:var(--fg-primary)}
+  .fcard p{margin:0; font-size:15px; line-height:1.48; color:var(--fg-secondary)}
+  .fcard .mini{margin-top:auto}
+  .farr{display:flex; align-items:center; justify-content:center;
+    font-size:28px; color:var(--color-neon-green)}
+  .fpar{display:grid; grid-template-columns:repeat(2,1fr); gap:8px; margin-top:auto}
+  .fpar span{background:#effbf4; border:1px solid #c8f0dc; border-radius:9px;
+    padding:11px 6px; text-align:center; font-size:13.5px; font-weight:600;
+    color:var(--color-dark-green)}
+  .fbot{background:#fafcfb; border:1px solid var(--border-default); border-radius:16px;
+    padding:26px 32px; display:grid; grid-template-columns:300px 1fr; gap:30px;
+    align-items:center}
+  .fbot .kk{font-family:var(--font-headline); font-size:24px; color:var(--color-dark-green);
+    line-height:1.2}
+  .fbot .kk small{display:block; font-family:var(--font-body); font-size:14.5px;
+    font-weight:400; color:var(--fg-secondary); margin-top:8px; line-height:1.45}
+  .cmp3{display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px}
+  .cmp3 div{background:#fff; border:1px solid #dcefe5; border-radius:11px;
+    padding:18px 12px; text-align:center; font-size:15.5px; font-weight:600;
+    color:var(--color-dark-green); line-height:1.3}
+  .cmp3 div small{display:block; font-weight:400; font-size:12.5px; color:var(--fg-secondary);
+    margin-top:5px}
+
+  /* ══ SLIDE 7 ════════════════════════════════════════════ */
+  .two{display:grid; grid-template-columns:1fr 1fr; gap:30px; margin-bottom:32px}
+  .col{border-radius:18px; padding:42px 44px; box-shadow:0 2px 12px rgba(0,0,0,0.04)}
+  .col-yes{background:#effbf4; border:1px solid #c8f0dc}
+  .col-no {background:#fafafa; border:1px solid #e6e6e6}
+  .col h3{font-family:var(--font-headline); font-size:29px; margin:0 0 26px}
+  .col-yes h3{color:var(--color-dark-green)}
+  .col-no  h3{color:#7b7b7b}
+  .col ul{list-style:none; margin:0; padding:0}
+  .col li{display:flex; gap:14px; font-size:19px; line-height:1.45;
+    margin-bottom:22px; color:#2c3330}
+  .col-no li{color:#6f6f6f}
+  .col li i{flex:0 0 auto; font-style:normal; font-weight:700; font-size:16px}
+  .col-yes li i{color:var(--color-dark-green)}
+  .col-no  li i{color:#b0b0b0}
+  .dash{border:2px dashed var(--color-neon-green); background:#f4fef8;
+    border-radius:16px; padding:32px 38px; display:flex; gap:28px; align-items:center}
+  .dash .k{font-family:var(--font-headline); font-size:22px;
+    color:var(--color-dark-green); white-space:nowrap}
+  .dash p{margin:0; font-size:17px; line-height:1.5; color:#2c3330}
+
+  /* ══ BOLITA (slide 3 y 7) ═══════════════════════════════ */
+  .s3hero{position:relative; height:352px; display:flex; align-items:center;
+    justify-content:center; margin-bottom:4px}
+  .ring{position:absolute; border-radius:50%; border:1.5px dashed rgba(18,242,128,.42)}
+  .r1{width:330px; height:330px}
+  .r2{width:400px; height:400px; border-color:rgba(18,242,128,.26)}
+  .r3{width:466px; height:466px; border-color:rgba(18,242,128,.14)}
+  .bolita{width:280px; height:280px; border-radius:50%; background:var(--gradient-hero);
+    box-shadow:0 10px 70px rgba(18,242,128,.45); color:#fff; display:flex;
+    flex-direction:column; align-items:center; justify-content:center; text-align:center;
+    position:relative; z-index:2}
+  .bolita .bk{font-size:11.5px; font-weight:700; letter-spacing:.19em;
+    text-transform:uppercase; color:rgba(255,255,255,.9); margin-bottom:9px}
+  .bolita .bn{font-family:var(--font-headline); font-size:34px; line-height:1.1}
+  .orb{position:absolute; width:12px; height:12px; border-radius:50%;
+    background:var(--color-neon-green); box-shadow:0 0 16px rgba(18,242,128,.9); z-index:3}
+
+  /* ══ SLIDE 6 · estados de actualizacion ═════════════════ */
+  .upd{display:grid; grid-template-columns:repeat(3,1fr); gap:26px; height:576px}
+  .ucard{border:1px solid var(--border-default); border-radius:18px; overflow:hidden;
+    background:#fff; box-shadow:0 2px 12px rgba(0,0,0,0.04); display:flex;
+    flex-direction:column}
+  .uhead{background:var(--color-near-black); color:#fff; padding:20px 26px}
+  .uwho{font-size:10.5px; font-weight:700; letter-spacing:.15em; text-transform:uppercase;
+    color:var(--color-neon-green); margin-bottom:5px}
+  .uttl{font-family:var(--font-headline); font-size:24px; line-height:1.15}
+  .ubody{padding:22px 24px; flex:1; display:flex; flex-direction:column}
+  .uscreen{border:1px solid #e0e6e3; border-radius:12px; overflow:hidden; background:#fff;
+    box-shadow:0 4px 18px rgba(0,0,0,.07)}
+  .ustrip{height:24px; background:#eceeed; display:flex; align-items:center; gap:4px;
+    padding:0 10px; border-bottom:1px solid #dadedc}
+  .ustrip i{width:6px; height:6px; border-radius:50%; display:block}
+  .ustrip span{margin-left:7px; font-size:9px; color:#8c9490}
+  .uin{padding:14px 15px}
+  .ur{display:flex; justify-content:space-between; align-items:center;
+    padding:8px 0; border-top:1px solid #eef1f0; font-size:13px; color:#57605c}
+  .ur:first-child{border-top:0}
+  .ur b{color:var(--fg-primary); font-weight:600}
+  .ur.new{background:#f0fdf6; margin:0 -15px; padding:8px 15px;
+    border-left:3px solid var(--color-neon-green)}
+  .ur.gone{color:#b9c2be; text-decoration:line-through}
+  .ubanner{border-radius:9px; padding:11px 13px; font-size:13px; font-weight:600;
+    display:flex; align-items:center; gap:9px; margin-bottom:11px}
+  .ub-ok{background:#effbf4; border:1px solid #c8f0dc; color:var(--color-dark-green)}
+  .ub-warn{background:#fffaf0; border:1px solid #f5dfb0; color:#8a6420}
+  .utot{margin-top:11px; background:var(--gradient-hero); border-radius:9px;
+    padding:10px 14px; color:#fff; font-size:13px; font-weight:700;
+    display:flex; justify-content:space-between}
+  .udiff{display:grid; grid-template-columns:1fr 1fr; gap:9px; margin-top:3px}
+  .udiff div{border-radius:9px; padding:11px 12px; font-size:12px; line-height:1.35}
+  .ud-a{background:#f6f7f7; border:1px solid #e6e9e8; color:#6f7874}
+  .ud-b{background:#effbf4; border:1px solid #c8f0dc; color:var(--color-dark-green)}
+  .udiff .k{display:block; font-size:9.5px; font-weight:700; letter-spacing:.1em;
+    text-transform:uppercase; margin-bottom:5px; opacity:.75}
+  .udiff .n{font-family:var(--font-headline); font-size:17px; margin-top:5px}
+  .ufoot{margin-top:auto; padding-top:16px; font-size:14.5px; line-height:1.5;
+    color:var(--fg-secondary)}
+  .ufoot b{color:var(--fg-primary)}
+
+  /* ══ SLIDE 7 · flujo con retorno ════════════════════════ */
+  .fl2{display:grid; grid-template-columns:1fr 40px 1fr 40px 1fr 40px 1fr 40px 1fr;
+    align-items:stretch; height:566px}
+  .fc{background:#fff; border:1px solid var(--border-default); border-radius:15px;
+    padding:26px 24px 28px; box-shadow:0 2px 12px rgba(0,0,0,0.04);
+    display:flex; flex-direction:column}
+  .fc.hero{background:var(--gradient-dark-cover); border-color:transparent; color:#fff}
+  .fn{width:34px; height:34px; border-radius:50%; background:var(--color-dark-green);
+    color:#fff; display:flex; align-items:center; justify-content:center;
+    font-family:var(--font-headline); font-size:16px; margin-bottom:12px}
+  .fc.hero .fn{background:var(--color-neon-green); color:var(--color-near-black)}
+  .fc h4{font-family:var(--font-headline); font-size:20px; line-height:1.2;
+    margin:0 0 10px; color:var(--fg-primary)}
+  .fc.hero h4{color:#fff}
+  .fc p{margin:0; font-size:14.5px; line-height:1.5; color:var(--fg-secondary)}
+  .fc.hero p{color:rgba(255,255,255,.75)}
+  .fa{display:flex; align-items:center; justify-content:center; font-size:24px;
+    color:var(--color-neon-green)}
+  .miniball{margin-top:auto; display:flex; justify-content:center; padding-top:12px}
+  .miniball div{width:116px; height:116px; border-radius:50%; background:var(--gradient-hero);
+    box-shadow:0 6px 30px rgba(18,242,128,.5); color:#fff; display:flex;
+    align-items:center; justify-content:center; text-align:center;
+    font-family:var(--font-headline); font-size:15px; line-height:1.2; padding:10px}
+  .fchips{display:grid; grid-template-columns:1fr 1fr; gap:7px; margin-top:auto; padding-top:12px}
+  .fchips span{background:#effbf4; border:1px solid #c8f0dc; border-radius:8px;
+    padding:9px 5px; text-align:center; font-size:12.5px; font-weight:600;
+    color:var(--color-dark-green)}
+  .fsys{margin-top:auto; padding-top:12px}
+  .fsys span{display:block; background:var(--color-near-black); color:#fff;
+    border-radius:8px; padding:9px 12px; font-size:12.5px; font-weight:700;
+    letter-spacing:.08em; text-align:center}
+  .ret{margin-top:18px; border:2px dashed var(--color-neon-green); background:#f4fef8;
+    border-radius:14px; padding:20px 30px; display:flex; align-items:center; gap:20px}
+  .ret .a{font-size:26px; color:var(--color-dark-green)}
+  .ret .k{font-family:var(--font-headline); font-size:21px; color:var(--color-dark-green);
+    white-space:nowrap}
+  .ret p{margin:0; font-size:16px; line-height:1.45; color:#2c3330}
+
+  /* ══ FLUJOGRAMA ═════════════════════════════════════════ */
+  .fg{display:grid; grid-template-columns:1fr 54px 1fr 54px 1fr 54px 1fr;
+    align-items:stretch; gap:0}
+  .fgrow2{margin-top:0}
+  .nd{border-radius:14px; padding:30px 28px; display:flex; flex-direction:column;
+    justify-content:center; min-height:248px}
+  .nd .num{width:36px; height:36px; border-radius:50%; display:flex; align-items:center;
+    justify-content:center; font-family:var(--font-headline); font-size:17px;
+    margin-bottom:16px}
+  .nd .nt{font-family:var(--font-headline); font-size:23px; line-height:1.2;
+    margin-bottom:9px}
+  .nd .ns{font-size:15px; line-height:1.5}
+
+  .nd-actor{background:#fff; border:1.5px solid var(--border-default);
+    box-shadow:0 2px 12px rgba(0,0,0,0.04)}
+  .nd-actor .num{background:#eef1f0; color:#6f7874}
+  .nd-actor .nt{color:var(--fg-primary)} .nd-actor .ns{color:var(--fg-secondary)}
+
+  .nd-sys{background:var(--color-near-black); color:#fff; border:1.5px solid var(--color-near-black)}
+  .nd-sys .num{background:rgba(255,255,255,.16); color:#fff}
+  .nd-sys .nt{color:#fff} .nd-sys .ns{color:rgba(255,255,255,.68)}
+
+  .nd-tar{background:var(--gradient-hero); border:1.5px solid transparent; color:#fff;
+    box-shadow:0 6px 30px rgba(18,242,128,.34)}
+  .nd-tar .num{background:rgba(255,255,255,.28); color:#fff}
+  .nd-tar .tag{font-size:11px; font-weight:700; letter-spacing:.16em; text-transform:uppercase;
+    color:rgba(255,255,255,.9); margin-bottom:6px}
+  .nd-tar .nt{color:#fff} .nd-tar .ns{color:rgba(255,255,255,.88)}
+
+  .chips4{display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-top:12px}
+  .chips4 span{background:#effbf4; border:1px solid #c8f0dc; border-radius:8px;
+    padding:11px 4px; text-align:center; font-size:14px; font-weight:600;
+    color:var(--color-dark-green)}
+
+  .ar{display:flex; align-items:center; justify-content:center; font-size:26px;
+    color:var(--color-neon-green); font-weight:700}
+  .drop{display:grid; grid-template-columns:1fr 54px 1fr 54px 1fr 54px 1fr; height:74px}
+  .drop .dcell{grid-column:7; display:flex; align-items:center; justify-content:center;
+    font-size:32px; color:var(--color-neon-green); font-weight:700}
+  .fgnote{margin-top:22px; border:2px dashed var(--color-neon-green); background:#f4fef8;
+    border-radius:14px; padding:20px 32px; display:flex; align-items:center; gap:24px}
+  .fgnote .k{font-family:var(--font-headline); font-size:22px;
+    color:var(--color-dark-green); white-space:nowrap}
+  .fgnote p{margin:0; font-size:16.5px; line-height:1.45; color:#2c3330}
+
+  /* ══ FLUJOGRAMA v2 ══════════════════════════════════════ */
+  .dg{position:relative; width:1700px; height:576px}
+  .dg svg{position:absolute; inset:0; width:1700px; height:576px}
+  .dg-band{position:absolute; left:0; top:0; width:1700px; height:104px;
+    background:var(--gradient-hero); border-radius:16px; color:#fff;
+    box-shadow:0 8px 40px rgba(18,242,128,.36); display:flex; flex-direction:column;
+    align-items:center; justify-content:center; z-index:2}
+  .dg-band .k{font-size:11px; font-weight:700; letter-spacing:.22em;
+    text-transform:uppercase; color:rgba(255,255,255,.9); margin-bottom:4px}
+  .dg-band .t{font-family:var(--font-headline); font-size:34px; line-height:1}
+  .dg-n{position:absolute; top:332px; height:124px; border-radius:13px;
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    text-align:center; padding:12px 14px; z-index:2}
+  .dg-n .nn{font-family:var(--font-headline); font-size:21px; line-height:1.15}
+  .dg-n .nd2{font-size:12.5px; line-height:1.35; margin-top:5px}
+  .dg-act{background:#fff; border:1.5px solid #d3dbd8; box-shadow:0 2px 12px rgba(0,0,0,.05)}
+  .dg-act .nn{color:var(--fg-primary)} .dg-act .nd2{color:var(--fg-secondary)}
+  .dg-sys{background:var(--color-near-black); border:1.5px solid var(--color-near-black)}
+  .dg-sys .nn{color:#fff} .dg-sys .nd2{color:rgba(255,255,255,.62)}
+  .dg-grp{background:#fff; border:1.5px dashed #a9dcc3; box-shadow:0 2px 12px rgba(0,0,0,.05)}
+  .dg-grp .gk{font-size:10.5px; font-weight:700; letter-spacing:.13em; text-transform:uppercase;
+    color:#9aa5a0; margin-bottom:8px}
+  .dg-grp .gc{display:grid; grid-template-columns:1fr 1fr; gap:5px}
+  .dg-grp .gc span{background:#effbf4; border:1px solid #c8f0dc; border-radius:6px;
+    padding:5px 8px; font-size:12px; font-weight:600; color:var(--color-dark-green)}
+  .dg-lbl{position:absolute; z-index:3; background:#fff; padding:5px 11px;
+    border-radius:7px; font-size:13px; line-height:1.3; color:#4a534f; text-align:center;
+    border:1px solid #e6ebe9}
+  .dg-lbl b{display:block; color:var(--color-dark-green); font-weight:700}
+  .dg-num{position:absolute; z-index:4; width:27px; height:27px; border-radius:50%;
+    background:var(--color-dark-green); color:#fff; display:flex; align-items:center;
+    justify-content:center; font-family:var(--font-headline); font-size:14px}
+  .dgnote{margin-top:20px; border:2px dashed var(--color-neon-green); background:#f4fef8;
+    border-radius:14px; padding:19px 30px; display:flex; align-items:center; gap:24px}
+  .dgnote .k{font-family:var(--font-headline); font-size:21px;
+    color:var(--color-dark-green); white-space:nowrap}
+  .dgnote p{margin:0; font-size:16px; line-height:1.45; color:#2c3330}
+
+  /* == FLUJOGRAMA LINEAL ================================== */
+  .lf{position:relative; width:1700px; height:508px}
+  .lf svg{position:absolute; inset:0; width:1700px; height:508px}
+  .lfn{position:absolute; top:101px; height:178px; border-radius:14px; z-index:2;
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    text-align:center; padding:16px 14px}
+  .lfn .t{font-family:var(--font-headline); font-size:21px; line-height:1.15}
+  .lfn .d{font-size:13px; line-height:1.4; margin-top:7px}
+  .lf-act{background:#fff; border:1.5px solid #d3dbd8; box-shadow:0 2px 12px rgba(0,0,0,.05)}
+  .lf-act .t{color:var(--fg-primary)} .lf-act .d{color:var(--fg-secondary)}
+  .lf-sys{background:var(--color-near-black); border:1.5px solid var(--color-near-black)}
+  .lf-sys .t{color:#fff} .lf-sys .d{color:rgba(255,255,255,.64)}
+  .lf-tar{background:var(--gradient-hero); border:none; color:#fff;
+    box-shadow:0 8px 40px rgba(18,242,128,.42); top:81px; height:218px}
+  .lf-tar .k{font-size:10px; font-weight:700; letter-spacing:.19em; text-transform:uppercase;
+    color:rgba(255,255,255,.9); margin-bottom:6px}
+  .lf-tar .t{color:#fff; font-size:24px} .lf-tar .d{color:rgba(255,255,255,.9)}
+  .lf-grp{background:#fff; border:1.5px dashed #a9dcc3; box-shadow:0 2px 12px rgba(0,0,0,.05)}
+  .lf-grp .gk{font-size:9.5px; font-weight:700; letter-spacing:.13em; text-transform:uppercase;
+    color:#9aa5a0; margin-bottom:9px}
+  .lf-grp .gc{display:grid; grid-template-columns:1fr 1fr; gap:6px; width:100%}
+  .lf-grp .gc span{background:#effbf4; border:1px solid #c8f0dc; border-radius:6px;
+    padding:7px 4px; font-size:12px; font-weight:600; color:var(--color-dark-green)}
+  .lf-grp .gc span.hi{background:var(--color-near-black); border-color:var(--color-near-black);
+    color:#fff}
+  .lf-grp .gf{font-size:11.5px; color:var(--fg-secondary); margin-top:9px}
+  .lfl{position:absolute; z-index:3; background:#fff; padding:5px 10px; border-radius:7px;
+    border:1px solid #e6ebe9; font-size:12.5px; line-height:1.3; color:#4a534f;
+    text-align:center}
+  .lfl b{display:block; color:var(--color-dark-green); font-weight:700}
+  .lfl.dash{border-style:dashed; border-color:#a9dcc3; background:#f7fdfa}
+  .lfnum{position:absolute; z-index:4; width:25px; height:25px; border-radius:50%;
+    background:var(--color-dark-green); color:#fff; display:flex; align-items:center;
+    justify-content:center; font-family:var(--font-headline); font-size:13px}
+
+  .vs-box{position:absolute; z-index:4; display:flex; align-items:stretch;
+    background:#fff; border:1.5px solid var(--color-neon-green); border-radius:11px;
+    overflow:hidden; box-shadow:0 4px 18px rgba(18,242,128,.20)}
+  .vs-box .side{padding:11px 18px; text-align:center; min-width:196px}
+  .vs-box .side .kk2{font-size:9.5px; font-weight:700; letter-spacing:.12em;
+    text-transform:uppercase; color:#9aa5a0; margin-bottom:3px}
+  .vs-box .side .vv{font-size:14px; font-weight:600; color:var(--fg-primary); line-height:1.25}
+  .vs-box .side.b{background:#f7fdfa}
+  .vs-box .vs{display:flex; align-items:center; justify-content:center; padding:0 15px;
+    background:var(--color-dark-green); color:#fff; font-family:var(--font-headline);
+    font-size:17px; letter-spacing:.04em}
+
+  /* == COMPONENTE 03 · SECOP ============================== */
+  .sc-hero{display:grid; grid-template-columns:1fr 1fr; gap:30px; margin-bottom:28px;
+    height:428px}
+  .sc-card{border-radius:18px; padding:44px 46px; box-shadow:0 2px 12px rgba(0,0,0,0.04);
+    display:flex; flex-direction:column; justify-content:center}
+  .sc-hoy{background:#fdf2f2; border:1px solid #f3d4d4}
+  .sc-post{background:#effbf4; border:1px solid #c8f0dc}
+  .sc-tag{font-size:11.5px; font-weight:700; letter-spacing:.15em; text-transform:uppercase;
+    margin:0 0 8px}
+  .sc-hoy .sc-tag{color:#b4453f} .sc-post .sc-tag{color:var(--color-dark-green)}
+  .sc-card .sc-verb{font-family:var(--font-headline); font-size:70px; line-height:1;
+    margin:0 0 22px}
+  .sc-hoy .sc-verb{color:#d34b45} .sc-post .sc-verb{color:var(--color-dark-green)}
+  .sc-card p{margin:0; font-size:20px; line-height:1.6; color:#2c3330}
+  .sc-hoy p{color:#7a6260}
+  .sc-stats{display:grid; grid-template-columns:repeat(3,1fr); gap:1px; height:250px;
+    background:var(--border-default); border:1px solid var(--border-default);
+    border-radius:16px; overflow:hidden}
+  .sc-st{background:#fff; padding:40px 38px; display:flex; flex-direction:column;
+    justify-content:center}
+  .sc-st .n{font-family:var(--font-headline); font-size:54px; line-height:1;
+    color:var(--color-dark-green); margin-bottom:11px}
+  .sc-st .n em{font-style:normal; color:var(--color-neon-green);
+    -webkit-text-stroke:1px var(--color-dark-green)}
+  .sc-st .l{font-size:16.5px; color:var(--fg-secondary); line-height:1.45}
+
+  .sc-pipe{display:grid; grid-template-columns:1fr 56px 1fr 56px 1fr; align-items:stretch}
+  .sc-col{border-radius:18px; padding:28px 30px; display:flex; flex-direction:column}
+  .sc-src{background:#fff; border:1.5px solid var(--border-default);
+    box-shadow:0 2px 12px rgba(0,0,0,.04)}
+  .sc-eng{background:var(--gradient-dark-cover); color:#fff;
+    box-shadow:0 8px 44px rgba(9,86,44,.30)}
+  .sc-out{background:#f7fdfa; border:1.5px solid #c8f0dc}
+  .sc-k{font-size:11px; font-weight:700; letter-spacing:.15em; text-transform:uppercase;
+    margin:0 0 6px; color:var(--color-dark-green)}
+  .sc-eng .sc-k{color:var(--color-neon-green)}
+  .sc-t{font-family:var(--font-headline); font-size:26px; margin:0 0 18px; line-height:1.15}
+  .sc-eng .sc-t{color:#fff}
+  .sc-it{display:flex; gap:12px; align-items:flex-start; padding:13px 0;
+    border-top:1px solid #eef1f0}
+  .sc-it:first-of-type{border-top:0}
+  .sc-eng .sc-it{border-color:rgba(255,255,255,.14)}
+  .sc-out .sc-it{border-color:#dcefe5}
+  .sc-it svg{width:22px; height:22px; flex:0 0 auto; margin-top:2px}
+  .sc-it b{display:block; font-size:17px; font-weight:600; margin-bottom:3px}
+  .sc-eng .sc-it b{color:#fff}
+  .sc-it span{font-size:14px; line-height:1.42; color:var(--fg-secondary)}
+  .sc-eng .sc-it span{color:rgba(255,255,255,.66)}
+  .sc-ar{display:flex; align-items:center; justify-content:center; font-size:30px;
+    color:var(--color-neon-green)}
+  .sc-2x{margin-top:auto; background:rgba(18,242,128,.18); border:1px solid rgba(18,242,128,.42);
+    border-radius:11px; padding:13px 16px; font-size:15px; font-weight:600; color:#fff;
+    text-align:center}
+  .sc-two{margin-top:auto; display:grid; grid-template-columns:1fr 1fr; gap:10px}
+  .sc-two span{background:#fff; border:1px solid #c8f0dc; border-radius:10px;
+    padding:13px 8px; text-align:center; font-size:15px; font-weight:600;
+    color:var(--color-dark-green)}
+  .sc-two span small{display:block; font-weight:400; font-size:12px;
+    color:var(--fg-secondary); margin-top:3px}
+
+  .lic{display:grid; grid-template-columns:1fr 130px 150px 128px; gap:10px;
+    align-items:center; padding:16px 6px; border-bottom:1px solid #eef1f0; font-size:15.5px}
+  .lic.h{font-size:11px; letter-spacing:.11em; text-transform:uppercase; color:#9aa5a0;
+    font-weight:700; border-bottom:2px solid #e6eae8; padding:11px 6px}
+  .lic .nm{font-weight:600; color:var(--fg-primary); line-height:1.3}
+  .lic .nm small{display:block; font-weight:400; font-size:12.5px; color:var(--fg-secondary);
+    margin-top:2px}
+  .lic .c{text-align:center}
+  .bar{height:8px; border-radius:4px; background:#eaefec; overflow:hidden; margin-bottom:5px}
+  .bar i{display:block; height:100%; border-radius:4px; background:var(--gradient-hero)}
+  .pc{font-size:13px; font-weight:700; color:var(--color-dark-green)}
+  .pri{display:inline-block; border-radius:999px; padding:5px 15px; font-size:12.5px;
+    font-weight:700}
+  .pri-a{background:var(--color-dark-green); color:#fff}
+  .pri-b{background:#effbf4; color:var(--color-dark-green); border:1px solid #c8f0dc}
+  .pri-c{background:#f4f5f5; color:#98a09c}
+
+  .plg{display:grid; grid-template-columns:repeat(4,1fr); gap:20px; margin-bottom:26px;
+    height:372px}
+  .plg-c{background:#fff; border:1px solid var(--border-default); border-radius:16px;
+    padding:36px 30px; box-shadow:0 2px 12px rgba(0,0,0,.04); display:flex;
+    flex-direction:column; justify-content:center}
+  .plg-c .ic{width:52px; height:52px; border-radius:13px; background:#effbf4;
+    border:1px solid #c8f0dc; display:flex; align-items:center; justify-content:center;
+    margin-bottom:16px}
+  .plg-c .ic svg{width:25px; height:25px}
+  .plg-c h4{font-family:var(--font-headline); font-size:23px; margin:0 0 12px;
+    color:var(--fg-primary); line-height:1.2}
+  .plg-c p{margin:0; font-size:15.5px; line-height:1.5; color:var(--fg-secondary)}
+  .plg-flow{display:grid; grid-template-columns:1fr 50px 1fr 50px 1fr; align-items:center;
+    background:#fafcfb; border:1px solid var(--border-default); border-radius:16px;
+    padding:44px 30px}
+  .plg-s{text-align:center}
+  .plg-s .kk{font-size:10.5px; font-weight:700; letter-spacing:.13em; text-transform:uppercase;
+    color:#9aa5a0; margin-bottom:6px}
+  .plg-s .vv{font-family:var(--font-headline); font-size:20px; color:var(--fg-primary);
+    line-height:1.2}
+  .plg-s .vv em{font-style:normal; color:var(--color-dark-green)}
+  .plg-a{display:flex; align-items:center; justify-content:center; font-size:26px;
+    color:var(--color-neon-green)}
+</style>
+</head>
+<body>
+
+<deck-stage width="1920" height="1080">
+
+<!-- ══════════════ 01 ══════════════ -->
+<section data-label="Tarifador &middot; Qu&eacute; solucionamos">
+  <img class="stamp-logo" src="./_plantilla/assets/logo-horizontal.png" alt="">
+  <p class="eyebrow">Componente 02 <b>&middot;</b> Tarifador Inteligente</p>
+  <h1 class="title">Qu&eacute; solucionamos</h1>
+  <p class="hint">Un mismo tarifador destraba tres cuellos de botella distintos.</p>
+
+  <div class="who">
+    <div class="wc">
+      <div class="wc-head">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#12f280" stroke-width="2" stroke-linecap="round">
+          <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>
+          <path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg>
+        <div class="r">Analista comercial</div>
+      </div>
+      <div class="wc-body">
+        <div class="wc-blk wc-hoy"><p class="wc-lab">Hoy</p>
+          <p>Persigue por correo a Compras, a N&oacute;mina y a quien tenga el hist&oacute;rico
+             del cliente. No cotiza: espera.</p></div>
+        <div class="wc-blk wc-post"><p class="wc-lab">Con el tarifador</p>
+          <p>El sistema consulta las fuentes y arma la tarifa.
+             Ella pasa a <b>auditar</b>, no a construir.</p></div>
+      </div>
+      <div class="wc-rule"></div>
+      <div class="wc-stat"><div class="n">3,75 <em>&rarr;</em> 7,5</div>
+        <div class="l">Cotizaciones al d&iacute;a. Hoy gasta cerca del 70% de la jornada
+          en las 3,75 que alcanza a sacar</div></div>
+    </div>
+
+    <div class="wc">
+      <div class="wc-head">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#12f280" stroke-width="2" stroke-linecap="round">
+          <path d="M20 7h-9"/><path d="M14 17H5"/><circle cx="17" cy="17" r="3"/>
+          <circle cx="7" cy="7" r="3"/></svg>
+        <div class="r">Comercial</div>
+      </div>
+      <div class="wc-body">
+        <div class="wc-blk wc-hoy"><p class="wc-lab">Hoy</p>
+          <p>Entre <b>25% y 30%</b> de su tiempo se le va resolviendo reprocesos de
+             facturaci&oacute;n de servicios adicionales.</p></div>
+        <div class="wc-blk wc-post"><p class="wc-lab">Con el tarifador</p>
+          <p>Cotiza en llamada lo que est&aacute; en sus manos, y deja de mediar entre
+             el cliente y Facturaci&oacute;n.</p></div>
+      </div>
+      <div class="wc-rule"></div>
+      <div class="wc-stat"><div class="n">25&ndash;30<em>%</em></div>
+        <div class="l">Del tiempo del comercial, hoy dedicado a reprocesos.
+          Ese es el margen que se recupera</div></div>
+    </div>
+
+    <div class="wc">
+      <div class="wc-head">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#12f280" stroke-width="2" stroke-linecap="round">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+          <path d="M14 2v6h6"/><path d="M9 15l2 2 4-4"/></svg>
+        <div class="r">Facturaci&oacute;n y cliente</div>
+      </div>
+      <div class="wc-body">
+        <div class="wc-blk wc-hoy"><p class="wc-lab">Hoy</p>
+          <p>El cliente conoce el precio cuando le llega la factura.
+             Facturaci&oacute;n se entera con el reclamo.</p></div>
+        <div class="wc-blk wc-post"><p class="wc-lab">Con el tarifador</p>
+          <p>El cliente ve y acepta antes. Facturaci&oacute;n contrasta lo pedido contra
+             lo ejecutado <b>antes de emitir</b>.</p></div>
+      </div>
+      <div class="wc-rule"></div>
+      <div class="wc-stat"><div class="n">4 <em>&aacute;reas</em></div>
+        <div class="l">Comercial, CGO, Programaci&oacute;n y MARTE notificadas en el mismo
+          momento en que el cliente acepta</div></div>
+    </div>
+  </div>
+
+  <div class="stamp-cap">Prosegur &middot; Propuesta COLMEN IA</div>
+  <div class="stamp-num">01</div>
+</section>
+
+
+<!-- ══════════════ 02 ══════════════ -->
+<section data-label="Tarifador &middot; As&iacute; se ver&iacute;a">
+  <img class="stamp-logo" src="./_plantilla/assets/logo-horizontal.png" alt="">
+  <p class="eyebrow">Componente 02 <b>&middot;</b> Tarifador Inteligente</p>
+  <h1 class="title">As&iacute; se ver&iacute;a el tarifador</h1>
+  <p class="hint hint-sm">El analista escoge el tipo de servicio y carga lo que se requiere.
+     El tarifador devuelve el desglose, el argumento y la tarifa lista para auditar.</p>
+
+  <div class="app">
+    <div class="app-bar">
+      <span class="d" style="background:#ff5f57"></span>
+      <span class="d" style="background:#febc2e"></span>
+      <span class="d" style="background:#28c840"></span>
+      <span class="u">tarifador.prosegur &mdash; Nueva cotizaci&oacute;n</span>
+    </div>
+    <div class="app-body">
+
+      <div class="app-side">
+        <p class="side-k">M&oacute;dulos de la tarifa</p>
+        <div class="side-i on"><span class="bd"></span>Servicio de vigilancia</div>
+        <div class="side-i"><span class="bd"></span>Mano de obra</div>
+        <div class="side-i"><span class="bd"></span>Escalas ajustadas</div>
+        <div class="side-i"><span class="bd"></span>H vigilancia</div>
+        <div class="side-i"><span class="bd"></span>Dotaciones b&aacute;sicas</div>
+        <div class="side-i"><span class="bd"></span>Medios auxiliares</div>
+        <div class="side-i"><span class="bd"></span>Comunicaciones</div>
+        <div class="side-i"><span class="bd"></span>Variables fijas</div>
+        <div class="side-i"><span class="bd"></span>ROCE</div>
+        <div class="side-i"><span class="bd"></span>Rentabilidad</div>
+        <div class="side-foot">Cada m&oacute;dulo se alimenta solo desde MARTE, Meta&nbsp;4
+          y compras.</div>
+      </div>
+
+      <div class="app-main">
+
+        <div class="selrow">
+          <span class="lb">Tipo de tarifa</span>
+          <span class="sel on">Servicios fijos</span>
+          <span class="sel">Servicios adicionales</span>
+          <span class="sep">&rarr;</span>
+          <span class="sel sub">Especiales</span>
+          <span class="sel sub">Normales</span>
+        </div>
+
+        <div class="io">
+
+          <div class="iocol">
+            <div class="ioh"><div class="ionum">1</div>
+              <div class="t">Lo que se pide</div>
+              <div class="who2">Lo carga el analista</div></div>
+
+            <div class="frow">
+              <div class="fi edit"><div class="k">Cliente</div>
+                <div class="v">Compa&ntilde;&iacute;a portuaria<span class="caret"></span></div></div>
+              <div class="fi"><div class="k">Delegaci&oacute;n</div><div class="v">Cartagena</div></div>
+            </div>
+            <div class="frow">
+              <div class="fi"><div class="k">Contrato</div><div class="v">12 meses</div></div>
+              <div class="fi"><div class="k">Forma de pago</div><div class="v">30 d&iacute;as</div></div>
+            </div>
+
+            <div style="margin-top:6px">
+              <div class="lrow" style="border-top:1px solid #eef1f0">
+                <div class="nm">Vigilancia sin arma 24 h permanentes</div>
+                <div class="c">3</div><div class="r">CDTVO</div></div>
+              <div class="lrow"><div class="nm">Supervisi&oacute;n y rondas</div>
+                <div class="c">1</div><div class="r">CDTVO</div></div>
+              <div class="lrow"><div class="nm">Medio de comunicaci&oacute;n</div>
+                <div class="c">4</div><div class="r">&mdash;</div></div>
+            </div>
+            <div class="addln">+ Agregar l&iacute;nea de servicio</div>
+
+            <div class="obs"><div class="k">Observaciones del analista</div>
+              <div class="v">Cliente pide inicio el 1 de octubre. Confirmar dotaci&oacute;n
+                especial para zona portuaria.<span class="caret"></span></div></div>
+          </div>
+
+          <div class="iocol out">
+            <div class="ioh"><div class="ionum">2</div>
+              <div class="t">Lo que entrega</div>
+              <div class="who2">Lo calcula el tarifador</div></div>
+
+            <div class="orow"><div>Mano de obra</div><div class="src">Meta 4</div>
+              <div class="r">$ 12.850.000</div></div>
+            <div class="orow"><div>Dotaci&oacute;n y medios auxiliares</div><div class="src">Compras</div>
+              <div class="r">$ 2.130.000</div></div>
+            <div class="orow"><div>Transporte &middot; valor semanal</div>
+              <div class="src">Operaciones</div><div class="r">$ 680.000</div></div>
+            <div class="orow sum"><div>Costo de operaci&oacute;n</div><div class="src"></div>
+              <div class="r">$ 15.660.000</div></div>
+            <div class="orow"><div>Margen aplicado &middot; 18%</div><div class="src">Regla</div>
+              <div class="r">$ 2.820.000</div></div>
+
+            <div class="why2"><div class="k">Por qu&eacute; esta tarifa</div>
+              <p>Cliente de m&aacute;s de 10 a&ntilde;os sostenido al 18%. Mano de obra a la
+                 fecha en Meta 4 y dotaci&oacute;n contrastada contra proveedores del grupo.</p></div>
+
+            <div class="totbar"><div><div class="k">Tarifa sugerida</div>
+              <div class="v">$ 18.480.000</div></div>
+              <div class="rt"><div class="k">Rentabilidad</div><div class="v">18,0%</div></div></div>
+
+            <div class="acts">
+              <span class="act act-o">Ajustar y auditar</span>
+              <span class="act act-n">Descargar cotizaci&oacute;n</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="note">
+    <div class="k">Lo que cambia</div>
+    <p>Hoy la tarifa se arma llenando a mano las casillas amarillas de una plantilla con diez
+       hojas y buscando el precio de cada &iacute;tem en la hoja de compras.</p>
+    <div class="ej">Cifras de ejemplo</div>
+  </div>
+
+  <div class="stamp-cap">Prosegur &middot; Propuesta COLMEN IA &middot; Interfaz de referencia</div>
+  <div class="stamp-num">02</div>
+</section>
+
+
+<!-- ══════════════ 03 ══════════════ -->
+<section data-label="Tarifador &middot; El motor y su back">
+  <img class="stamp-logo" src="./_plantilla/assets/logo-horizontal.png" alt="">
+  <p class="eyebrow">Componente 02 <b>&middot;</b> Tarifador Inteligente</p>
+  <h1 class="title">De d&oacute;nde saca el precio</h1>
+  <p class="hint hint-sm">Ese mismo tarifador calcula la tarifa de todos los servicios.
+     Detr&aacute;s, los sistemas de los que la saca.</p>
+
+  <div class="s3hero">
+    <div class="ring r3"></div><div class="ring r2"></div><div class="ring r1"></div>
+    <div class="orb" style="top:44px; left:calc(50% - 232px)"></div>
+    <div class="orb" style="bottom:56px; right:calc(50% - 216px)"></div>
+    <div class="orb" style="top:104px; right:calc(50% - 192px); width:8px; height:8px"></div>
+    <div class="bolita">
+      <div class="bk">Motor de tarifas</div>
+      <div class="bn">Tarifador<br>Inteligente</div>
+    </div>
+  </div>
+
+  <svg class="wires" viewBox="0 0 1700 64">
+    <g stroke="#12f280" stroke-width="2.5" fill="none" stroke-linecap="round">
+      <path d="M850 0 L850 32"/><path d="M170 32 L1530 32"/>
+      <path d="M170 32 L170 64"/><path d="M510 32 L510 64"/>
+      <path d="M850 32 L850 64"/><path d="M1190 32 L1190 64"/>
+      <path d="M1530 32 L1530 64"/>
+    </g>
+  </svg>
+
+  <p class="backlab">El back &mdash; de d&oacute;nde salen los datos</p>
+
+  <div class="circles">
+    <div class="cnode">
+      <div class="cdot"><svg viewBox="0 0 24 24" fill="none" stroke="#09562c" stroke-width="2"
+        stroke-linecap="round"><ellipse cx="12" cy="5" rx="8" ry="3"/>
+        <path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/>
+        <path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg></div>
+      <div class="cn">MARTE</div>
+      <div class="cd">El hist&oacute;rico de cada cliente: condiciones, rentabilidad y c&oacute;mo
+        se ha manejado a lo largo de los a&ntilde;os</div>
+    </div>
+    <div class="cnode">
+      <div class="cdot"><svg viewBox="0 0 24 24" fill="none" stroke="#09562c" stroke-width="2"
+        stroke-linecap="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+        <circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg></div>
+      <div class="cn">Meta 4</div>
+      <div class="cd">El sistema de n&oacute;mina. Cu&aacute;nto cuesta realmente la operaci&oacute;n
+        asignada a ese cliente</div>
+    </div>
+    <div class="cnode">
+      <div class="cdot"><svg viewBox="0 0 24 24" fill="none" stroke="#09562c" stroke-width="2"
+        stroke-linecap="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+        <path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></div>
+      <div class="cn">Compras</div>
+      <div class="csub">
+        <span>Proveedores ya registrados en el grupo, con sus precios</span>
+        <span>B&uacute;squeda en internet &mdash; comparativo del precio de hoy</span>
+      </div>
+    </div>
+    <div class="cnode">
+      <div class="cdot"><svg viewBox="0 0 24 24" fill="none" stroke="#09562c" stroke-width="2"
+        stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+        <path d="M14 2v6h6"/><path d="M9 13h6"/><path d="M9 17h6"/></svg></div>
+      <div class="cn">Reglas de negocio</div>
+      <div class="cd">Lo que aplica igual para todas las tarifas. Lo mantiene un responsable
+        de Prosegur</div>
+      <div class="cex"><b>Por ejemplo</b>M&iacute;nimo de rentabilidad por servicio &middot;
+        reducci&oacute;n de la jornada laboral &middot; recargos de ley</div>
+    </div>
+    <div class="cnode">
+      <div class="cdot"><svg viewBox="0 0 24 24" fill="none" stroke="#09562c" stroke-width="2"
+        stroke-linecap="round"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg></div>
+      <div class="cn">Adquisici&oacute;n del dato</div>
+      <div class="cd">Lo que solo fija el criterio humano, porque cambia de una semana a otra</div>
+      <div class="cex"><b>Por ejemplo</b>Operaciones carga el valor del transporte que se va a
+        manejar esta semana</div>
+    </div>
+  </div>
+
+  <div class="stamp-cap">Prosegur &middot; Propuesta COLMEN IA</div>
+  <div class="stamp-num">03</div>
+</section>
+
+
+<!-- ══════════════ 04 ══════════════ -->
+<section data-label="Tarifador &middot; La cotizaci&oacute;n que sale">
+  <img class="stamp-logo" src="./_plantilla/assets/logo-horizontal.png" alt="">
+  <p class="eyebrow">Componente 02 <b>&middot;</b> Tarifador Inteligente</p>
+  <h1 class="title">La cotizaci&oacute;n que sale, con su argumento</h1>
+  <p class="hint hint-sm">Es el documento que se descarga desde la pantalla anterior.
+     No entrega un n&uacute;mero: entrega el porqu&eacute; &mdash; y lo que no pudo resolver, lo dice.</p>
+
+  <div class="mock">
+    <div class="chrome">
+      <span class="dot" style="background:#ff5f57"></span>
+      <span class="dot" style="background:#febc2e"></span>
+      <span class="dot" style="background:#28c840"></span>
+      <span class="u">tarifador.prosegur &mdash; Cotizaci&oacute;n #4821 &middot; Compa&ntilde;&iacute;a portuaria</span>
+    </div>
+    <div class="mgrid">
+      <div class="mleft">
+        <div class="mrow h"><div>L&iacute;nea del servicio</div><div class="r">Fuente</div><div class="r">Valor</div></div>
+        <div class="mrow"><div><b>Vigilancia sin arma 24 h</b> &middot; 3 puestos</div>
+          <div class="r">Tarifa decreto</div><div class="r">$ 12.850.000</div></div>
+        <div class="mrow"><div>Dotaci&oacute;n y medios auxiliares</div>
+          <div class="r">Compras</div><div class="r">$ 2.130.000</div></div>
+        <div class="mrow"><div>Transporte &middot; valor semanal</div>
+          <div class="r">Operaciones</div><div class="r">$ 680.000</div></div>
+        <div class="mrow"><div>Margen aplicado &middot; 18%</div>
+          <div class="r">Regla</div><div class="r">$ 2.820.000</div></div>
+        <div class="mrow tot"><div>Tarifa mensual sugerida</div><div class="r"></div>
+          <div class="r">$ 18.480.000</div></div>
+        <div class="dl">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#09562c"
+            stroke-width="2" stroke-linecap="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+            <path d="M7 10l5 5 5-5"/><path d="M12 15V3"/></svg>
+          Cotizaci&oacute;n #4821 &middot; descargada desde el tarifador
+        </div>
+      </div>
+      <div class="mright">
+        <p class="why">Por qu&eacute; esta tarifa</p>
+        <div class="wcard">
+          <p>Este cliente se ha manejado <b>m&aacute;s de 10 a&ntilde;os</b> al mismo margen.
+             Sostener el 18% protege la relaci&oacute;n.</p>
+          <span class="src-l">Fuente &middot; hist&oacute;rico en MARTE</span>
+        </div>
+        <div class="wcard">
+          <p>El mismo servicio se cotiz&oacute; <b>hace un a&ntilde;o en $ 17.310.000</b>.
+             Sube por costo de n&oacute;mina vigente.</p>
+          <span class="src-l">Fuente &middot; MARTE + Meta 4</span>
+        </div>
+        <div class="warn">
+          <p><b>No pude resolver esto.</b> Compras no tiene precio vigente para dotaci&oacute;n
+             especial de zona portuaria. Requiere validaci&oacute;n humana.</p>
+          <span class="src-l">Pendiente para el analista</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="stamp-cap">Prosegur &middot; Propuesta COLMEN IA &middot; Cifras de ejemplo</div>
+  <div class="stamp-num">04</div>
+</section>
+
+
+<!-- ══════════════ 05 ══════════════ -->
+<section data-label="Cliente &middot; As&iacute; se ver&iacute;a">
+  <img class="stamp-logo" src="./_plantilla/assets/logo-horizontal.png" alt="">
+  <p class="eyebrow">Componente 02 <b>&middot;</b> Servicios adicionales</p>
+  <h1 class="title">El mismo tarifador, de cara al cliente</h1>
+  <p class="hint hint-sm">El cliente pide su adicional y ve el valor antes de aprobar.
+     Ac&aacute; solo entran especiales y normales &mdash; los servicios fijos no.</p>
+
+  <div class="app">
+    <div class="app-bar">
+      <span class="d" style="background:#ff5f57"></span>
+      <span class="d" style="background:#febc2e"></span>
+      <span class="d" style="background:#28c840"></span>
+      <span class="u">portal.prosegur &mdash; Servicios adicionales</span>
+    </div>
+    <div class="app-body">
+
+      <div class="app-side">
+        <p class="side-k">Mis servicios adicionales</p>
+        <div class="side-i on"><span class="bd"></span>Solicitar un adicional</div>
+        <div class="side-i"><span class="bd"></span>Solicitudes aprobadas</div>
+        <div class="side-i"><span class="bd"></span>En ejecuci&oacute;n</div>
+        <div class="side-i"><span class="bd"></span>Hist&oacute;rico</div>
+        <div class="side-foot">El cliente ve su tarifa y su hist&oacute;rico. No ve costos,
+          m&aacute;rgenes ni la tarifa de servicios fijos.</div>
+      </div>
+
+      <div class="app-main">
+
+        <div class="selrow">
+          <span class="lb">Tipo de adicional</span>
+          <span class="sel">Especiales</span>
+          <span class="sel on">Normales</span>
+          <span class="sep">&middot;</span>
+          <span class="lb" style="margin-right:0">Delegaci&oacute;n</span>
+          <span class="sel sub on">Cartagena</span>
+        </div>
+
+        <div class="io">
+
+          <div class="iocol">
+            <div class="ioh"><div class="ionum">1</div>
+              <div class="t">Lo que el cliente pide</div>
+              <div class="who2">Lo carga el cliente</div></div>
+
+            <div class="frow">
+              <div class="fi edit"><div class="k">Servicio requerido</div>
+                <div class="v">Refuerzo nocturno<span class="caret"></span></div></div>
+              <div class="fi"><div class="k">Cantidad</div><div class="v">2 puestos</div></div>
+            </div>
+            <div class="frow">
+              <div class="fi"><div class="k">Desde</div><div class="v">12 de octubre</div></div>
+              <div class="fi"><div class="k">Hasta</div><div class="v">18 de octubre</div></div>
+            </div>
+
+            <div style="margin-top:6px">
+              <div class="lrow" style="border-top:1px solid #eef1f0">
+                <div class="nm">Refuerzo nocturno &middot; puesto adicional</div>
+                <div class="c">2</div><div class="r">Normal</div></div>
+              <div class="lrow"><div class="nm">Cubrimiento de evento &middot; fin de semana</div>
+                <div class="c">1</div><div class="r">Especial</div></div>
+              <div class="lrow"><div class="nm">Vigilancia sin arma &middot; horas extra</div>
+                <div class="c">24 h</div><div class="r">Normal</div></div>
+            </div>
+            <div class="addln">+ Agregar otro servicio a esta solicitud</div>
+
+            <div class="obs"><div class="k">Nota del cliente</div>
+              <div class="v">El refuerzo es por el arribo de dos buques. Requerimos el mismo
+                personal de la semana pasada.<span class="caret"></span></div></div>
+          </div>
+
+          <div class="iocol out">
+            <div class="ioh"><div class="ionum">2</div>
+              <div class="t">Lo que el cliente ve</div>
+              <div class="who2">Antes de aprobar</div></div>
+
+            <div class="orow"><div>Refuerzo nocturno &middot; 2 puestos</div>
+              <div class="src">Normal</div><div class="r">$ 2.360.000</div></div>
+            <div class="orow"><div>Cubrimiento de evento &middot; fin de semana</div>
+              <div class="src">Especial</div><div class="r">$ 1.480.000</div></div>
+            <div class="orow"><div>Vigilancia sin arma &middot; 24 horas extra</div>
+              <div class="src">Normal</div><div class="r">$ 720.000</div></div>
+
+            <div class="why2"><div class="k">Qu&eacute; ve el cliente</div>
+              <p>El valor de cada adicional antes de aprobarlo, con su tipo y su
+                 delegaci&oacute;n. No ve costos internos ni m&aacute;rgenes.</p></div>
+
+            <div class="totbar"><div><div class="k">Total de la solicitud</div>
+              <div class="v">$ 4.560.000</div></div>
+              <div class="rt"><div class="k">Vigencia</div><div class="v">7 d&iacute;as</div></div></div>
+
+            <div class="acts">
+              <span class="act act-o">Ajustar solicitud</span>
+              <span class="act act-n">Aprobar</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="note">
+    <div class="k">Al aprobar</div>
+    <p>La solicitud queda en firme y se notifica sola, en el mismo momento, a Comercial,
+       CGO, Programaci&oacute;n y MARTE.</p>
+    <div class="ej">Cifras de ejemplo</div>
+  </div>
+
+  <div class="stamp-cap">Prosegur &middot; Propuesta COLMEN IA &middot; Interfaz de referencia</div>
+  <div class="stamp-num">05</div>
+</section>
+
+
+<!-- 06 EL FLUJO -->
+<section data-label="Servicios adicionales &middot; El flujo">
+  <img class="stamp-logo" src="./_plantilla/assets/logo-horizontal.png" alt="">
+  <p class="eyebrow">Componente 02 <b>&middot;</b> Servicios adicionales</p>
+  <h1 class="title">El flujo completo</h1>
+  <p class="hint hint-sm">El tarifador arranca el proceso y lo cierra. En el medio, cada
+     &aacute;rea sigue con lo suyo.</p>
+
+  <div class="lf">
+    <svg viewBox="0 0 1700 508">
+      <defs>
+        <marker id="a1" markerWidth="11" markerHeight="9" refX="10" refY="4.5" orient="auto">
+          <path d="M0,0 L11,4.5 L0,9 z" fill="#09562c"/></marker>
+        <marker id="a2" markerWidth="11" markerHeight="9" refX="10" refY="4.5" orient="auto">
+          <path d="M0,0 L11,4.5 L0,9 z" fill="#5aa982"/></marker>
+      </defs>
+      <g stroke="#09562c" stroke-width="2.5" fill="none" marker-end="url(#a1)">
+        <path d="M212 190 L253 190"/>
+        <path d="M547 190 L588 190"/>
+        <path d="M887 190 L928 190"/>
+        <path d="M1162 190 L1203 190"/>
+        <path d="M1447 190 L1488 190"/>
+      </g>
+      <g stroke="#5aa982" stroke-width="2.5" fill="none" marker-end="url(#a2)"
+         stroke-dasharray="8 6">
+        <path d="M405 299 L405 372 Q405 388 421 388 L1584 388 Q1600 388 1600 372 L1600 290"/>
+      </g>
+      <g stroke="#09562c" stroke-width="2.5" fill="none" marker-end="url(#a1)">
+        <path d="M1600 279 L1600 448 Q1600 466 1582 466 L124 466 Q106 466 106 448 L106 287"/>
+      </g>
+    </svg>
+
+    <div class="lfn lf-act" style="left:0; width:212px">
+      <div class="t">Cliente</div>
+      <div class="d">Entra al portal y acepta el adicional</div>
+    </div>
+
+    <div class="lfnum" style="left:220px; top:105px">1</div>
+    <div class="lfl" style="left:170px; top:36px; width:128px"><b>Acepta</b>ve el valor antes</div>
+
+    <div class="lfn lf-tar" style="left:265px; width:282px">
+      <div class="k">Motor de tarifas</div>
+      <div class="t">Tarifador Inteligente</div>
+      <div class="d">Registra la aceptaci&oacute;n en firme y dispara la notificaci&oacute;n</div>
+    </div>
+
+    <div class="lfnum" style="left:555px; top:105px">2</div>
+    <div class="lfl" style="left:508px; top:28px; width:154px">
+      <b>Notifica por correo</b>a los cuatro,<br>al mismo tiempo</div>
+
+    <div class="lfn lf-grp" style="left:600px; width:287px">
+      <div class="gk">Se enteran al tiempo</div>
+      <div class="gc"><span>Comercial</span><span>CGO</span>
+        <span>Programaci&oacute;n</span><span class="hi">MARTE</span></div>
+      <div class="gf">Ah&iacute; termina el trabajo del tarifador</div>
+    </div>
+
+    <div class="lfnum" style="left:895px; top:105px">3</div>
+    <div class="lfl" style="left:846px; top:40px; width:150px">
+      <b>MARTE toma la propuesta</b></div>
+
+    <div class="lfn lf-sys" style="left:940px; width:222px">
+      <div class="t">MARTE</div>
+      <div class="d">Una persona sube la propuesta al sistema</div>
+    </div>
+
+    <div class="lfnum" style="left:1170px; top:105px">4</div>
+    <div class="lfl" style="left:1112px; top:32px; width:174px">
+      <b>Le avisa a Programaci&oacute;n</b>no pasa por el tarifador</div>
+
+    <div class="lfn lf-act" style="left:1215px; width:232px">
+      <div class="t">Programaci&oacute;n</div>
+      <div class="d">Agenda y ejecuta el servicio</div>
+    </div>
+
+    <div class="lfnum" style="left:1455px; top:105px">5</div>
+    <div class="lfl" style="left:1398px; top:40px; width:144px">
+      <b>Lo que se ejecut&oacute;</b></div>
+
+    <div class="lfn lf-sys" style="left:1490px; width:210px">
+      <div class="t">PROFACT</div>
+      <div class="d">Compara los dos lados y emite la factura</div>
+    </div>
+
+    <div class="lfnum" style="left:606px; top:378px">6</div>
+    <div class="vs-box" style="left:640px; top:358px">
+      <div class="side"><div class="kk2">Lo que el cliente acept&oacute;</div>
+        <div class="vv">Consultado en el tarifador</div></div>
+      <div class="vs">VS</div>
+      <div class="side b"><div class="kk2">Lo que se ejecut&oacute;</div>
+        <div class="vv">Reportado por Programaci&oacute;n</div></div>
+    </div>
+
+    <div class="lfnum" style="left:700px; top:454px">7</div>
+    <div class="lfl" style="left:732px; top:446px; width:336px">
+      <b>Factura correcta a la primera</b>sin reclamo ni reproceso</div>
+  </div>
+
+  <div class="dgnote">
+    <div class="k">D&oacute;nde entra el tarifador</div>
+    <p>En el <b>arranque</b> &mdash; el cliente ve el valor, acepta y las cuatro &aacute;reas
+       quedan notificadas al tiempo &mdash; y en el <b>cierre</b>, cuando Facturaci&oacute;n
+       necesita saber qu&eacute; fue lo que el cliente realmente acept&oacute;. En el medio,
+       cada &aacute;rea sigue su curso.</p>
+  </div>
+
+  <div class="stamp-cap">Prosegur &middot; Propuesta COLMEN IA</div>
+  <div class="stamp-num">06</div>
+</section>
+
+
+<!-- ══════════════ 07 · ALCANCE ══════════════ -->
+<section data-label="Tarifador &middot; Alcance y l&iacute;mites">
+  <img class="stamp-logo" src="./_plantilla/assets/logo-horizontal.png" alt="">
+  <p class="eyebrow">Componente 02 <b>&middot;</b> Tarifador Inteligente</p>
+  <h1 class="title">Alcance y l&iacute;mites</h1>
+  <p class="hint">Lo que entra en este componente, y lo que deliberadamente queda fuera.</p>
+
+  <div class="two">
+    <div class="col col-yes">
+      <h3>Lo que hace</h3>
+      <ul>
+        <li><i>&#10003;</i>Calcula servicios fijos, adicionales especiales y adicionales normales</li>
+        <li><i>&#10003;</i>Consume las cinco fuentes: MARTE, Meta 4, compras, reglas de negocio y adquisici&oacute;n del dato</li>
+        <li><i>&#10003;</i>Sugiere la tarifa y sustenta el porqu&eacute; contra el hist&oacute;rico</li>
+        <li><i>&#10003;</i>Reporta lo que no puede resolver en vez de rellenarlo</li>
+        <li><i>&#10003;</i>Incorpora las correcciones del analista</li>
+        <li><i>&#10003;</i>Portal privado de cliente para adicionales, con notificaci&oacute;n en paralelo</li>
+        <li><i>&#10003;</i>Vista de contraste para Facturaci&oacute;n antes de emitir</li>
+      </ul>
+    </div>
+    <div class="col col-no">
+      <h3>Lo que no hace</h3>
+      <ul>
+        <li><i>&#10005;</i>No reemplaza a MARTE, Meta 4, VIGIA ni PROFACT &mdash; se conecta a ellos</li>
+        <li><i>&#10005;</i>No aprueba tarifas sin humano: el analista sigue siendo quien valida</li>
+        <li><i>&#10005;</i>El portal de cliente no es p&uacute;blico y no cubre servicios fijos</li>
+        <li><i>&#10005;</i>No incluye el mantenimiento de las reglas de negocio: lo lidera un responsable de Prosegur</li>
+        <li><i>&#10005;</i>No incluye licenciamiento ni infraestructura de nube</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="dash">
+    <div class="k">Descubrimiento t&eacute;cnico</div>
+    <p>El m&eacute;todo de conexi&oacute;n a MARTE, Meta 4 y la nube de compras &mdash; v&iacute;a API o
+       v&iacute;a extracci&oacute;n &mdash; se define con el &aacute;rea de TI de Prosegur al inicio del
+       proyecto. El valor asociado a esa integraci&oacute;n se presenta como estimado.</p>
+  </div>
+
+  <div class="stamp-cap">Prosegur &middot; Propuesta COLMEN IA</div>
+  <div class="stamp-num">07</div>
+</section>
+
+
+<!-- ============ 08 · SECOP · QUE SOLUCIONAMOS ============ -->
+<section data-label="SECOP &middot; Qu&eacute; solucionamos">
+  <img class="stamp-logo" src="./_plantilla/assets/logo-horizontal.png" alt="">
+  <p class="eyebrow">Componente 03 <b>&middot;</b> Gestor de SECOP</p>
+  <h1 class="title">Qu&eacute; solucionamos</h1>
+  <p class="hint hint-sm">El equipo de licitaciones no est&aacute; lento. Est&aacute; en su
+     techo de capacidad.</p>
+
+  <div class="sc-hero">
+    <div class="sc-card sc-hoy">
+      <p class="sc-tag">Hoy</p>
+      <p class="sc-verb">Alcanza.</p>
+      <p>Tres personas revisan licitaciones a mano, una por una. Nueve por semana es
+         <b>el m&aacute;ximo</b> que alcanzan &mdash; no el promedio. Todo lo que se publique
+         por encima de ah&iacute; no se mira: no porque no sirva, sino porque no dan las manos.</p>
+    </div>
+    <div class="sc-card sc-post">
+      <p class="sc-tag">Con el gestor</p>
+      <p class="sc-verb">Apuesta.</p>
+      <p>El sistema barre SECOP y las plataformas privadas, filtra contra lo que Prosegur
+         ya ha hecho, y entrega una <b>lista priorizada</b>. El equipo deja de buscar y
+         empieza a escoger d&oacute;nde competir.</p>
+    </div>
+  </div>
+
+  <div class="sc-stats">
+    <div class="sc-st"><div class="n">3 <em>personas</em></div>
+      <div class="l">Dedicadas hoy a revisar y gestionar licitaciones</div></div>
+    <div class="sc-st"><div class="n">9 <em>/ semana</em></div>
+      <div class="l">Su m&aacute;ximo volumen. Lo que pase de ah&iacute; no se alcanza a revisar</div></div>
+    <div class="sc-st"><div class="n">~13 <em>horas</em></div>
+      <div class="l">De trabajo humano por licitaci&oacute;n, entre b&uacute;squeda,
+        lectura y seguimiento</div></div>
+  </div>
+
+  <div class="stamp-cap">Prosegur &middot; Propuesta COLMEN IA</div>
+  <div class="stamp-num">08</div>
+</section>
+
+
+<!-- ============ 09 · SECOP · COMO FUNCIONA ============ -->
+<section data-label="SECOP &middot; C&oacute;mo funciona">
+  <img class="stamp-logo" src="./_plantilla/assets/logo-horizontal.png" alt="">
+  <p class="eyebrow">Componente 03 <b>&middot;</b> Gestor de SECOP</p>
+  <h1 class="title">De d&oacute;nde salen y c&oacute;mo se filtran</h1>
+  <p class="hint hint-sm">Conexi&oacute;n directa a la fuente, memoria de lo que Prosegur ya
+     ha hecho, y un informe por compa&ntilde;&iacute;a.</p>
+
+  <div class="sc-pipe" style="height:600px">
+
+    <div class="sc-col sc-src">
+      <p class="sc-k">Paso 01</p>
+      <p class="sc-t">Las fuentes</p>
+      <div class="sc-it">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#09562c" stroke-width="2" stroke-linecap="round">
+          <rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18"/><path d="M8 4v16"/></svg>
+        <div><b>SECOP</b><span>Conexi&oacute;n directa por API a la fuente oficial. Sin
+          intermediarios</span></div>
+      </div>
+      <div class="sc-it">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#09562c" stroke-width="2" stroke-linecap="round">
+          <path d="M12 2 2 7l10 5 10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        <div><b>Ariba y otras privadas</b><span>Las licitaciones que no pasan por SECOP,
+          en el mismo tablero</span></div>
+      </div>
+      <div class="sc-it">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#09562c" stroke-width="2" stroke-linecap="round">
+          <path d="M4 4h6l2 3h8v13H4z"/><path d="M8 13h8"/></svg>
+        <div><b>El hist&oacute;rico de Prosegur</b><span>Las licitaciones de todos estos
+          a&ntilde;os, hoy repartidas en carpetas del equipo</span></div>
+      </div>
+    </div>
+
+    <div class="sc-ar">&rarr;</div>
+
+    <div class="sc-col sc-eng">
+      <p class="sc-k">Paso 02</p>
+      <p class="sc-t">El filtro</p>
+      <div class="sc-it">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#12f280" stroke-width="2" stroke-linecap="round">
+          <path d="M22 3H2l8 9.5V19l4 2v-8.5z"/></svg>
+        <div><b>Descarta lo que no aplica</b><span>Contrasta cada convocatoria contra lo
+          que Prosegur sabe hacer</span></div>
+      </div>
+      <div class="sc-it">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#12f280" stroke-width="2" stroke-linecap="round">
+          <path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg>
+        <div><b>Mide el grado de oportunidad</b><span>Qu&eacute; porcentaje de los servicios
+          pedidos puede prestar la compa&ntilde;&iacute;a</span></div>
+      </div>
+      <div class="sc-it">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#12f280" stroke-width="2" stroke-linecap="round">
+          <path d="M3 6h18"/><path d="M7 12h10"/><path d="M11 18h2"/></svg>
+        <div><b>Prioriza</b><span>Ordena de m&aacute;s a menos afinidad con la trayectoria
+          real de Prosegur</span></div>
+      </div>
+      <div class="sc-2x">Dos barridos al d&iacute;a</div>
+    </div>
+
+    <div class="sc-ar">&rarr;</div>
+
+    <div class="sc-col sc-out">
+      <p class="sc-k">Paso 03</p>
+      <p class="sc-t">El informe</p>
+      <div class="sc-it">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#09562c" stroke-width="2" stroke-linecap="round">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+          <path d="M14 2v6h6"/><path d="M9 15l2 2 4-4"/></svg>
+        <div><b>Lista priorizada</b><span>Con el grado de oportunidad de cada convocatoria,
+          al &aacute;rea de licitaciones</span></div>
+      </div>
+      <div class="sc-it">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#09562c" stroke-width="2" stroke-linecap="round">
+          <circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        <div><b>Seguimiento</b><span>Estado de cada proceso, fechas de entrega y
+          <b>cambios de fecha</b></span></div>
+      </div>
+      <div class="sc-two">
+        <span>Prosegur Security<small>su propio foco</small></span>
+        <span>Prosegur Tecnolog&iacute;a<small>su propio foco</small></span>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="stamp-cap">Prosegur &middot; Propuesta COLMEN IA</div>
+  <div class="stamp-num">09</div>
+</section>
+
+
+<!-- ============ 10 · SECOP · EL INFORME ============ -->
+<section data-label="SECOP &middot; El informe">
+  <img class="stamp-logo" src="./_plantilla/assets/logo-horizontal.png" alt="">
+  <p class="eyebrow">Componente 03 <b>&middot;</b> Gestor de SECOP</p>
+  <h1 class="title">El informe que recibe el &aacute;rea</h1>
+  <p class="hint hint-sm">No una lista de convocatorias: una lista ordenada por qu&eacute;
+     tanto encaja cada una con lo que Prosegur sabe hacer.</p>
+
+  <div class="mock">
+    <div class="chrome">
+      <span class="dot" style="background:#ff5f57"></span>
+      <span class="dot" style="background:#febc2e"></span>
+      <span class="dot" style="background:#28c840"></span>
+      <span class="u">gestor.prosegur &mdash; Informe del 25 de agosto &middot; barrido de las 7:00 a.m.</span>
+    </div>
+    <div style="padding:34px 42px 40px">
+      <div class="selrow" style="margin-bottom:20px">
+        <span class="lb">Foco de negocio</span>
+        <span class="sel on">Prosegur Security</span>
+        <span class="sel">Prosegur Tecnolog&iacute;a</span>
+        <span class="sep">&middot;</span>
+        <span class="lb" style="margin-right:0">Fuente</span>
+        <span class="sel sub on">SECOP</span>
+        <span class="sel sub">Ariba</span>
+      </div>
+
+      <div class="lic h">
+        <div>Convocatoria</div><div class="c">Fuente</div>
+        <div class="c">Servicios que podemos prestar</div><div class="c">Prioridad</div>
+      </div>
+      <div class="lic">
+        <div class="nm">Vigilancia y seguridad privada &mdash; terminal portuaria
+          <small>Cierre: 12 de septiembre</small></div>
+        <div class="c">SECOP</div>
+        <div class="c"><div class="bar"><i style="width:100%"></i></div><span class="pc">100%</span></div>
+        <div class="c"><span class="pri pri-a">Alta</span></div>
+      </div>
+      <div class="lic">
+        <div class="nm">Seguridad electr&oacute;nica y monitoreo &mdash; red hospitalaria
+          <small>Cierre: 8 de septiembre</small></div>
+        <div class="c">Ariba</div>
+        <div class="c"><div class="bar"><i style="width:82%"></i></div><span class="pc">82%</span></div>
+        <div class="c"><span class="pri pri-a">Alta</span></div>
+      </div>
+      <div class="lic">
+        <div class="nm">Vigilancia con medio tecnol&oacute;gico &mdash; sedes administrativas
+          <small>Cierre: 19 de septiembre</small></div>
+        <div class="c">SECOP</div>
+        <div class="c"><div class="bar"><i style="width:64%"></i></div><span class="pc">64%</span></div>
+        <div class="c"><span class="pri pri-b">Media</span></div>
+      </div>
+      <div class="lic">
+        <div class="nm">Transporte de valores y custodia
+          <small>Cierre: 2 de septiembre</small></div>
+        <div class="c">SECOP</div>
+        <div class="c"><div class="bar"><i style="width:35%"></i></div><span class="pc">35%</span></div>
+        <div class="c"><span class="pri pri-c">Baja</span></div>
+      </div>
+      <div class="lic" style="border-bottom:0">
+        <div class="nm">Aseo y servicios generales &mdash; complejo industrial
+          <small>Cierre: 15 de septiembre</small></div>
+        <div class="c">SECOP</div>
+        <div class="c"><div class="bar"><i style="width:12%"></i></div><span class="pc">12%</span></div>
+        <div class="c"><span class="pri pri-c">Descartada</span></div>
+      </div>
+
+      <div class="note" style="margin-top:26px">
+        <div class="k">El humano decide</div>
+        <p>El &aacute;rea marca cu&aacute;les quiere analizar a fondo. Ese es el segundo
+           filtro, y lo dispara una persona &mdash; no el sistema.</p>
+        <div class="ej">Convocatorias de ejemplo</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="stamp-cap">Prosegur &middot; Propuesta COLMEN IA &middot; Interfaz de referencia</div>
+  <div class="stamp-num">10</div>
+</section>
+
+
+<!-- ============ 11 · SECOP · EL AGENTE DE PLIEGOS ============ -->
+<section data-label="SECOP &middot; An&aacute;lisis de pliegos">
+  <img class="stamp-logo" src="./_plantilla/assets/logo-horizontal.png" alt="">
+  <p class="eyebrow">Componente 03 <b>&middot;</b> Gestor de SECOP</p>
+  <h1 class="title">El agente que lee los pliegos</h1>
+  <p class="hint hint-sm">Segundo filtro. Lo dispara una persona sobre las convocatorias que
+     marc&oacute; &mdash; y el agente entra al detalle.</p>
+
+  <div class="plg-flow" style="margin-bottom:28px">
+    <div class="plg-s"><div class="kk">Lo decide un humano</div>
+      <div class="vv">El &aacute;rea marca <em>cu&aacute;les</em> analizar</div></div>
+    <div class="plg-a">&rarr;</div>
+    <div class="plg-s"><div class="kk">Lo hace el agente</div>
+      <div class="vv">Entra a los pliegos y los <em>eval&uacute;a punto por punto</em></div></div>
+    <div class="plg-a">&rarr;</div>
+    <div class="plg-s"><div class="kk">Lo recibe el &aacute;rea</div>
+      <div class="vv">Qu&eacute; tan cerca est&aacute;<br><em>Prosegur de cumplir</em></div></div>
+  </div>
+
+  <div class="plg">
+    <div class="plg-c">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#09562c" stroke-width="2"
+        stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+        <path d="M14 2v6h6"/><path d="M9 13h6"/><path d="M9 17h4"/></svg></div>
+      <h4>Condiciones del proceso</h4>
+      <p>Qu&eacute; exige la contrataci&oacute;n: modalidad, requisitos habilitantes,
+         plazos y forma de presentaci&oacute;n.</p>
+    </div>
+    <div class="plg-c">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#09562c" stroke-width="2"
+        stroke-linecap="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/>
+        <circle cx="12" cy="10" r="3"/></svg></div>
+      <h4>Capacidad territorial</h4>
+      <p>D&oacute;nde hay que prestar el servicio y si Prosegur tiene presencia y
+         operaci&oacute;n en esas delegaciones.</p>
+    </div>
+    <div class="plg-c">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#09562c" stroke-width="2"
+        stroke-linecap="round"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg></div>
+      <h4>Indicadores financieros</h4>
+      <p>Los &iacute;ndices que pide el pliego contra los que la compa&ntilde;&iacute;a
+         puede acreditar.</p>
+    </div>
+    <div class="plg-c">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#09562c" stroke-width="2"
+        stroke-linecap="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+        <circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg></div>
+      <h4>Requerimiento de personal</h4>
+      <p>Cu&aacute;nta gente pide la convocatoria, con qu&eacute; perfil, y qu&eacute;
+         tan alcanzable es cubrirlo.</p>
+    </div>
+  </div>
+
+  <div class="note">
+    <div class="k">Por qu&eacute; importa</div>
+    <p>Leer un pliego a fondo es donde se van las horas. Que el agente lo haga primero no
+       reemplaza el criterio del &aacute;rea: le llega el an&aacute;lisis hecho y decide
+       sobre eso.</p>
+  </div>
+
+  <div class="stamp-cap">Prosegur &middot; Propuesta COLMEN IA</div>
+  <div class="stamp-num">11</div>
+</section>
+
+
+<!-- ============ 12 · SECOP · ALCANCE ============ -->
+<section data-label="SECOP &middot; Alcance y l&iacute;mites">
+  <img class="stamp-logo" src="./_plantilla/assets/logo-horizontal.png" alt="">
+  <p class="eyebrow">Componente 03 <b>&middot;</b> Gestor de SECOP</p>
+  <h1 class="title">Alcance y l&iacute;mites</h1>
+  <p class="hint">Lo que entra en este componente, y lo que deliberadamente queda fuera.</p>
+
+  <div class="two">
+    <div class="col col-yes">
+      <h3>Lo que hace</h3>
+      <ul>
+        <li><i>&#10003;</i>Conexi&oacute;n directa por API a SECOP, con dos barridos al d&iacute;a</li>
+        <li><i>&#10003;</i>Incorpora Ariba y las dem&aacute;s plataformas privadas al mismo tablero</li>
+        <li><i>&#10003;</i>Filtra contra el hist&oacute;rico de licitaciones de Prosegur</li>
+        <li><i>&#10003;</i>Mide el grado de oportunidad y prioriza la lista</li>
+        <li><i>&#10003;</i>Informe separado para Prosegur Security y Prosegur Tecnolog&iacute;a</li>
+        <li><i>&#10003;</i>Agente de an&aacute;lisis de pliegos, bajo demanda del &aacute;rea</li>
+        <li><i>&#10003;</i>Seguimiento de estados, fechas y cambios de fecha</li>
+      </ul>
+    </div>
+    <div class="col col-no">
+      <h3>Lo que no hace</h3>
+      <ul>
+        <li><i>&#10005;</i>No presenta la licitaci&oacute;n: prioriza y analiza, la decisi&oacute;n es del &aacute;rea</li>
+        <li><i>&#10005;</i>No reemplaza al equipo de licitaciones</li>
+        <li><i>&#10005;</i>El an&aacute;lisis de pliegos solo corre sobre lo que un humano marca</li>
+        <li><i>&#10005;</i>No estima probabilidad de ganar: mide encaje con lo que Prosegur sabe hacer</li>
+        <li><i>&#10005;</i>No incluye licenciamiento ni infraestructura de nube</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="dash">
+    <div class="k">Levantamiento del hist&oacute;rico</div>
+    <p>El hist&oacute;rico de licitaciones vive hoy en carpetas de los computadores del
+       equipo. Consolidarlo y estructurarlo es una <b>fase previa</b> del proyecto, con su
+       propio valor estimado: es lo que le da criterio al filtro.</p>
+  </div>
+
+  <div class="stamp-cap">Prosegur &middot; Propuesta COLMEN IA</div>
+  <div class="stamp-num">12</div>
+</section>
+
+
+</deck-stage>
+
+<script src="./_plantilla/deck-stage.js"></script>
+</body>
+</html>
