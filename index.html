@@ -927,6 +927,20 @@
   .org-a .af2{border-top:1px solid var(--border-default); padding-top:11px;
     font-family:var(--font-body); font-weight:600; font-size:11px; letter-spacing:.2em;
     text-transform:uppercase; color:var(--fg-muted)}
+
+  .org-fact{display:flex; gap:30px; margin-top:20px}
+  .org-fact span{font-family:var(--font-body); font-size:15px; color:rgba(255,255,255,.72)}
+  .org-fact span b{font-family:var(--font-headline); font-size:26px;
+    color:var(--color-neon-green); margin-right:8px}
+  .org-a{justify-content:space-between}
+
+  .org-fact{display:flex; gap:34px; margin-top:22px}
+  .org-fact span{font-family:var(--font-body); font-size:15px; color:rgba(255,255,255,.72)}
+  .org-fact span b{font-family:var(--font-headline); font-size:27px;
+    color:var(--color-neon-green); margin-right:9px}
+  .org-a{justify-content:space-between; height:186px}
+  .org-top{top:8px}
+  .tcd-s span em{font-style:normal; flex:1; min-width:0}
 </style>
 </head>
 <body>
@@ -940,11 +954,11 @@
   <div class="ghead">
     <div class="gl">
       <p class="geye">Adopci&oacute;n de inteligencia artificial</p>
-      <h2 class="gt">Un solo programa para que la IA entre
-        <span class="hl2">a toda la operaci&oacute;n.</span></h2>
+      <h2 class="gt">El objetivo no es que conozcan la IA.
+        Es que <span class="hl2">la adopten.</span></h2>
     </div>
-    <p class="gh">Una base com&uacute;n para todo el equipo, y de ah&iacute; una rama por
-      &aacute;rea sobre su trabajo real.</p>
+    <p class="gh">Primero capacitamos a <b>todo el equipo</b> sobre la misma base.
+      Despu&eacute;s bajamos a cada &aacute;rea, sobre su trabajo real.</p>
   </div>
 
   <div class="org">
@@ -957,19 +971,20 @@
     </svg>
 
     <div class="org-top">
-      <p class="ok">M&oacute;dulo troncal &middot; lo ve todo el equipo</p>
+      <p class="ok">Primero &middot; lo ve todo el equipo</p>
       <p class="ot">Fundamentos y primer agente</p>
-      <p class="ox">Directivos, comerciales, SECOP y reporter&iacute;a arrancan con la
-        misma base: la herramienta instalada, el criterio para usarla y un agente propio
-        funcionando. Seis m&oacute;dulos, doce horas.</p>
-      <div class="org-mods"><span><b>01</b>Introducci&oacute;n a sistemas de IA</span><span><b>02</b>Pensamiento sistem&aacute;tico y prompting</span><span><b>03</b>Productividad empresarial</span><span><b>04</b>Rutinas, skills y Excel en la nube</span><span><b>05 &middot; 06</b>Introducci&oacute;n al primer agente &middot; 2 sesiones</span></div>
+      <p class="ox">Directivos, comerciales, SECOP y reporter&iacute;a en el mismo
+        sal&oacute;n: la herramienta instalada, el criterio para usarla y un agente propio
+        funcionando.</p>
+      <div class="org-fact"><span><b>6</b> m&oacute;dulos</span><span><b>12</b> horas</span>
+        <span><b>Todo</b> el equipo</span></div>
     </div>
 
-    <div class="org-lab">Y de ah&iacute;, una rama por &aacute;rea</div>
-    <div class="org-a" style="left:0px"><div><p class="an">Comercial</p><p class="aw">3 personas</p><div class="al"><span><i>&rarr;</i>Presentaciones estandarizadas</span><span><i>&rarr;</i>Agente de gesti&oacute;n sobre el CRM</span></div></div><div class="af2">2 sesiones &middot; 4 horas</div></div>
-    <div class="org-a" style="left:434px"><div><p class="an">SECOP</p><p class="aw">Equipo de licitaciones</p><div class="al"><span><i>&rarr;</i>Agente diligenciador de formatos</span><span><i>&rarr;</i>Redacci&oacute;n asistida</span></div></div><div class="af2">2 sesiones &middot; 4 horas</div></div>
-    <div class="org-a" style="left:868px"><div><p class="an">CRM y reporter&iacute;a</p><p class="aw">Equipo de informes</p><div class="al"><span><i>&rarr;</i>Informes mejor presentados</span><span><i>&rarr;</i>An&aacute;lisis, no solo armado</span></div></div><div class="af2">2 sesiones &middot; 4 horas</div></div>
-    <div class="org-a" style="left:1302px"><div><p class="an">Equipo directivo</p><p class="aw">Comit&eacute;</p><div class="al"><span><i>&rarr;</i>Simular el impacto de un cambio de reglas</span><span><i>&rarr;</i>El informe del comit&eacute;, armado solo</span></div></div><div class="af2">2 sesiones &middot; 4 horas</div></div>
+    <div class="org-lab">Despu&eacute;s &middot; una rama por &aacute;rea</div>
+    <div class="org-a" style="left:0px"><div><p class="an">Comercial</p><p class="aw">3 personas</p></div><div class="af2">2 sesiones &middot; 4 horas</div></div>
+    <div class="org-a" style="left:434px"><div><p class="an">SECOP</p><p class="aw">Equipo de licitaciones</p></div><div class="af2">2 sesiones &middot; 4 horas</div></div>
+    <div class="org-a" style="left:868px"><div><p class="an">CRM y reporter&iacute;a</p><p class="aw">Equipo de informes</p></div><div class="af2">2 sesiones &middot; 4 horas</div></div>
+    <div class="org-a" style="left:1302px"><div><p class="an">Equipo directivo</p><p class="aw">Comit&eacute;</p></div><div class="af2">2 sesiones &middot; 4 horas</div></div>
   </div>
 
   <div class="stamp-cap">Prosegur &middot; Propuesta COLMEN IA</div>
@@ -1024,7 +1039,7 @@
       <div class="tcd"><div class="tcd-b"><p class="tcd-n">01</p><p class="tcd-t">Comercial</p><p class="tcd-x">3 personas</p><div class="tcd-s"><span><i>&rarr;</i>Presentaciones estandarizadas, sacadas r&aacute;pido</span><span><i>&rarr;</i>Agente de gesti&oacute;n comercial sobre el CRM</span></div></div><div class="tcd-f"><span class="tcd-g">Comercial</span><span class="tcd-a">&rarr;</span></div></div>
       <div class="tcd"><div class="tcd-b"><p class="tcd-n">02</p><p class="tcd-t">SECOP</p><p class="tcd-x">Equipo de licitaciones</p><div class="tcd-s"><span><i>&rarr;</i>Agente diligenciador de formatos de SECOP</span><span><i>&rarr;</i>Redacci&oacute;n asistida de los formatos del proceso</span></div></div><div class="tcd-f"><span class="tcd-g">Licitaciones</span><span class="tcd-a">&rarr;</span></div></div>
       <div class="tcd"><div class="tcd-b"><p class="tcd-n">03</p><p class="tcd-t">CRM y reporter&iacute;a</p><p class="tcd-x">Equipo de informes</p><div class="tcd-s"><span><i>&rarr;</i>Agente que presenta y analiza los informes</span><span><i>&rarr;</i>Reducir el tiempo de producci&oacute;n de cada reporte</span></div></div><div class="tcd-f"><span class="tcd-g">Reporter&iacute;a</span><span class="tcd-a">&rarr;</span></div></div>
-      <div class="tcd"><div class="tcd-b"><p class="tcd-n">04</p><p class="tcd-t">Equipo directivo</p><p class="tcd-x">Comit&eacute;</p><div class="tcd-s"><span><i>&rarr;</i>Simular qu&eacute; le hace a la rentabilidad un cambio de reglas: reducci&oacute;n de jornada, salario m&iacute;nimo, recargos &mdash; por cliente y por delegaci&oacute;n</span><span><i>&rarr;</i>El informe del comit&eacute; armado solo: lo que producen las &aacute;reas en un tablero, y poder preguntarle a los datos sin esperar a que alguien lo arme</span></div></div><div class="tcd-f"><span class="tcd-g">Direcci&oacute;n</span><span class="tcd-a">&rarr;</span></div></div>
+      <div class="tcd"><div class="tcd-b"><p class="tcd-n">04</p><p class="tcd-t">Equipo directivo</p><p class="tcd-x">Comit&eacute;</p><div class="tcd-s"><span><i>&rarr;</i><em><b>Preguntarle al negocio en espa&ntilde;ol:</b> &laquo;&iquest;qu&eacute; clientes perdieron margen este trimestre?&raquo; &mdash; y que responda con el dato, sin pedirle el reporte a nadie</em></span><span><i>&rarr;</i><em><b>Simular antes de decidir:</b> qu&eacute; le hace a la rentabilidad la reducci&oacute;n de jornada o un cambio de recargos, por cliente y por delegaci&oacute;n</em></span></div></div><div class="tcd-f"><span class="tcd-g">Direcci&oacute;n</span><span class="tcd-a">&rarr;</span></div></div>
       <div class="tcd acc" style="grid-column:span 2">
         <p class="ak">El zoom por &aacute;rea</p>
         <p class="af"><span class="hl2">4 &aacute;reas</span> &middot; 2 sesiones cada una</p>
