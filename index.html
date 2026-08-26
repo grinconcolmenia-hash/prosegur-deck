@@ -1327,6 +1327,18 @@
 
 
   
+  .ec-dual{display:flex; align-items:center; gap:16px; background:rgba(18,242,128,.15);
+    border:1.5px solid var(--color-neon-green); border-radius:15px; padding:20px 24px;
+    margin-bottom:26px}
+  .ec-dual svg{width:28px; height:28px; flex:0 0 auto}
+  .ec-dual b{display:block; font-family:var(--font-headline); font-size:19px;
+    color:var(--color-neon-green); line-height:1.25}
+  .ec-dual em{display:block; font-style:normal; font-size:14px; line-height:1.45;
+    color:rgba(255,255,255,.72); margin-top:6px}
+  .ec-dual.lt{background:#effbf4; border-color:#c8f0dc; margin-bottom:0; flex:1}
+  .ec-dual.lt b{color:var(--color-dark-green)}
+  .ec-dual.lt em{color:var(--fg-secondary)}
+
   /* ══ PROPUESTA ECONOMICA ══════════════════════════════════ */
 
   /* -- Tabla de lineas (capacitacion) -- */
@@ -1432,8 +1444,7 @@
   <div class="pc-vig"></div>
   <div class="pc-wrap l">
     <div class="pc-chip"><i></i>Componente 01</div>
-    <h2 class="pc-title sm">Plan de transformaci&oacute;n<br>en inteligencia
-      artificial<br><span>para el equipo comercial</span></h2>
+    <h2 class="pc-title sm">Plan de transformaci&oacute;n<br>en IA<br><span>para el equipo comercial</span></h2>
     <p class="pc-sub">Rutas pr&aacute;cticas sobre los procesos que el equipo ya
       tiene entre manos.</p>
     <div class="pc-tags">
@@ -3017,11 +3028,18 @@
     </div>
   </div>
 
-  <div class="ec-foot">
-    <span class="kf">Por qu&eacute; baja la hora</span>
-    <p>En el tronco hay <b>dos capacitadores</b> acompa&ntilde;ando al equipo completo
-       en el mismo sal&oacute;n. En el zoom cada &aacute;rea trabaja con
-       <b>un solo capacitador</b>, en grupo peque&ntilde;o.</p>
+  <div style="margin-top:24px; display:grid; grid-template-columns:1.35fr 1fr; gap:22px">
+    <div class="ec-foot" style="margin-top:0">
+      <span class="kf">Por qu&eacute; baja la hora</span>
+      <p>En el tronco hay <b>dos capacitadores</b> para el equipo completo. En el zoom
+         cada &aacute;rea trabaja con <b>un solo capacitador</b>.</p>
+    </div>
+    <div class="ec-dual lt">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#09562c" stroke-width="1.9"
+        stroke-linecap="round"><path d="M3 21h7V3H3zM14 21h7V9h-7z"/><path d="M6 7h1M6 11h1M6 15h1M17 13h1M17 17h1"/></svg>
+      <div><b>Security + Tecnolog&iacute;a</b>
+        <em>El mismo plan forma a los equipos de las dos compa&ntilde;&iacute;as.</em></div>
+    </div>
   </div>
 
   <div class="stamp-cap">Prosegur &middot; Propuesta COLMEN IA</div>
@@ -3134,16 +3152,22 @@
 
       <div class="ec-both">
         <i></i>
-        <p>Una sola implementaci&oacute;n sirve a <b>Prosegur Security</b> y a
-          <b>Prosegur Tecnolog&iacute;a</b>, cada una con su foco y su base.</p>
+        <p>Las licencias de <b>Apollo y Lusha</b> son recurrentes y se presupuestan
+          aparte.</p>
       </div>
     </div>
 
     <div class="ec-price">
+      <div class="ec-dual">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#12f280" stroke-width="1.9"
+          stroke-linecap="round"><path d="M3 21h7V3H3zM14 21h7V9h-7z"/><path d="M6 7h1M6 11h1M6 15h1M17 13h1M17 17h1"/></svg>
+        <div><b>Security + Tecnolog&iacute;a</b>
+          <em>Una sola implementaci&oacute;n, con su foco y su base para cada una.</em></div>
+      </div>
       <div class="kp">Inversi&oacute;n</div>
       <div class="vp">$22.000.000</div>
-      <div class="xp">Agente completo para las dos compa&ntilde;&iacute;as. Las licencias
-        de Apollo y Lusha se presupuestan aparte.</div>
+      <div class="xp">El agente completo, sirviendo a las dos compa&ntilde;&iacute;as sin
+        cobrar dos veces.</div>
     </div>
   </div>
 
@@ -3195,12 +3219,18 @@
 
       <div class="ec-both">
         <i></i>
-        <p>Una sola implementaci&oacute;n sirve a <b>Prosegur Security</b> y a
-          <b>Prosegur Tecnolog&iacute;a</b>, cada una con su informe.</p>
+        <p>El levantamiento del <b>hist&oacute;rico</b> es una fase previa: es lo que le
+          da criterio al filtro.</p>
       </div>
     </div>
 
     <div class="ec-price">
+      <div class="ec-dual">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#12f280" stroke-width="1.9"
+          stroke-linecap="round"><path d="M3 21h7V3H3zM14 21h7V9h-7z"/><path d="M6 7h1M6 11h1M6 15h1M17 13h1M17 17h1"/></svg>
+        <div><b>Security + Tecnolog&iacute;a</b>
+          <em>Un solo gestor, un informe propio para cada compa&ntilde;&iacute;a.</em></div>
+      </div>
       <div class="ec-opt hi">
         <div class="ko">Alcance base</div>
         <div class="vo">$15.000.000</div>
