@@ -837,6 +837,54 @@
     border-radius:13px; padding:24px 26px}
   .team-p b{font-family:var(--font-headline); font-size:19px; display:block; color:#fff}
   .team-p small{font-size:13px; color:rgba(255,255,255,.7)}
+
+  /* == PROGRAMA (patron s-toc, heredado de Highlights) ===== */
+  .ghead{display:flex; justify-content:space-between; align-items:flex-end; gap:60px;
+    margin-bottom:30px}
+  .ghead .gl{max-width:1120px; display:flex; flex-direction:column; gap:14px}
+  .ghead .geye{font-family:var(--font-body); font-weight:700; font-size:12px;
+    letter-spacing:.24em; text-transform:uppercase; color:var(--color-dark-green); margin:0}
+  .ghead .gt{font-family:var(--font-headline); font-size:56px; line-height:1.06;
+    color:var(--fg-primary); margin:0}
+  .ghead .gt .hl2{color:var(--color-dark-green); font-style:italic}
+  .ghead .gh{font-family:var(--font-body); font-size:21px; line-height:1.5;
+    color:var(--fg-secondary); max-width:450px; text-align:right; margin:0}
+
+  .tocg{display:grid; grid-template-columns:repeat(3,1fr);
+    grid-template-rows:1fr 1fr auto; gap:16px; height:632px}
+  .tcd{display:flex; flex-direction:column; justify-content:space-between; gap:8px;
+    background:#fff; border:1px solid var(--border-default); border-radius:16px;
+    padding:22px 24px 15px; min-width:0; min-height:0; position:relative; overflow:hidden}
+  .tcd::before{content:""; position:absolute; left:0; top:0; width:100%; height:5px;
+    background:var(--gradient-green-blue)}
+  .tcd-b{display:flex; flex-direction:column; gap:7px}
+  .tcd-n{font-family:var(--font-headline); font-size:33px; line-height:1;
+    letter-spacing:-.01em; margin:0 0 2px; background:var(--gradient-green-blue);
+    -webkit-background-clip:text; background-clip:text; color:transparent}
+  .tcd-t{font-family:var(--font-headline); font-size:20px; line-height:1.15;
+    color:var(--fg-primary); margin:0}
+  .tcd-x{font-family:var(--font-body); font-size:14px; line-height:1.4;
+    color:var(--fg-secondary); margin:0}
+  .tcd-f{display:flex; align-items:center; justify-content:space-between;
+    border-top:1px solid var(--border-default); padding-top:11px}
+  .tcd-g{font-family:var(--font-body); font-weight:600; font-size:11px; letter-spacing:.2em;
+    text-transform:uppercase; color:var(--fg-muted); margin:0}
+  .tcd-a{font-family:var(--font-body); font-size:19px; color:var(--color-dark-green);
+    line-height:1}
+  .tcd.acc{background:#0b1410; border-color:#0b1410; flex-direction:row; align-items:center;
+    justify-content:space-between; gap:28px; grid-column:span 3; padding:20px 36px}
+  .tcd.acc::before{background:var(--color-neon-green)}
+  .tcd.acc .ak{font-family:var(--font-body); font-weight:600; font-size:12px;
+    letter-spacing:.28em; text-transform:uppercase; color:var(--color-neon-green); margin:0;
+    white-space:nowrap}
+  .tcd.acc .af{font-family:var(--font-headline); font-size:25px; line-height:1.15;
+    color:#fff; margin:0}
+  .tcd.acc .af .hl2{color:var(--color-neon-green); font-style:normal}
+  .tcd-s{display:flex; flex-direction:column; gap:6px; margin-top:2px}
+  .tcd-s span{font-family:var(--font-body); font-size:13.5px; line-height:1.35;
+    color:var(--fg-secondary); display:flex; gap:8px}
+  .tcd-s span i{font-style:normal; color:var(--color-neon-green);
+    -webkit-text-stroke:.5px var(--color-dark-green); font-weight:700; flex:0 0 auto}
 </style>
 </head>
 <body>
@@ -844,47 +892,30 @@
 <deck-stage width="1920" height="1080">
 
 
-<!-- ============ C01 · LA ESTRUCTURA ============ -->
-<section data-label="Capacitaci&oacute;n &middot; La estructura">
+<!-- ============ C01 · EL PROGRAMA ============ -->
+<section data-label="Capacitaci&oacute;n &middot; El programa">
   <img class="stamp-logo" src="./_plantilla/assets/logo-horizontal.png" alt="">
-  <p class="eyebrow">Componente 01 <b>&middot;</b> Capacitaci&oacute;n</p>
-  <h1 class="title">Primero todos, despu&eacute;s cada uno</h1>
-  <p class="hint hint-sm">Un tronco com&uacute;n que ve el equipo completo, y de ah&iacute;
-     un zoom a lo que cada &aacute;rea hace todos los d&iacute;as.</p>
-
-  <div class="tree">
-    <svg viewBox="0 0 1700 596">
-      <g stroke="#12f280" stroke-width="2.5" fill="none" stroke-linecap="round">
-        <path d="M199 246 L1501 246"/>
-        <path d="M850 186 L850 246 M199 246 L199 296"/><path d="M850 186 L850 246 M633 246 L633 296"/><path d="M850 186 L850 246 M1067 246 L1067 296"/><path d="M850 186 L850 246 M1501 246 L1501 296"/>
-      </g>
-    </svg>
-
-    <div class="trunk">
-      <div>
-        <div class="k">Tronco com&uacute;n &middot; lo ve todo el equipo</div>
-        <div class="t">Fundamentos y primer agente</div>
-        <div class="s">Directivos, comerciales, SECOP y reporter&iacute;a arrancan con la
-          misma base: la herramienta instalada, el criterio para usarla y un agente propio
-          funcionando.</div>
-      </div>
-      <div class="trunk-m">
-        <div><div class="n">6</div><div class="l">sesiones</div></div>
-        <div><div class="n">12</div><div class="l">horas</div></div>
-      </div>
+  <div class="ghead">
+    <div class="gl">
+      <p class="geye">Programa de la capacitaci&oacute;n</p>
+      <h2 class="gt">Seis m&oacute;dulos para que el equipo <span class="hl2">opere con IA.</span></h2>
     </div>
-
-    <div class="zoomlab">Y de ah&iacute;, zoom por &aacute;rea</div>
-    <div class="branch" style="left:0px"><div class="bh"><div class="bi"><svg viewBox="0 0 24 24" fill="none" stroke="#09562c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7h-9"/><path d="M14 17H5"/><circle cx="17" cy="17" r="3"/><circle cx="7" cy="7" r="3"/></svg></div><h4>Comercial</h4></div><div class="hrs">2 sesiones &middot; 4 horas &middot; 3 personas</div><ul><li><i>&rarr;</i>Presentaciones estandarizadas, sacadas r&aacute;pido</li><li><i>&rarr;</i>Agente de gesti&oacute;n comercial conectado al CRM</li><li><i>&rarr;</i>Notificaciones por correo: seguimiento de clientes e indicadores</li></ul><div class="cond">El acceso al CRM queda sujeto a la autorizaci&oacute;n de Prosegur</div></div>
-    <div class="branch" style="left:434px"><div class="bh"><div class="bi"><svg viewBox="0 0 24 24" fill="none" stroke="#09562c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6"/><path d="M9 17h4"/></svg></div><h4>SECOP</h4></div><div class="hrs">2 sesiones &middot; 4 horas</div><ul><li><i>&rarr;</i>Agente diligenciador de formatos de SECOP</li><li><i>&rarr;</i>Redacci&oacute;n asistida de los formatos del proceso</li><li><i>&rarr;</i>Se apoya en el gestor del componente 03</li></ul></div>
-    <div class="branch" style="left:868px"><div class="bh"><div class="bi"><svg viewBox="0 0 24 24" fill="none" stroke="#09562c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg></div><h4>CRM y reporter&iacute;a</h4></div><div class="hrs">2 sesiones &middot; 4 horas</div><ul><li><i>&rarr;</i>Agente que presenta mejor los informes</li><li><i>&rarr;</i>An&aacute;lisis del informe, no solo su armado</li><li><i>&rarr;</i>Reducir el tiempo de producci&oacute;n de cada reporte</li></ul></div>
-    <div class="branch" style="left:1302px"><div class="bh"><div class="bi"><svg viewBox="0 0 24 24" fill="none" stroke="#09562c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V8l7-5 7 5v13"/><path d="M10 21v-6h4v6"/></svg></div><h4>Equipo directivo</h4></div><div class="hrs">2 sesiones &middot; 4 horas</div><ul><li><i>&rarr;</i>Decidir con datos propios: pedir el an&aacute;lisis y leerlo con criterio</li><li><i>&rarr;</i>Base consultable del &aacute;rea, para que el conocimiento no se vaya con la gente</li><li><i>&rarr;</i>C&oacute;mo supervisar el trabajo que el equipo hace con IA</li></ul></div>
+    <p class="gh">El tronco lo ve el equipo completo &mdash; directivos, comerciales,
+      SECOP y reporter&iacute;a. De ah&iacute;, cada &aacute;rea hace zoom.</p>
   </div>
 
-  <div class="note" style="margin-top:22px">
-    <div class="k">28 horas en total</div>
-    <p>12 del tronco m&aacute;s 4 por cada &aacute;rea. Catorce sesiones de dos horas, todas
-       con metodolog&iacute;a pr&aacute;ctica: se aprende construyendo sobre casos de Prosegur.</p>
+  <div class="tocg">
+      <div class="tcd"><div class="tcd-b"><p class="tcd-n">01</p><p class="tcd-t">Fundamentos del sistema de IA</p><p class="tcd-x">Instalaci&oacute;n de la plataforma y c&oacute;mo funciona por dentro.</p></div><div class="tcd-f"><span class="tcd-g">Fundamentos</span><span class="tcd-a">&rarr;</span></div></div>
+      <div class="tcd"><div class="tcd-b"><p class="tcd-n">02</p><p class="tcd-t">Pensamiento sistem&aacute;tico</p><p class="tcd-x">C&oacute;mo hablarle a la IA para que devuelva lo que se necesita.</p></div><div class="tcd-f"><span class="tcd-g">Criterio</span><span class="tcd-a">&rarr;</span></div></div>
+      <div class="tcd"><div class="tcd-b"><p class="tcd-n">03</p><p class="tcd-t">Productividad empresarial I</p><p class="tcd-x">Crear rutinas y skills sobre lo que cada quien repite todos los d&iacute;as.</p></div><div class="tcd-f"><span class="tcd-g">Productividad</span><span class="tcd-a">&rarr;</span></div></div>
+      <div class="tcd"><div class="tcd-b"><p class="tcd-n">04</p><p class="tcd-t">Productividad empresarial II</p><p class="tcd-x">Excel en la nube y ejecuci&oacute;n autom&aacute;tica de los archivos de siempre.</p></div><div class="tcd-f"><span class="tcd-g">Automatizaci&oacute;n</span><span class="tcd-a">&rarr;</span></div></div>
+      <div class="tcd"><div class="tcd-b"><p class="tcd-n">05</p><p class="tcd-t">Tu primer agente I</p><p class="tcd-x">Qu&eacute; es un agente y c&oacute;mo se estructura, de la idea a la primera versi&oacute;n.</p></div><div class="tcd-f"><span class="tcd-g">Agentes</span><span class="tcd-a">&rarr;</span></div></div>
+      <div class="tcd"><div class="tcd-b"><p class="tcd-n">06</p><p class="tcd-t">Tu primer agente II</p><p class="tcd-x">Taller: cada quien construye el suyo, enfocado en su &aacute;rea.</p></div><div class="tcd-f"><span class="tcd-g">Taller</span><span class="tcd-a">&rarr;</span></div></div>
+      <div class="tcd acc">
+        <p class="ak">El tronco com&uacute;n</p>
+        <p class="af"><span class="hl2">6 m&oacute;dulos</span> &middot; 12 horas</p>
+        <p class="af">Lo ve <span class="hl2">todo el equipo</span></p>
+      </div>
   </div>
 
   <div class="stamp-cap">Prosegur &middot; Propuesta COLMEN IA</div>
@@ -892,21 +923,28 @@
 </section>
 
 
-<!-- ============ C02 · EL TRONCO ============ -->
-<section data-label="Capacitaci&oacute;n &middot; El tronco">
+<!-- ============ C02 · EL ZOOM POR AREA ============ -->
+<section data-label="Capacitaci&oacute;n &middot; Zoom por &aacute;rea">
   <img class="stamp-logo" src="./_plantilla/assets/logo-horizontal.png" alt="">
-  <p class="eyebrow">Componente 01 <b>&middot;</b> Capacitaci&oacute;n</p>
-  <h1 class="title">El tronco: 6 sesiones, 12 horas</h1>
-  <p class="hint hint-sm">Todo pr&aacute;ctico. No hay sesiones de solo escuchar: cada una
-     termina con algo hecho.</p>
+  <div class="ghead">
+    <div class="gl">
+      <p class="geye">Despu&eacute;s del tronco</p>
+      <h2 class="gt">Y de ah&iacute;, <span class="hl2">zoom a cada &aacute;rea.</span></h2>
+    </div>
+    <p class="gh">Dos sesiones por &aacute;rea, sobre los documentos y sistemas que ese
+      equipo usa todos los d&iacute;as.</p>
+  </div>
 
-  <div class="ses">
-    <div class="sc2"><div class="num">1</div><h4>Intro al sistema de IA</h4><p>Instalaci&oacute;n de la plataforma y c&oacute;mo funciona por dentro. Todos arrancan con la herramienta corriendo.</p><div class="badge2">Pr&aacute;ctica desde el minuto uno</div></div>
-    <div class="sc2"><div class="num">2</div><h4>Pensamiento sistem&aacute;tico</h4><p>C&oacute;mo hablarle a la IA para que devuelva lo que se necesita, y no lo que se le ocurra.</p><div class="badge2">La sesi&oacute;n que cambia el resto</div></div>
-    <div class="sc2"><div class="num">3</div><h4>Productividad empresarial I</h4><p>Crear rutinas y crear skills: convertir lo que cada quien repite todos los d&iacute;as en algo que se ejecuta solo.</p><div class="badge2">Sobre tareas reales del equipo</div></div>
-    <div class="sc2"><div class="num">4</div><h4>Productividad empresarial II</h4><p>Excel en la nube y ejecuci&oacute;n autom&aacute;tica. Que los archivos de siempre dejen de llenarse a mano.</p><div class="badge2">Sobre archivos de Prosegur</div></div>
-    <div class="sc2 pair"><div class="num">5</div><h4>Tu primer agente I</h4><p>Qu&eacute; es un agente y c&oacute;mo se estructura. El ciclo completo, de la idea a la primera versi&oacute;n corriendo.</p><div class="badge2">Bloque de 2 sesiones &middot; 4 horas</div></div>
-    <div class="sc2 pair"><div class="num">6</div><h4>Tu primer agente II</h4><p>Taller: cada quien construye el suyo, enfocado en el &aacute;rea donde trabaja. Sale funcionando.</p><div class="badge2">Cada quien se lleva el suyo</div></div>
+  <div class="tocg" style="grid-template-columns:repeat(2,1fr)">
+      <div class="tcd"><div class="tcd-b"><p class="tcd-n">01</p><p class="tcd-t">Comercial</p><p class="tcd-x">3 personas</p><div class="tcd-s"><span><i>&rarr;</i>Presentaciones estandarizadas, sacadas r&aacute;pido</span><span><i>&rarr;</i>Agente de gesti&oacute;n comercial sobre el CRM</span></div></div><div class="tcd-f"><span class="tcd-g">Comercial</span><span class="tcd-a">&rarr;</span></div></div>
+      <div class="tcd"><div class="tcd-b"><p class="tcd-n">02</p><p class="tcd-t">SECOP</p><p class="tcd-x">Equipo de licitaciones</p><div class="tcd-s"><span><i>&rarr;</i>Agente diligenciador de formatos de SECOP</span><span><i>&rarr;</i>Redacci&oacute;n asistida de los formatos del proceso</span></div></div><div class="tcd-f"><span class="tcd-g">Licitaciones</span><span class="tcd-a">&rarr;</span></div></div>
+      <div class="tcd"><div class="tcd-b"><p class="tcd-n">03</p><p class="tcd-t">CRM y reporter&iacute;a</p><p class="tcd-x">Equipo de informes</p><div class="tcd-s"><span><i>&rarr;</i>Agente que presenta y analiza los informes</span><span><i>&rarr;</i>Reducir el tiempo de producci&oacute;n de cada reporte</span></div></div><div class="tcd-f"><span class="tcd-g">Reporter&iacute;a</span><span class="tcd-a">&rarr;</span></div></div>
+      <div class="tcd"><div class="tcd-b"><p class="tcd-n">04</p><p class="tcd-t">Equipo directivo</p><p class="tcd-x">Comit&eacute;</p><div class="tcd-s"><span><i>&rarr;</i>Decidir con datos propios: pedir el an&aacute;lisis y leerlo</span><span><i>&rarr;</i>Base consultable, para que el conocimiento no se vaya</span></div></div><div class="tcd-f"><span class="tcd-g">Direcci&oacute;n</span><span class="tcd-a">&rarr;</span></div></div>
+      <div class="tcd acc" style="grid-column:span 2">
+        <p class="ak">El zoom por &aacute;rea</p>
+        <p class="af"><span class="hl2">4 &aacute;reas</span> &middot; 2 sesiones cada una</p>
+        <p class="af"><span class="hl2">16 horas</span> &middot; 28 en total con el tronco</p>
+      </div>
   </div>
 
   <div class="stamp-cap">Prosegur &middot; Propuesta COLMEN IA</div>
