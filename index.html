@@ -1364,10 +1364,14 @@
     color:var(--fg-secondary)}
   .ec-sub{text-align:right; font-family:var(--font-headline); font-size:36px;
     color:var(--color-dark-green); font-variant-numeric:tabular-nums}
-  .ec-sub small{display:block; font-family:var(--font-body); font-size:12.5px;
-    font-weight:600; color:#9aa5a0; margin-top:8px; letter-spacing:.01em}
-  .ec-tot .gr small{display:block; font-family:var(--font-body); font-size:12.5px;
-    font-weight:600; color:rgba(255,255,255,.45); margin-top:8px; letter-spacing:.01em}
+  .ec-sub small{display:block; font-family:var(--font-body); font-size:13px;
+    font-weight:600; color:var(--fg-secondary); margin-top:9px; letter-spacing:.01em}
+  .ec-sub small b{font-family:var(--font-headline); font-size:19px; font-weight:400;
+    color:var(--color-dark-green); font-variant-numeric:tabular-nums; margin-left:5px}
+  .ec-tot .gr small{display:block; font-family:var(--font-body); font-size:13px;
+    font-weight:600; color:rgba(255,255,255,.6); margin-top:9px; letter-spacing:.01em}
+  .ec-tot .gr small b{font-family:var(--font-headline); font-size:19px; font-weight:400;
+    color:var(--color-neon-green); font-variant-numeric:tabular-nums; margin-left:5px}
 
   .ec-tot{display:grid; grid-template-columns:1fr 520px 300px; gap:20px;
     padding:22px 34px; align-items:center; background:var(--gradient-dark-cover)}
@@ -1396,10 +1400,12 @@
   .capdeal{margin-top:24px; display:grid; grid-template-columns:1fr 400px; gap:30px;
     align-items:center; background:#effbf4; border:2px solid var(--color-neon-green);
     border-radius:18px; padding:24px 36px; box-shadow:0 6px 26px rgba(9,86,44,.10)}
-  .capdeal .dk{font-size:11.5px; font-weight:700; letter-spacing:.15em;
-    text-transform:uppercase; color:var(--color-dark-green); opacity:.6; margin-bottom:10px}
-  .capdeal .dt{font-family:var(--font-headline); font-size:32px;
-    color:var(--color-dark-green); line-height:1.16}
+  .capdeal .dbadge{display:inline-block; background:var(--color-neon-green);
+    border-radius:999px; padding:7px 17px; font-size:11.5px; font-weight:700;
+    letter-spacing:.13em; text-transform:uppercase; color:var(--color-dark-green);
+    margin-bottom:13px}
+  .capdeal .dt{font-family:var(--font-headline); font-size:38px;
+    color:var(--color-dark-green); line-height:1.12}
   .capdeal .dp{margin:11px 0 0; font-size:15px; line-height:1.5; color:#2c3330}
   .capdeal .dv{text-align:right; font-family:var(--font-headline); font-size:76px;
     color:var(--color-dark-green); line-height:1; font-variant-numeric:tabular-nums}
@@ -3094,7 +3100,7 @@
           <small>El tronco &mdash; lo ve todo el equipo</small></span></div>
       <div class="ec-det"><span>6 m&oacute;dulos</span><span>12 horas</span>
         <span>Todo el equipo</span></div>
-      <div class="ec-sub">$12.000.000<small>$600.000 de inversi&oacute;n por persona</small></div>
+      <div class="ec-sub">$12.000.000<small>Inversi&oacute;n por persona<b>$600.000</b></small></div>
     </div>
 
     <div class="ec-tr">
@@ -3103,24 +3109,24 @@
           <small>Una rama para cada equipo &mdash; el mismo grupo</small></span></div>
       <div class="ec-det"><span>4 &aacute;reas</span><span>16 horas</span>
         <span>2 sesiones por &aacute;rea</span></div>
-      <div class="ec-sub">$8.000.000<small>$400.000 de inversi&oacute;n por persona</small></div>
+      <div class="ec-sub">$8.000.000<small>Inversi&oacute;n por persona<b>$400.000</b></small></div>
     </div>
 
     <div class="ec-tot">
       <div class="lb2">Total del plan<small>Los dos bloques, tomados juntos</small></div>
       <div class="hrs"><span>28 horas</span><span>20 personas</span></div>
-      <div class="gr">$20.000.000<small>$1.000.000 de inversi&oacute;n por persona</small></div>
+      <div class="gr">$20.000.000<small>Inversi&oacute;n por persona<b>$1.000.000</b></small></div>
     </div>
   </div>
 
   <div class="capdeal">
     <div>
-      <div class="dk">Por llevar el plan completo</div>
+      <span class="dbadge">Beneficio por el plan completo</span>
       <div class="dt">Dejamos el bloque 02 en</div>
-      <p class="dp">Es el bloque donde se capacitan las cuatro &aacute;reas, cada una sobre
-         su propio trabajo.</p>
+      <p class="dp">Las mismas veinte personas y las cuatro &aacute;reas completas &mdash;
+         cada una sobre su propio trabajo.</p>
     </div>
-    <div class="dv">$8.000.000<small>en vez de su valor de lista</small></div>
+    <div class="dv">$8.000.000<small>las mismas 20 personas</small></div>
   </div>
 
   <div class="capbot">
