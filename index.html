@@ -1388,20 +1388,30 @@
     color:var(--color-dark-green); white-space:nowrap}
   .ec-foot p{margin:0; font-size:15.5px; line-height:1.45; color:#2c3330}
 
-  /* -- Tres notas al pie de la economica de capacitacion -- */
-  .cap3{margin-top:28px; display:grid; grid-template-columns:1fr 1.2fr 1fr; gap:20px;
-    align-items:stretch}
-  .cc{border:1.5px solid var(--border-default); border-radius:16px; padding:26px 30px;
-    background:#fff; box-shadow:0 4px 22px rgba(0,0,0,.05)}
-  .cc .ck{font-size:11px; font-weight:700; letter-spacing:.14em; text-transform:uppercase;
-    color:#9aa5a0; margin-bottom:16px}
-  .cc .cv{font-family:var(--font-headline); font-size:42px; color:var(--color-dark-green);
-    line-height:1; font-variant-numeric:tabular-nums}
-  .cc .cu{font-size:13.5px; color:var(--fg-secondary); margin-top:9px}
-  .cc p{margin:16px 0 0; font-size:14.5px; line-height:1.5; color:#2c3330}
-  .cc.hi{background:#effbf4; border-color:var(--color-neon-green)}
-  .cc.hi .ck{color:var(--color-dark-green); opacity:.6}
-  .cc.hi .cv{font-size:54px}
+  /* -- Cierre de la economica de capacitacion -- */
+  .capdeal{margin-top:26px; display:grid; grid-template-columns:1fr 400px; gap:30px;
+    align-items:center; background:#effbf4; border:2px solid var(--color-neon-green);
+    border-radius:18px; padding:28px 36px; box-shadow:0 6px 26px rgba(9,86,44,.10)}
+  .capdeal .dk{font-size:11.5px; font-weight:700; letter-spacing:.15em;
+    text-transform:uppercase; color:var(--color-dark-green); opacity:.6; margin-bottom:11px}
+  .capdeal .dt{font-family:var(--font-headline); font-size:32px;
+    color:var(--color-dark-green); line-height:1.16}
+  .capdeal .dp{margin:13px 0 0; font-size:15px; line-height:1.5; color:#2c3330}
+  .capdeal .dv{text-align:right; font-family:var(--font-headline); font-size:76px;
+    color:var(--color-dark-green); line-height:1; font-variant-numeric:tabular-nums}
+  .capdeal .dv small{display:block; font-family:var(--font-body); font-size:12.5px;
+    font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+    color:var(--color-dark-green); opacity:.5; margin-top:11px}
+
+  .capwho{margin-top:18px; display:flex; align-items:center; gap:20px; background:#fff;
+    border:1.5px solid var(--border-default); border-radius:14px; padding:20px 30px;
+    box-shadow:0 4px 22px rgba(0,0,0,.05)}
+  .capwho svg{width:26px; height:26px; flex:0 0 auto}
+  .capwho b{font-family:var(--font-headline); font-size:19px; color:var(--fg-primary);
+    white-space:nowrap}
+  .capwho i{display:block; width:1px; height:32px; background:#e3e8e6; flex:0 0 auto}
+  .capwho em{font-style:normal; font-size:14.5px; line-height:1.45;
+    color:var(--fg-secondary)}
 
   /* -- Slide de un componente -- */
   .ec-one{display:grid; grid-template-columns:1.2fr 1fr; gap:32px; height:660px}
@@ -3061,8 +3071,8 @@
   <img class="stamp-logo" src="./_plantilla/assets/logo-horizontal.png" alt="">
   <p class="eyebrow">Propuesta econ&oacute;mica <b>&middot;</b> Componente 01</p>
   <h1 class="title">Plan de transformaci&oacute;n en IA</h1>
-  <p class="hint hint-sm">El programa se cotiza por bloque. Los dos, tomados juntos,
-     forman a las mismas veinte personas.</p>
+  <p class="hint hint-sm">El programa se cotiza por bloque, para todo el equipo de las
+     dos compa&ntilde;&iacute;as.</p>
 
   <div class="ec-t">
     <div class="ec-th">
@@ -3094,28 +3104,24 @@
     </div>
   </div>
 
-  <div class="cap3">
-    <div class="cc">
-      <div class="ck">Llevando los dos bloques</div>
-      <div class="cv">$8.000.000</div>
-      <div class="cu">queda el segundo bloque</div>
-      <p>El bloque 02 se deja en ese valor cuando se toma junto con el primero.</p>
+  <div class="capdeal">
+    <div>
+      <div class="dk">Por llevar el plan completo</div>
+      <div class="dt">Dejamos el bloque 02 en</div>
+      <p class="dp">Es el bloque donde se capacitan las cuatro &aacute;reas &mdash; comercial,
+         SECOP, CRM y reporter&iacute;a, y el equipo directivo &mdash; cada una trabajando
+         sobre sus propios documentos y sistemas.</p>
     </div>
+    <div class="dv">$8.000.000<small>en vez de su valor de lista</small></div>
+  </div>
 
-    <div class="cc hi">
-      <div class="ck">No cobramos por persona</div>
-      <div class="cv">$1.000.000</div>
-      <div class="cu">de inversi&oacute;n por participante</div>
-      <p>El plan se cobra por bloque, no por asistente. Con veinte personas, eso es lo
-         que termina costando formar a cada una &mdash; las 28 horas completas.</p>
-    </div>
-
-    <div class="cc">
-      <div class="ck">Alcance</div>
-      <div class="cv">2 compa&ntilde;&iacute;as</div>
-      <div class="cu">Security + Tecnolog&iacute;a</div>
-      <p>El mismo plan forma a los equipos de las dos, sin cobrar dos veces.</p>
-    </div>
+  <div class="capwho">
+    <svg viewBox="0 0 24 24" fill="none" stroke="#09562c" stroke-width="1.9"
+      stroke-linecap="round" stroke-linejoin="round"><path d="M16 20v-1.6a3.4 3.4 0 0 0-3.4-3.4H6.4A3.4 3.4 0 0 0 3 18.4V20"/><circle cx="9.5" cy="7.6" r="3.4"/><path d="M21 20v-1.6a3.4 3.4 0 0 0-2.6-3.3M15.4 4.4a3.4 3.4 0 0 1 0 6.5"/></svg>
+    <b>Todo el equipo, en las dos compa&ntilde;&iacute;as</b>
+    <i></i>
+    <em>Comercial, SECOP, CRM y reporter&iacute;a y el equipo directivo &mdash; de Prosegur
+        Security y Prosegur Tecnolog&iacute;a, con un solo plan.</em>
   </div>
 
   <div class="stamp-cap">Prosegur &middot; Propuesta COLMEN IA</div>
